@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "I accept terms and conditions"; ObjectID = "5e0-xS-iBh"; */
+"5e0-xS-iBh.text" = "I accept terms and conditions";
+
+/* Class = "UIButton"; normalTitle = "START UP"; ObjectID = "Cm6-Ee-nSL"; */
+"Cm6-Ee-nSL.normalTitle" = "START UP";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "M9h-gU-Zug"; */
+"M9h-gU-Zug.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "WELCOME"; ObjectID = "WQ5-lK-jaJ"; */
+"WQ5-lK-jaJ.text" = "WELCOME";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "jcy-1P-fxb"; */
+"jcy-1P-fxb.normalTitle" = "LOGIN";
+
+/* Class = "UILabel"; text = "Thanks for downloading this app. Please watch the introduction video under these lines and sing in or create your profile. Let the save me application cares for you."; ObjectID = "lGu-e6-kH8"; */
+"lGu-e6-kH8.text" = "Thanks for downloading this app. Please watch the introduction video under these lines and sing in or create your profile. Let the save me application cares for you.";
