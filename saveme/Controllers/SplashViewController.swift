@@ -20,7 +20,6 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     
     @IBOutlet weak var checkbox: UIButton!
     
-    
     var acceptterms: Bool = false
     
     @IBAction func checking(_ sender: Any) {
@@ -33,6 +32,8 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     let controller = AVPlayerViewController()
     
     @IBAction func fblogin(_ sender: Any) {
+        
+        if(acceptterms) {
         
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: nil) { loginResult in
@@ -58,6 +59,8 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
             }
             
         }
+            
+        }
         
     }
     
@@ -72,9 +75,20 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         self.view.addSubview(controller.view)
         controller.view.frame = self.view.frame
         
+        let btn = UIButton(type: .system)
+        
+        btn.setTitle("Back".localized, for: UIControlState.normal)
+        
+        btn.addTarget(self, action: #selector(endPlay), for: .touchUpInside)
+        controller.contentOverlayView?.addSubview(btn)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(sender:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: item)
         player.play()
         
+    }
+    
+    func endPlay(){
+       controller.view.removeFromSuperview()
     }
     
     func playerDidFinishPlaying(sender: Notification) {
@@ -83,9 +97,9 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     
     
     @IBAction func startup(_ sender: Any) {
+
         self.showWizardScreen()
     }
-    
     
     @IBOutlet weak var loginbtn: UIButton!
     

@@ -21,13 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="map" translatesAutoresizingMaskIntoConstraints="NO" id="Z8v-l0-PUU" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" restorationIdentifier="map" translatesAutoresizingMaskIntoConstraints="NO" id="Z8v-l0-PUU" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxO-ST-7rR">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxO-ST-7rR">
                                 <rect key="frame" x="0.0" y="30" width="119" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubn-Gc-5S0">
                                         <rect key="frame" x="8" y="13" width="44" height="47"/>
@@ -47,10 +46,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Z8v-l0-PUU" firstAttribute="leading" secondItem="rxO-ST-7rR" secondAttribute="leading" id="KMW-8h-HRi"/>
                             <constraint firstItem="Z8v-l0-PUU" firstAttribute="leading" secondItem="cp5-1W-Uk6" secondAttribute="leading" id="Z1W-lu-aDP"/>
+                            <constraint firstItem="Z8v-l0-PUU" firstAttribute="top" secondItem="cp5-1W-Uk6" secondAttribute="top" id="ZOQ-Vm-fuf"/>
                             <constraint firstAttribute="trailing" secondItem="Z8v-l0-PUU" secondAttribute="trailing" id="bQo-Qr-jBR"/>
                             <constraint firstItem="45X-9y-TLq" firstAttribute="top" secondItem="Z8v-l0-PUU" secondAttribute="bottom" id="hB0-ip-W8S"/>
-                            <constraint firstItem="Z8v-l0-PUU" firstAttribute="top" secondItem="jMT-aQ-tCP" secondAttribute="bottom" constant="8" id="mys-gN-lqP"/>
                         </constraints>
                     </view>
                     <connections>
