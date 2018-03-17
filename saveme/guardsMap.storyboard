@@ -21,23 +21,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-FI-MMr" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                            <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="map" translatesAutoresizingMaskIntoConstraints="NO" id="Z8v-l0-PUU" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxO-ST-7rR">
+                                <rect key="frame" x="0.0" y="30" width="119" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubn-Gc-5S0">
+                                        <rect key="frame" x="8" y="13" width="44" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="keyboard_arrow_left_black_144x144"/>
+                                        <connections>
+                                            <action selector="backbtn:" destination="r1r-eM-W1Y" eventType="touchUpInside" id="cOn-2K-84q"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-k8-ELe">
+                                        <rect key="frame" x="60" y="9" width="51" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OyQ-FI-MMr" secondAttribute="trailing" id="fQN-6b-yna"/>
-                            <constraint firstItem="45X-9y-TLq" firstAttribute="top" secondItem="OyQ-FI-MMr" secondAttribute="bottom" id="gC8-oW-MZz"/>
-                            <constraint firstItem="OyQ-FI-MMr" firstAttribute="top" secondItem="jMT-aQ-tCP" secondAttribute="bottom" constant="8" id="nJG-SO-sfp"/>
-                            <constraint firstItem="OyQ-FI-MMr" firstAttribute="leading" secondItem="cp5-1W-Uk6" secondAttribute="leading" id="oaH-ZC-Z8r"/>
+                            <constraint firstItem="Z8v-l0-PUU" firstAttribute="leading" secondItem="cp5-1W-Uk6" secondAttribute="leading" id="Z1W-lu-aDP"/>
+                            <constraint firstAttribute="trailing" secondItem="Z8v-l0-PUU" secondAttribute="trailing" id="bQo-Qr-jBR"/>
+                            <constraint firstItem="45X-9y-TLq" firstAttribute="top" secondItem="Z8v-l0-PUU" secondAttribute="bottom" id="hB0-ip-W8S"/>
+                            <constraint firstItem="Z8v-l0-PUU" firstAttribute="top" secondItem="jMT-aQ-tCP" secondAttribute="bottom" constant="8" id="mys-gN-lqP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backlogo" destination="Gjd-k8-ELe" id="5Pl-ZX-2Z4"/>
+                        <outlet property="map" destination="Z8v-l0-PUU" id="Mcx-79-U7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-Z4-yj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="-131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="keyboard_arrow_left_black_144x144" width="144" height="144"/>
+        <image name="logo" width="150" height="156"/>
+    </resources>
 </document>
