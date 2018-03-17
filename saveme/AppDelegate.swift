@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var locationManager = LocationManager.sharedInstance
     
-    
-    
     enum ShortcutIdentifier: String {
         case Share
         case Add
@@ -68,7 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return handled
     }
-    
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
@@ -127,6 +124,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else {
                 self.lat = latitude
                 self.lng = longitude
+                print("lat")
+                print(latitude)
             }
             
         }

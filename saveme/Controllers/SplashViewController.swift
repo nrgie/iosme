@@ -8,14 +8,29 @@ import AVFoundation
 import MediaPlayer
 
 class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
+    
+    
+    
     @IBOutlet weak var modeLogo: UIImageView!
   
     @IBOutlet weak var videobtn: UIButton!
     
+    @IBOutlet weak var terms: UILabel!
     @IBOutlet weak var fbbtn: UIButton!
     
-    let controller = AVPlayerViewController()
+    @IBOutlet weak var checkbox: UIButton!
     
+    
+    var acceptterms: Bool = false
+    
+    @IBAction func checking(_ sender: Any) {
+        
+        checkbox.setImage(UIImage(named: "checkboxChecked"), for: UIControlState())
+        acceptterms = true
+        
+    }
+    
+    let controller = AVPlayerViewController()
     
     @IBAction func fblogin(_ sender: Any) {
         
@@ -78,6 +93,13 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         self.showLoginScreen()
     }
     
+    func userDidTapLabel(tapGestureRecognizer: UITapGestureRecognizer) {
+        
+        UIApplication.shared.open(NSURL(string:"http://www.saveme-app.com/terms.html")! as URL)
+        
+    }
+    
+    
     override func viewDidLoad() {
         
         // Add a custom login button to your app
@@ -93,6 +115,10 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         if DataStore.shared.getAccessToken() != nil {
             self.showMainScreen()
         }
+        
+        terms.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(userDidTapLabel(tapGestureRecognizer:)))
+        terms.addGestureRecognizer(tapGesture)
         
         //guard let number = URL(string:"tel://112") else { return; }
         
