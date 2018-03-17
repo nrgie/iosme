@@ -96,7 +96,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>For short time emergency signal reaction with available gps coordinates</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

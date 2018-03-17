@@ -21,7 +21,7 @@ class Wizard5ViewController : UIViewController {
     
     @IBAction func next(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard6", bundle: nil)
-        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard6") as! Wizard4ViewController
+        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard6") as! Wizard6ViewController
         UIApplication.shared.delegate?.window??.rootViewController = settingsController
     }
     

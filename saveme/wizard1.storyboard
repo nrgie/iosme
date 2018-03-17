@@ -142,13 +142,13 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMB-df-v2b">
-                                                        <rect key="frame" x="8" y="8" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="238" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4j-Mn-h7E">
-                                                        <rect key="frame" x="8" y="26" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="25.5" width="238" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="j7E-O1-vzn"/>
                                                         </constraints>
@@ -242,13 +242,13 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyV-ZL-Lr2">
-                                                        <rect key="frame" x="8" y="8" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="238" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upr-J2-kuX">
-                                                        <rect key="frame" x="8" y="26" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="25.5" width="238" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="aJJ-Gx-KUm"/>
                                                         </constraints>
@@ -291,13 +291,13 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c3-7q-Xcb">
-                                                        <rect key="frame" x="8" y="8" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="238" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-ua-4hw">
-                                                        <rect key="frame" x="8" y="26" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="25.5" width="238" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="UMx-fx-DRk"/>
                                                         </constraints>
@@ -340,13 +340,13 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vj-9d-fcT">
-                                                        <rect key="frame" x="8" y="8" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="238" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-m2-vQx">
-                                                        <rect key="frame" x="8" y="26" width="238" height="18"/>
+                                                        <rect key="frame" x="8" y="25.5" width="238" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="U3r-Dz-FCd"/>
                                                         </constraints>

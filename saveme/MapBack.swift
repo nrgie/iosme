@@ -30,14 +30,18 @@ class MapBackView: UIView {
         self.addSubview(bannerView)
         
         profileView = UIImageView(frame: CGRect.zero)
-        profileView.backgroundColor = UIColor.gray
+
+        let newImg: UIImage? = UIImage(named: "logo")
+        profileView.image = newImg
+        
+        //profileView.sd_setImage(with: URL(string: self.day?.img ?? ""))
+        profileView.backgroundColor = UIColor.white
         profileView.layer.borderColor = UIColor.white.cgColor
         profileView.layer.borderWidth = 1.0
-        profileView.layer.cornerRadius = 5.0
+        profileView.layer.cornerRadius = 0.0
         
-        
-        profileView.autoSetDimension(.width, toSize: 124.0)
-        profileView.autoSetDimension(.height, toSize: 124.0)
+        profileView.autoSetDimension(.width, toSize: 80.0)
+        profileView.autoSetDimension(.height, toSize: 80.0)
         
         self.addSubview(profileView)
         
@@ -45,7 +49,7 @@ class MapBackView: UIView {
         
         //self.addSubview(segmentedControl)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -54,7 +58,7 @@ class MapBackView: UIView {
         if(shouldSetupConstraints) {
             
             let edgesInset: CGFloat = 10.0
-            let centerOffset: CGFloat = 62.0
+            let centerOffset: CGFloat = 2.0
             
             bannerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero, excludingEdge: .bottom)
             

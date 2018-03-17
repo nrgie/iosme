@@ -118,7 +118,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
-            
             if error != nil {
                 print(error)
             } else {
@@ -127,7 +126,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("lat")
                 print(latitude)
             }
-            
         }
         
         
