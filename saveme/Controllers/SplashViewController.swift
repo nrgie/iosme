@@ -168,8 +168,8 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     }
 
     func showWizardScreen(){
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard1", bundle: nil)
+        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard1") as! Wizard1ViewController
         UIApplication.shared.delegate?.window??.rootViewController = settingsController
     }
     
