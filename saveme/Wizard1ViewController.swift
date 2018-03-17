@@ -12,5 +12,10 @@ import UIKit
 
 class Wizard1ViewController : UIViewController {
 
+    @IBAction func next(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard2", bundle: nil)
+        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard2") as! Wizard2ViewController
+        UIApplication.shared.delegate?.window??.rootViewController = settingsController
+    }
     
 }

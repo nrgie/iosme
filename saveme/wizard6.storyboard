@@ -32,7 +32,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="wNL-ym-kd7"/>
                                 </constraints>
-                                <state key="normal" title="NEXT"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.049664591809999999" green="0.58411593260000005" blue="0.11287780040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="finish:" destination="jbK-VW-2SD" eventType="touchUpInside" id="Me0-1Q-46R"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-vn-SDE">
                                 <rect key="frame" x="0.0" y="20" width="320" height="87"/>
@@ -404,7 +409,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-IN-3zm">
                                 <rect key="frame" x="0.0" y="142" width="320" height="46"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDENTIFICATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-7C-3lZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMERGENCY ALERT SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-7C-3lZ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="vAh-FU-hgA"/>
@@ -413,7 +418,7 @@
                                         <color key="textColor" red="0.73921227331606221" green="0.057853514039824944" blue="0.049312044096763555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Basic Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-DZ-EWZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings for alert types" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-DZ-EWZ">
                                         <rect key="frame" x="0.0" y="25" width="320" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -431,13 +436,13 @@
                                     <constraint firstItem="IVJ-7C-3lZ" firstAttribute="top" secondItem="ZBw-IN-3zm" secondAttribute="top" id="sJY-De-LHa"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="euK-58-mCz">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="5" translatesAutoresizingMaskIntoConstraints="NO" id="euK-58-mCz">
                                 <rect key="frame" x="0.0" y="107" width="320" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="Xha-74-jIx"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.088285088651834043" blue="0.10762000039466213" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.049664591814023572" green="0.58411593264248707" blue="0.11287780042132672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="login" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-hc-ZDo">
                                 <rect key="frame" x="54" y="530" width="77" height="30"/>
@@ -445,7 +450,12 @@
                                     <constraint firstAttribute="height" constant="30" id="iXQ-uw-d63"/>
                                     <constraint firstAttribute="width" constant="77" id="p7E-YB-iRT"/>
                                 </constraints>
-                                <state key="normal" title="PREVIOUS"/>
+                                <state key="normal" title="PREVIOUS">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="prev:" destination="jbK-VW-2SD" eventType="touchUpInside" id="Dhl-tg-f7i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
