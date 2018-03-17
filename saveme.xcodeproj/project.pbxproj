@@ -91,6 +91,11 @@
 		88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40074205D717600CF1E9D /* wizard4.storyboard */; };
 		88C40077205D718500CF1E9D /* wizard5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40076205D718500CF1E9D /* wizard5.storyboard */; };
 		88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40078205D719A00CF1E9D /* wizard6.storyboard */; };
+		88C4007B205D71FA00CF1E9D /* Wizard2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007A205D71FA00CF1E9D /* Wizard2ViewController.swift */; };
+		88C4007D205D720D00CF1E9D /* Wizard3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007C205D720D00CF1E9D /* Wizard3ViewController.swift */; };
+		88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */; };
+		88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40080205D722500CF1E9D /* Wizard5ViewController.swift */; };
+		88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40082205D723100CF1E9D /* Wizard6ViewController.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
 		9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6951EC444D9005167B6 /* CustomCalendar.swift */; };
@@ -227,6 +232,11 @@
 		88C40074205D717600CF1E9D /* wizard4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard4.storyboard; sourceTree = "<group>"; };
 		88C40076205D718500CF1E9D /* wizard5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard5.storyboard; sourceTree = "<group>"; };
 		88C40078205D719A00CF1E9D /* wizard6.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard6.storyboard; sourceTree = "<group>"; };
+		88C4007A205D71FA00CF1E9D /* Wizard2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard2ViewController.swift; sourceTree = "<group>"; };
+		88C4007C205D720D00CF1E9D /* Wizard3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard3ViewController.swift; sourceTree = "<group>"; };
+		88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard4ViewController.swift; sourceTree = "<group>"; };
+		88C40080205D722500CF1E9D /* Wizard5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard5ViewController.swift; sourceTree = "<group>"; };
+		88C40082205D723100CF1E9D /* Wizard6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard6ViewController.swift; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
 		9109E6951EC444D9005167B6 /* CustomCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCalendar.swift; path = Views/CustomCalendar.swift; sourceTree = "<group>"; };
@@ -407,6 +417,11 @@
 				73132C1B20068391002B690B /* SigninViewController.swift */,
 				732D648A1F024587007142A6 /* SettingsViewController.swift */,
 				7373DA56200651CD00DC77E8 /* Wizard1ViewController.swift */,
+				88C4007A205D71FA00CF1E9D /* Wizard2ViewController.swift */,
+				88C4007C205D720D00CF1E9D /* Wizard3ViewController.swift */,
+				88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */,
+				88C40080205D722500CF1E9D /* Wizard5ViewController.swift */,
+				88C40082205D723100CF1E9D /* Wizard6ViewController.swift */,
 				9109E6991EC49F2B005167B6 /* QuestionnarieViewController.swift */,
 				91AF74801EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift */,
 				910C08451EC6077300D25694 /* RecommendationsViewController.swift */,
@@ -808,6 +823,7 @@
 				3DEE9A271EC1249B00CA8B8D /* CustomNavigationBar.swift in Sources */,
 				3D01487F1EC0B69200804F54 /* MessageUtils.swift in Sources */,
 				3DAF8BC71EC9A90E002E3A76 /* ProgressionCellView.swift in Sources */,
+				88C4007B205D71FA00CF1E9D /* Wizard2ViewController.swift in Sources */,
 				3DEE9A2A1EC1B46600CA8B8D /* UIView+NavigationItems.swift in Sources */,
 				910C08461EC6077300D25694 /* RecommendationsViewController.swift in Sources */,
 				3D5F21901EBDCCFA0044A9A8 /* UserDataResponse.swift in Sources */,
@@ -820,6 +836,7 @@
 				732D648D1F0245C5007142A6 /* RunDay.swift in Sources */,
 				91AF74811EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift in Sources */,
 				3DEE9A131EC0D5EE00CA8B8D /* MenuViewController.swift in Sources */,
+				88C4007D205D720D00CF1E9D /* Wizard3ViewController.swift in Sources */,
 				73132C2220075290002B690B /* MapBack.swift in Sources */,
 				3D0148791EC06BAA00804F54 /* CustomButton.swift in Sources */,
 				737107412046FC090092689D /* AppNC.swift in Sources */,
@@ -836,6 +853,7 @@
 				91AF74851EC9C9E100DAD6D1 /* ProgramInfoViewController.swift in Sources */,
 				73132C24200F5013002B690B /* SettingCell.swift in Sources */,
 				3DEE9A211EC0FA7A00CA8B8D /* MenuItem.swift in Sources */,
+				88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */,
 				73132C2020070439002B690B /* GuardsMapViewController.swift in Sources */,
 				E6E957E91EFBACA700C5CA3E /* DecideViewController.swift in Sources */,
 				3D7D71281EBCC2E900E71211 /* SplashViewController.swift in Sources */,
@@ -856,6 +874,8 @@
 				3D5F21921EBDCD460044A9A8 /* UserData.swift in Sources */,
 				7371073D2046FA0C0092689D /* HalfModalInteractiveTransition.swift in Sources */,
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
+				88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */,
+				88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */,
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
 				7303FF761FB9886500247D54 /* AppDelegate.swift in Sources */,
 				3DE201201EC8B8D4004B19EB /* Program.swift in Sources */,

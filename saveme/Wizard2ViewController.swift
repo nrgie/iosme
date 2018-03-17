@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 
-class Wizard1ViewController : UIViewController {
+class Wizard2ViewController : UIViewController {
 
     
+
 }
