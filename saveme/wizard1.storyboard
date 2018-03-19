@@ -33,15 +33,15 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-4" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXO-r7-yt1">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w7-bf-Jb6">
-                                        <rect key="frame" x="28" y="22" width="45" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w7-bf-Jb6">
+                                        <rect key="frame" x="28" y="22" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="rZm-MH-VVZ"/>
                                         </constraints>
-                                        <state key="normal" image="infoButton"/>
+                                        <state key="normal" image="help_icon_white"/>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-pp-D80">
-                                        <rect key="frame" x="81" y="3" width="146" height="62"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-pp-D80">
+                                        <rect key="frame" x="87" y="12" width="146" height="62"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -544,7 +544,7 @@
     </scenes>
     <resources>
         <image name="avatar" width="640" height="570"/>
-        <image name="infoButton" width="22" height="22"/>
+        <image name="help_icon_white" width="181" height="179"/>
         <image name="logo" width="150" height="156"/>
         <image name="red-4" width="2560" height="1920"/>
     </resources>
