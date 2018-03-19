@@ -1,12 +1,5 @@
-//
-//  DataStore.swift
-//  eletmodvaltok
-//
-//  Created by Imre Ujlaki on 2017. 05. 08..
-//  Copyright © 2017. CodeYard. All rights reserved.
-//
-
 import Foundation
+import ObjectMapper
 
 class DataStore {
     
@@ -30,6 +23,24 @@ class DataStore {
     private func readValue(for key: String) -> Any? {
         return UserDefaults.standard.object(forKey: key)
     }
+    
+    public func syncUser() {
+        if userData != nil {
+            let json = userData?.toJSONString(prettyPrint: false)
+            self.persist(value: json, key: Constants.DataKeys.AccessTokenKey)
+        }
+        // ide egy ajax küldő.
+    }
+    
+    public func fillUser() {
+        if(getAccessToken() != nil) {
+            let user = UserData(JSONString: getAccessToken()!)
+            userData = user
+        } else {
+            userData = UserData()
+        }
+    }
+    
     
     public func getAccessToken() -> String? {
         return self.readValue(for: Constants.DataKeys.AccessTokenKey) as? String
@@ -82,5 +93,17 @@ class DataStore {
             queries[program.id] = query
         })
         return queries
+    }
+}
+
+extension NSObject {
+    func safeValue(forKey key: String) -> Any? {
+        let copy = Mirror(reflecting: self)
+        for child in copy.children.makeIterator() {
+            if let label = child.label, label == key {
+                return child.value
+            }
+        }
+        return nil
     }
 }

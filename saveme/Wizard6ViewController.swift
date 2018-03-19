@@ -14,9 +14,7 @@ class ProductView: UIView {
     
     @IBOutlet weak var sw: UISwitch!
     @IBAction func swact(_ sender: Any) {
-        
     }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -74,6 +72,11 @@ class ProductsAdapter: Adapter {
 
 class Wizard6ViewController : UIViewController {
 
+    var spage: Bool = false
+    public func forSettings() {
+        spage = true
+    }
+    
     @IBOutlet weak var listview: RollView!
     
     override func viewDidLoad() {

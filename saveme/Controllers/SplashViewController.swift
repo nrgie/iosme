@@ -108,6 +108,12 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if DataStore.shared.getAccessToken() != nil {
+            DataStore.shared.fillUser()
+            return self.showMainScreen()
+        }
         
         // Add a custom login button to your app
         //let myLoginButton = UIButton(type: .Custom)]
@@ -119,10 +125,6 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         let myLoginButton = LoginButton(readPermissions: [ .publicProfile ])
         myLoginButton.center = view.center
         
-        if DataStore.shared.getAccessToken() != nil {
-            self.showMainScreen()
-        }
-        
         terms.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(userDidTapLabel(tapGestureRecognizer:)))
         terms.addGestureRecognizer(tapGesture)
@@ -131,8 +133,7 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         //UIApplication.shared.open(number);
         //myLoginButton.addTarget(self, action: @selector(self.loginButtonClicked) forControlEvents: .TouchUpInside)
         //view.addSubview(myLoginButton)
-        /*
-        */
+
     }
 
     func showWizardScreen(){

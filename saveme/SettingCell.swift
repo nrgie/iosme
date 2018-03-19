@@ -28,7 +28,6 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
     
     var imagepicker = UIImagePickerController()
     
-    
     override func layoutSubviews() {
         //insideView.layer.cornerRadius = cornerRadius
         //let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
@@ -147,6 +146,45 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
     func tap(){
         print(self.key.text!)
         print(self.sepText.text!)
+
+        
+        if self.sepText.text == "w1" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard1", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard1") as! Wizard1ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        if self.sepText.text == "w2" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard2", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard2") as! Wizard2ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        if self.sepText.text == "w3" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard3", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard3") as! Wizard3ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        if self.sepText.text == "w4" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard4", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard4") as! Wizard4ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        if self.sepText.text == "w5" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard5", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard5") as! Wizard5ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        if self.sepText.text == "w6" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard6", bundle: nil)
+            let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard6") as! Wizard6ViewController
+            c.spage = true
+            UIApplication.shared.delegate?.window??.rootViewController = c
+        }
+        
         
         if self.sepText.text == "studentmode" {
             print("EXIT!")
@@ -195,7 +233,6 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
                 imagepicker.allowsEditing = false
                 
                 UIApplication.shared.keyWindow?.rootViewController?.present(imagepicker, animated: true, completion: nil)
-                
                 
             }
             

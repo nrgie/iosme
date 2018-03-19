@@ -12,6 +12,11 @@ import UIKit
 
 class Wizard4ViewController : UIViewController {
 
+    var spage: Bool = false
+    public func forSettings() {
+        spage = true
+    }
+    
     @IBAction func prev(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard3", bundle: nil)
         let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard3") as! Wizard3ViewController

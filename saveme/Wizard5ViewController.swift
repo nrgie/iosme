@@ -12,6 +12,10 @@ import UIKit
 
 class Wizard5ViewController : UIViewController {
 
+    var spage: Bool = false
+    public func forSettings() {
+        spage = true
+    }
     
     @IBAction func prev(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard4", bundle: nil)

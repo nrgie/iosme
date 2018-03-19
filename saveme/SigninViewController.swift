@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Alamofire
+import ObjectMapper
 
 class SigninPageViewController : UIViewController {
     
@@ -19,8 +20,6 @@ class SigninPageViewController : UIViewController {
     @IBOutlet weak var passF: UITextField!
     
     let disposeBag: DisposeBag = DisposeBag()
-    
-    
     
     override func viewDidLoad() {
         self.emailF.registerForDismiss()
@@ -94,11 +93,20 @@ class SigninPageViewController : UIViewController {
                 MessageUtils.show(message: "Invalid User Login".localized, with: "Error".localized, on: self)
                 
             } else {
+                
+                //let json : AnyObject! = JSONSerialization.JSONObjectWithData(responseString, options: JSONSerialization.ReadingOptions.MutableContainers, error: error)
+
+                let user = UserData(JSONString: responseString!)
+                DataStore.shared.userData = user
+                
+                
                 //DataStore.shared.userData = resuserDataResponse?.userData.first
+//                let userarr: Array<UserData> = Mapper<UserData>().mapArray(JSONString: responseString!)
+
                 
-               DataStore.shared.setAccessToken(token: responseString!)
                 
-               NotificationCenter.default.post(name: Constants.Notifications.UserLoggedInNotification, object: nil, userInfo: nil)
+                DataStore.shared.setAccessToken(token: responseString!)
+                NotificationCenter.default.post(name: Constants.Notifications.UserLoggedInNotification, object: nil, userInfo: nil)
                 
             }
             

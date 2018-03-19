@@ -42,12 +42,12 @@ class SettingsViewController: UITableViewController {
             
             Setting("", "detailsettings".localized, "", "separator"),
             
-            Setting("male", "generalsettings".localized, "", "studentmode"),
-            Setting("vcard", "sublabel_contact".localized, "", "contactpage"),
-            Setting("list", "medilabel".localized, "", "medicalpage"),
-            Setting("peoples", "guardshandling".localized, "", "guardspage"),
-            Setting("shield", "protectedstracking".localized, "", "protectsmap"),
-            Setting("alert", "signalsetup".localized, "", "emergenypage"),
+            Setting("male", "generalsettings".localized, "", "w1"),
+            Setting("vcard", "sublabel_contact".localized, "", "w2"),
+            Setting("list", "medilabel".localized, "", "w3"),
+            Setting("peoples", "guardshandling".localized, "", "w4"),
+            Setting("shield", "protectedstracking".localized, "", "w5"),
+            Setting("alert", "signalsetup".localized, "", "w6"),
 
             Setting("", "informations".localized, "", "separator"),
             

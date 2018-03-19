@@ -95,6 +95,13 @@
 		882DB681205FA4EE00C37F85 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB67C205FA4EE00C37F85 /* Adapter.swift */; };
 		882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB67D205FA4EE00C37F85 /* ContainerView.swift */; };
 		882DB684205FA7E200C37F85 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB683205FA7E100C37F85 /* ProductView.xib */; };
+		882DB686205FC0A400C37F85 /* fullname.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882DB685205FC0A400C37F85 /* fullname.storyboard */; };
+		882DB688205FCC2F00C37F85 /* Setting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB687205FCC2F00C37F85 /* Setting.xib */; };
+		882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */; };
+		882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB68B205FCFE200C37F85 /* SettingView.swift */; };
+		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
+		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
+		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
 		88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40070205D715800CF1E9D /* wizard2.storyboard */; };
 		88C40073205D716900CF1E9D /* wizard3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40072205D716900CF1E9D /* wizard3.storyboard */; };
 		88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40074205D717600CF1E9D /* wizard4.storyboard */; };
@@ -105,6 +112,7 @@
 		88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */; };
 		88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40080205D722500CF1E9D /* Wizard5ViewController.swift */; };
 		88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40082205D723100CF1E9D /* Wizard6ViewController.swift */; };
+		88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
 		9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6951EC444D9005167B6 /* CustomCalendar.swift */; };
@@ -245,6 +253,13 @@
 		882DB67C205FA4EE00C37F85 /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		882DB67D205FA4EE00C37F85 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		882DB683205FA7E100C37F85 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
+		882DB685205FC0A400C37F85 /* fullname.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = fullname.storyboard; sourceTree = "<group>"; };
+		882DB687205FCC2F00C37F85 /* Setting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Setting.xib; sourceTree = "<group>"; };
+		882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAvatarView.swift; sourceTree = "<group>"; };
+		882DB68B205FCFE200C37F85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
+		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
 		88C40070205D715800CF1E9D /* wizard2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard2.storyboard; sourceTree = "<group>"; };
 		88C40072205D716900CF1E9D /* wizard3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard3.storyboard; sourceTree = "<group>"; };
 		88C40074205D717600CF1E9D /* wizard4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard4.storyboard; sourceTree = "<group>"; };
@@ -255,6 +270,7 @@
 		88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard4ViewController.swift; sourceTree = "<group>"; };
 		88C40080205D722500CF1E9D /* Wizard5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard5ViewController.swift; sourceTree = "<group>"; };
 		88C40082205D723100CF1E9D /* Wizard6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard6ViewController.swift; sourceTree = "<group>"; };
+		88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListAdapter.swift; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
 		9109E6951EC444D9005167B6 /* CustomCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCalendar.swift; path = Views/CustomCalendar.swift; sourceTree = "<group>"; };
@@ -341,6 +357,7 @@
 		3D3B1ADC1EBCBC17005DE871 /* saveme */ = {
 			isa = PBXGroup;
 			children = (
+				88DFFC0A205FD36C007EF3F7 /* adapter */,
 				882DB672205FA4BF00C37F85 /* Pool */,
 				882DB671205FA4B600C37F85 /* Roll */,
 				737107312046D9A90092689D /* saveme.entitlements */,
@@ -362,6 +379,7 @@
 				88C40074205D717600CF1E9D /* wizard4.storyboard */,
 				88C40076205D718500CF1E9D /* wizard5.storyboard */,
 				88C40078205D719A00CF1E9D /* wizard6.storyboard */,
+				882DB685205FC0A400C37F85 /* fullname.storyboard */,
 				7373DA58200653F100DC77E8 /* base.storyboard */,
 				738BF2F020177FE400773420 /* medical.storyboard */,
 				3D3B1AE91EBCBC17005DE871 /* Info.plist */,
@@ -415,6 +433,8 @@
 				910C08431EC5A23300D25694 /* PageIndicatorView.swift */,
 				91AF74821EC9ADD100DAD6D1 /* RecommendationCell.swift */,
 				73132C23200F5013002B690B /* SettingCell.swift */,
+				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
+				88BA887520603D530028C5AF /* FullNameDialog.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -480,6 +500,7 @@
 				3D5F21951EBF64960044A9A8 /* Theme.swift */,
 				3D0148801EC0B89900804F54 /* String+Locale.swift */,
 				737A4E7F2047932600D38D16 /* LocationManager.swift */,
+				88BA88712060125E0028C5AF /* UIGesture.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -502,6 +523,8 @@
 				3DE2011F1EC8B8D4004B19EB /* Program.swift */,
 				735778C5200F59AE00D3AFF0 /* Setting.swift */,
 				3D32ACE71ECA02BD00F7BE98 /* Page.swift */,
+				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
+				882DB68B205FCFE200C37F85 /* SettingView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -565,6 +588,7 @@
 				882DB67A205FA4EE00C37F85 /* RollView.swift */,
 				882DB683205FA7E100C37F85 /* ProductView.xib */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
+				882DB687205FCC2F00C37F85 /* Setting.xib */,
 			);
 			path = Roll;
 			sourceTree = "<group>";
@@ -577,6 +601,14 @@
 				882DB675205FA4CE00C37F85 /* PThreadMutex.swift */,
 			);
 			path = Pool;
+			sourceTree = "<group>";
+		};
+		88DFFC0A205FD36C007EF3F7 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */,
+			);
+			name = adapter;
 			sourceTree = "<group>";
 		};
 		E2A5507AB903D134B0630158 /* Frameworks */ = {
@@ -702,9 +734,11 @@
 				3DEE9A1D1EC0F68D00CA8B8D /* RobotoCondensed-Light.ttf in Resources */,
 				3D1A65C31EC3189E007F1C1F /* ProgressView.xib in Resources */,
 				3DEE9A1F1EC0F68D00CA8B8D /* RobotoCondensed-Regular.ttf in Resources */,
+				882DB688205FCC2F00C37F85 /* Setting.xib in Resources */,
 				7373DA59200653F100DC77E8 /* base.storyboard in Resources */,
 				3DEE9A1A1EC0F68D00CA8B8D /* RobotoCondensed-Bold.ttf in Resources */,
 				730B6FFA200626F400D83914 /* Settings.storyboard in Resources */,
+				882DB686205FC0A400C37F85 /* fullname.storyboard in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
@@ -852,6 +886,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
 				3D8BBD351EC0CC2100F459E7 /* UserResponse.swift in Sources */,
@@ -866,6 +901,7 @@
 				732D648B1F024587007142A6 /* SettingsViewController.swift in Sources */,
 				3D0148851EC0BFC000804F54 /* DataStore.swift in Sources */,
 				9109E69A1EC49F2B005167B6 /* QuestionnarieViewController.swift in Sources */,
+				882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */,
 				3DEE9A271EC1249B00CA8B8D /* CustomNavigationBar.swift in Sources */,
 				3D01487F1EC0B69200804F54 /* MessageUtils.swift in Sources */,
 				3DAF8BC71EC9A90E002E3A76 /* ProgressionCellView.swift in Sources */,
@@ -877,6 +913,7 @@
 				3D7D712F1EBCC75C00E71211 /* Constants.swift in Sources */,
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
 				3D0148871EC0C38F00804F54 /* UIColor+Hexa.swift in Sources */,
+				882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */,
 				3D62BA0C1EC5C87700F6B122 /* CustomNavigationController.swift in Sources */,
 				3DEE9A241EC0FD4700CA8B8D /* MenuItemCell.swift in Sources */,
 				7373DA5B2006574200DC77E8 /* BaseViewController.swift in Sources */,
@@ -887,6 +924,8 @@
 				73132C2220075290002B690B /* MapBack.swift in Sources */,
 				3D0148791EC06BAA00804F54 /* CustomButton.swift in Sources */,
 				882DB67F205FA4EE00C37F85 /* RollView.swift in Sources */,
+				88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */,
+				88BA88722060125E0028C5AF /* UIGesture.swift in Sources */,
 				882DB677205FA4CE00C37F85 /* Pool.swift in Sources */,
 				737107412046FC090092689D /* AppNC.swift in Sources */,
 				911EFA4C1EC0719700CF9ABF /* UserDataEditorEmbedViewController.swift in Sources */,
@@ -914,6 +953,7 @@
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
+				88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */,
 				3D5F21961EBF64960044A9A8 /* Theme.swift in Sources */,
 				737A4E802047932600D38D16 /* LocationManager.swift in Sources */,
 				9109E69C1EC4A093005167B6 /* AnswersCell.swift in Sources */,

@@ -12,6 +12,12 @@ import UIKit
 
 class Wizard2ViewController : UIViewController {
 
+    var spage: Bool = false
+    public func forSettings() {
+        spage = true
+    }
+    
+    
     @IBOutlet weak var snapvalue: UILabel!
     @IBOutlet weak var snapview: UIView!
     @IBOutlet weak var skypevalue: UILabel!

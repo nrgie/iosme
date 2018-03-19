@@ -14,6 +14,8 @@ class Setting: NSObject {
     var key: String!
     var value: String!
     var action: String!
+    var type: String!
+    var userfield: String!
     
     init(_ icon: String, _ key: String, _ value: String, _ action: String) {
         super.init()
@@ -21,5 +23,17 @@ class Setting: NSObject {
         self.key = key
         self.value = value
         self.action = action
+        self.type = ""
+        self.userfield = ""
+    }
+    
+    init(_ icon: String, _ key: String, _ value: String, _ action: String, _ type: String, _ userfield: String) {
+        super.init()
+        self.icon = icon
+        self.key = key
+        self.value = value
+        self.action = action
+        self.type = type
+        self.userfield = userfield
     }
 }

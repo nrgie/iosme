@@ -24,6 +24,7 @@ struct Constants {
     }
     
     struct Notifications {
+        static let ReloadListView = NSNotification.Name(rawValue: "RefreshListView")
         static let ToggleMenuNotification = NSNotification.Name(rawValue: "ToggleMenuNotification")
         static let ShowInfoNotification = NSNotification.Name(rawValue: "ShowInfoNotification")
         static let GoBackNotification = NSNotification.Name(rawValue: "GoBackNotification")

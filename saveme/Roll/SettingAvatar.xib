@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingAvatarView" customModule="saveme" customModuleProvider="target">
+            <connections>
+                <outlet property="avatar" destination="GLJ-rS-6mb" id="0Ug-S9-YVa"/>
+                <outlet property="key" destination="HI1-77-WYB" id="1YU-bG-53P"/>
+                <outlet property="value" destination="OzJ-fa-djd" id="hM8-kv-1PB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="icon" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-rS-6mb">
+                    <rect key="frame" x="10" y="6" width="40" height="40"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI1-77-WYB">
+                    <rect key="frame" x="58" y="4" width="204" height="26"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-fa-djd">
+                    <rect key="frame" x="58" y="22" width="204" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gq-Me-qZD">
+                    <rect key="frame" x="289" y="3" width="31" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="dAV-z3-R1g"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="›">
+                        <color key="titleColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="go:" destination="iN0-l3-epB" eventType="touchUpInside" id="IyB-63-Awk"/>
+                        <action selector="go:" destination="-1" eventType="touchUpInside" id="nVW-lK-OjV"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT4-gO-f33">
+                    <rect key="frame" x="10" y="49" width="298" height="1"/>
+                    <color key="backgroundColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qT4-gO-f33" firstAttribute="bottom" secondItem="6Gq-Me-qZD" secondAttribute="bottom" id="7aZ-pQ-cNr"/>
+                <constraint firstItem="6Gq-Me-qZD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8Am-Td-kji"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8TQ-da-D6o"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="trailing" secondItem="OzJ-fa-djd" secondAttribute="trailing" id="981-AA-gHb"/>
+                <constraint firstItem="qT4-gO-f33" firstAttribute="top" secondItem="HI1-77-WYB" secondAttribute="bottom" constant="19" id="AOT-On-0uE"/>
+                <constraint firstItem="6Gq-Me-qZD" firstAttribute="leading" secondItem="HI1-77-WYB" secondAttribute="trailing" constant="27" id="Cdk-rG-06b"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="leading" secondItem="OzJ-fa-djd" secondAttribute="leading" id="NL9-UU-8Z5"/>
+                <constraint firstItem="GLJ-rS-6mb" firstAttribute="leading" secondItem="qT4-gO-f33" secondAttribute="leading" id="Trm-xh-RpJ"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="leading" secondItem="GLJ-rS-6mb" secondAttribute="trailing" constant="8" symbolic="YES" id="Uyo-hg-J1l"/>
+                <constraint firstItem="GLJ-rS-6mb" firstAttribute="bottom" secondItem="OzJ-fa-djd" secondAttribute="bottom" id="VRM-1s-D2K"/>
+                <constraint firstItem="qT4-gO-f33" firstAttribute="top" secondItem="GLJ-rS-6mb" secondAttribute="bottom" constant="3" id="Zbb-Gs-jQG"/>
+                <constraint firstItem="GLJ-rS-6mb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="cTJ-KZ-gnI"/>
+                <constraint firstItem="6Gq-Me-qZD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="fme-8j-dE6"/>
+                <constraint firstAttribute="trailing" secondItem="6Gq-Me-qZD" secondAttribute="trailing" id="kv5-Eg-Do7"/>
+                <constraint firstAttribute="trailing" secondItem="qT4-gO-f33" secondAttribute="trailing" constant="12" id="lnG-Rm-w0k"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="mE0-aU-rTf"/>
+                <constraint firstItem="OzJ-fa-djd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="22" id="mVX-tY-b2j"/>
+                <constraint firstItem="GLJ-rS-6mb" firstAttribute="centerY" secondItem="6Gq-Me-qZD" secondAttribute="centerY" id="xqg-Py-RQs"/>
+                <constraint firstItem="GLJ-rS-6mb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="yCS-ta-EOE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-22" y="-435"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar" width="640" height="570"/>
+    </resources>
+</document>

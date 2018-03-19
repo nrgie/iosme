@@ -28,6 +28,7 @@
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-Ty-s4y">
                     <rect key="frame" x="233" y="7" width="51" height="31"/>
+                    <color key="onTintColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="swact:" destination="-1" eventType="valueChanged" id="gJe-vY-R41"/>
                     </connections>

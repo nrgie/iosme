@@ -3,14 +3,15 @@
 import Foundation
 import ObjectMapper
 
-class UserData : BaseResponse {
+class UserData : Mappable {
+    
     //var id: String!
 //    var userName: String!
  //   var firstName: String!
   //  var lastName: String!
     
     var email: String!
-    //var gender: String!
+    var gender: String!
     
     var fbid: String!;
     var name1: String!;
@@ -20,7 +21,6 @@ class UserData : BaseResponse {
     var national: String!;
     var bday: String!;
     var taj: String!;
-    
     var avatar: String!;
     
     var phoneprefix: String!;
@@ -38,7 +38,6 @@ class UserData : BaseResponse {
     var weight: String!;
     var allergy: String!;
     
-    
     /*
     var langs: Array<LangModel>!;
     var allergies: Array<AllergyModel>!;
@@ -50,7 +49,6 @@ class UserData : BaseResponse {
     var protecteds: Array<ProtectedModel>!;
     var guards: Array<UserData>!;
     */
-    
     
     var lat: String!;
     var lng: String!;
@@ -125,17 +123,28 @@ class UserData : BaseResponse {
  
     
     required init?(map: Map) {
-        super.init(map: map)
+        //super.init(map: map)
     }
     
-    override func mapping(map: Map) {
-        super.mapping(map: map)
+    func safe(key: String) -> Any? {
+        let copy = Mirror(reflecting: self)
+        for child in copy.children.makeIterator() {
+            if let label = child.label, label == key {
+                return child.value
+            }
+        }
+        return nil
+    }
+    
+    func mapping(map: Map) {
+        //super.mapping(map: map)
         fbid <- map["fbid"]
         name1 <- map["name1"]
         name2 <- map["name2"]
         name3 <- map["name3"]
         email <- map["email"]
         national <- map["national"]
+        gender <- map["gender"]
         bday <- map["bday"]
         taj <- map["taj"]
         avatar <- map["avatar"]
@@ -214,12 +223,15 @@ class UserData : BaseResponse {
         
     }
     
+    
+    
     init(
         fbid: String = "",
         name1: String = "",
         name2: String = "",
         name3: String = "",
         email: String = "",
+        gender: String = "",
         national: String = "",
         bday: String = "",
         taj: String = "",
@@ -297,7 +309,7 @@ class UserData : BaseResponse {
     
      ) {
         
-        super.init()!
+        //super.init()!
         
         self.fbid = fbid
         self.name1 = name1
@@ -305,6 +317,7 @@ class UserData : BaseResponse {
         self.name3  = name3
         self.email = email
         self.national = national
+        self.gender = gender
         self.bday = bday
         self.taj = taj
         self.avatar = avatar
