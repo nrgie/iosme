@@ -12,6 +12,16 @@ import UIKit
 
 class Wizard2ViewController : UIViewController {
 
+    @IBOutlet weak var snapvalue: UILabel!
+    @IBOutlet weak var snapview: UIView!
+    @IBOutlet weak var skypevalue: UILabel!
+    @IBOutlet weak var skypeview: UIView!
+    @IBOutlet weak var whatsvalue: UILabel!
+    @IBOutlet weak var whatsview: UIView!
+    @IBOutlet weak var vibervalue: UILabel!
+    @IBOutlet weak var viberview: UIView!
+    @IBOutlet weak var fbvalue: UILabel!
+    @IBOutlet weak var fbview: UIView!
     @IBAction func prev(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard1", bundle: nil)
         let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard1") as! Wizard1ViewController
