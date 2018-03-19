@@ -9,15 +9,10 @@ import MediaPlayer
 
 class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     
-    
-    
     @IBOutlet weak var modeLogo: UIImageView!
-  
     @IBOutlet weak var videobtn: UIButton!
-    
     @IBOutlet weak var terms: UILabel!
     @IBOutlet weak var fbbtn: UIButton!
-    
     @IBOutlet weak var checkbox: UIButton!
     
     var acceptterms: Bool = false
@@ -54,8 +49,6 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
                     let baseController = mainStoryboard.instantiateViewController(withIdentifier: "BaseViewController") as! BaseViewController
                     UIApplication.shared.delegate?.window??.rootViewController = baseController
                 }
-                
-                
             }
             
         }
@@ -71,16 +64,13 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         
         controller.player = player
         
+        /*
         self.addChildViewController(controller)
         self.view.addSubview(controller.view)
         controller.view.frame = self.view.frame
+        */
         
-        let btn = UIButton(type: .system)
-        
-        btn.setTitle("Back".localized, for: UIControlState.normal)
-        
-        btn.addTarget(self, action: #selector(endPlay), for: .touchUpInside)
-        controller.contentOverlayView?.addSubview(btn)
+        self.showDetailViewController(controller, sender: self)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(sender:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: item)
         player.play()
@@ -98,7 +88,10 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
     
     @IBAction func startup(_ sender: Any) {
 
-        self.showWizardScreen()
+        if(acceptterms) {
+            self.showWizardScreen()
+        }
+        
     }
     
     @IBOutlet weak var loginbtn: UIButton!
@@ -135,49 +128,10 @@ class SplashViewController : UIViewController, AVPlayerViewControllerDelegate {
         terms.addGestureRecognizer(tapGesture)
         
         //guard let number = URL(string:"tel://112") else { return; }
-        
         //UIApplication.shared.open(number);
-        
-        // Handle clicks on the button
         //myLoginButton.addTarget(self, action: @selector(self.loginButtonClicked) forControlEvents: .TouchUpInside)
-        
-        // Add the button to the view
         //view.addSubview(myLoginButton)
-        
         /*
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        if DataStore.shared.getAccessToken() != nil
-        {
-            RestClient.getUser(accessToken: DataStore.shared.getAccessToken()! , complitionBlock: { (error: String?, userResponse: UserResponse?) in
-                if error == nil {
-                    if userResponse!.userId != nil {
-                        
-                        RestClient.getUserData(userId: userResponse!.userId, accessToken: DataStore.shared.getAccessToken()!, complitionBlock: { (error: String?, userDataResponse: UserDataResponse?) in
-                            if error == nil {
-                                DataStore.shared.userData = userDataResponse?.userData.first
-                                DataStore.shared.subscriptions = userDataResponse?.userSubscriptions
-                                NotificationCenter.default.post(name: Constants.Notifications.UserLoggedInNotification, object: nil, userInfo: nil)
-                                self.showMainScreen()
-                            } else {
-                                MessageUtils.show(message: error!, with: "Error".localized, on: self)
-                            }
-                        })
-                        
-                        DataStore.shared.setUserId(userId: userResponse!.userId)
-                        
-                    } else {
-                        // no userid for saved token. do logout
-                        DataStore.shared.clearData()
-                        NotificationCenter.default.post(name: Constants.Notifications.UserLoggedOutNotification, object: nil, userInfo: nil)
-                        self.showMainScreen()
-                    }
-                } else {
-                    MessageUtils.show(message: error!, with: "Error".localized, on: self)
-                }
-            })
-        } else {
-            self.showMainScreen()
-        }
         */
     }
 

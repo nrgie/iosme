@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,17 @@
                         <viewControllerLayoutGuide type="bottom" id="fTz-Np-LBi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vyP-gw-0xz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="v18-yY-L6l">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="v18-yY-L6l">
+                                <rect key="frame" x="0.0" y="31" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Mc2-Rh-IMC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-lK-jaJ">
-                                <rect key="frame" x="0.0" y="116" width="375" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-lK-jaJ">
+                                <rect key="frame" x="0.0" y="120" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DXM-8t-yl2"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGu-e6-kH8">
-                                <rect key="frame" x="16" y="151" width="343" height="63"/>
+                                <rect key="frame" x="16" y="151" width="288" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="hxW-9k-jKh"/>
                                 </constraints>
@@ -48,17 +48,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj6-AQ-YZu">
-                                <rect key="frame" x="16" y="464" width="339" height="21"/>
+                                <rect key="frame" x="16" y="365" width="284" height="21"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="checkbox" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNp-dD-jUc">
-                                        <rect key="frame" x="16" y="-1" width="84" height="22"/>
+                                        <rect key="frame" x="16" y="-1" width="29" height="22"/>
                                         <state key="normal" image="checkboxUnchecked"/>
                                         <connections>
                                             <action selector="checking:" destination="d6Z-or-OHK" eventType="touchUpInside" id="phr-8u-aye"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="terms" text="I accept terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-xS-iBh">
-                                        <rect key="frame" x="108" y="-1" width="180" height="21"/>
+                                        <rect key="frame" x="53" y="-1" width="180" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fbbtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l11-D8-8bn">
-                                <rect key="frame" x="0.0" y="508" width="375" height="38"/>
+                                <rect key="frame" x="0.0" y="409" width="320" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="nuB-0I-lYh"/>
                                 </constraints>
@@ -86,18 +86,24 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="192-DG-2p8">
-                                <rect key="frame" x="0.0" y="577" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="478" width="320" height="51"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="login" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-1P-fxb">
-                                        <rect key="frame" x="54" y="11" width="45" height="30"/>
-                                        <state key="normal" title="LOGIN"/>
+                                        <rect key="frame" x="54" y="8" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginview:" destination="d6Z-or-OHK" eventType="touchUpInside" id="x2i-3k-Ral"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="start" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm6-Ee-nSL">
-                                        <rect key="frame" x="236" y="11" width="71" height="30"/>
-                                        <state key="normal" title="START UP"/>
+                                        <rect key="frame" x="161" y="8" width="91" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="START UP">
+                                            <color key="titleColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="startup:" destination="d6Z-or-OHK" eventType="touchUpInside" id="yzc-qa-9lc"/>
                                         </connections>
@@ -113,7 +119,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFill" restorationIdentifier="video" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-gU-Zug">
-                                <rect key="frame" x="16" y="229" width="339" height="209"/>
+                                <rect key="frame" x="16" y="229" width="284" height="110"/>
+                                <inset key="imageEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <state key="normal" title="Button" image="splashvideobg"/>
                                 <connections>
                                     <action selector="playvideo:" destination="d6Z-or-OHK" eventType="touchUpInside" id="3uK-7A-XtR"/>
