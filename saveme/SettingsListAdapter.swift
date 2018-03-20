@@ -25,77 +25,96 @@ class SettingsListAdapter: Adapter {
 
     func view(forPosition position: Int, convertView: UIView?) -> UIView {
         
-        let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
-        result.fill(with: items[position])
-        
         let item : Setting = items[position]
-
-        UITapGestureRecognizer(addToView: result) {
-            if item.action == "phone" {
-                var value = self.user?.safe(key: "phone")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.phone = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            if item.action == "email" {
-                var value = self.user?.safe(key: "email")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your email address".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.email = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            if item.action == "password" {
-                var value = self.user?.safe(key: "password")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your password".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.password = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
+        
+        if item.action == "name" {
             
-            if item.action == "bday" {
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
-                var date = dateFormatter.date(from: (self.user?.bday)!)
-                if date == nil {
-                    date = dateFormatter.date(from: "1980-01-01")
-                }
-                DatePickerDialog().show("Birth Day".localized, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: date!, datePickerMode: .date) {
-                    (date) -> Void in
-                    if let dt = date {
-                        let formatter = DateFormatter()
-                        formatter.dateFormat = "yyyy-MM-dd"
-                        self.user?.bday = formatter.string(from: dt)
+            let result : SettingAvatarView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingAvatarView
+            result.fill(with: items[position])
+            UITapGestureRecognizer(addToView: result) {
+                print("OK!")
+            }
+            result.isUserInteractionEnabled = true
+            return result
+            
+        } else {
+            
+            let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
+            result.fill(with: items[position])
+            result.isUserInteractionEnabled = true
+            
+            UITapGestureRecognizer(addToView: result) {
+                if item.action == "phone" {
+                    var value = self.user?.safe(key: "phone")
+                    if value == nil { value = "" }
+                    let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                    alert.addTextField { (textField) in textField.text = value as? String }
+                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
+                        self.user?.phone = alert?.textFields![0].text
                         self.reload()
+                    }))
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+                if item.action == "email" {
+                    var value = self.user?.safe(key: "email")
+                    if value == nil { value = "" }
+                    let alert = UIAlertController(title: "Fill your email address".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                    alert.addTextField { (textField) in textField.text = value as? String }
+                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
+                        self.user?.email = alert?.textFields![0].text
+                        self.reload()
+                    }))
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+                if item.action == "password" {
+                    var value = self.user?.safe(key: "password")
+                    if value == nil { value = "" }
+                    let alert = UIAlertController(title: "Fill your password".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                    alert.addTextField { (textField) in textField.text = value as? String }
+                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
+                        self.user?.password = alert?.textFields![0].text
+                        self.reload()
+                    }))
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+                
+                if item.action == "bday" {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    var date = dateFormatter.date(from: (self.user?.bday)!)
+                    if date == nil {
+                        date = dateFormatter.date(from: "1980-01-01")
+                    }
+                    DatePickerDialog().show("Birth Day".localized, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: date!, datePickerMode: .date) {
+                        (date) -> Void in
+                        if let dt = date {
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "yyyy-MM-dd"
+                            self.user?.bday = formatter.string(from: dt)
+                            self.reload()
+                        }
                     }
                 }
+                
             }
             
-            
-            
+            return result
         }
         
         
         
-        result.isUserInteractionEnabled = true
-        return result
 
     }
     
     func viewType(forPosition position: Int) -> UIView.Type {
-        return SettingView.self
+        
+        let item : Setting = items[position]
+        if item.action == "name" {
+            return SettingAvatarView.self
+        } else {
+            return SettingView.self
+        }
+
     }
     
     func reload() {

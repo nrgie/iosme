@@ -112,6 +112,11 @@
 		88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */; };
 		88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40080205D722500CF1E9D /* Wizard5ViewController.swift */; };
 		88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40082205D723100CF1E9D /* Wizard6ViewController.swift */; };
+		88D539DF2060E3F10089F7E2 /* SettingAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */; };
+		88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D539E02060F00B0089F7E2 /* SettingIcon.xib */; };
+		88D539E32060F01B0089F7E2 /* SettingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E22060F01B0089F7E2 /* SettingIconView.swift */; };
+		88D539E52060F4A00089F7E2 /* SettingsContactListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */; };
+		88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */; };
 		88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
@@ -270,6 +275,11 @@
 		88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard4ViewController.swift; sourceTree = "<group>"; };
 		88C40080205D722500CF1E9D /* Wizard5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard5ViewController.swift; sourceTree = "<group>"; };
 		88C40082205D723100CF1E9D /* Wizard6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard6ViewController.swift; sourceTree = "<group>"; };
+		88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingAvatar.xib; sourceTree = "<group>"; };
+		88D539E02060F00B0089F7E2 /* SettingIcon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingIcon.xib; sourceTree = "<group>"; };
+		88D539E22060F01B0089F7E2 /* SettingIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIconView.swift; sourceTree = "<group>"; };
+		88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContactListAdapter.swift; sourceTree = "<group>"; };
+		88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHealthListAdapter.swift; sourceTree = "<group>"; };
 		88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListAdapter.swift; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
@@ -524,6 +534,7 @@
 				735778C5200F59AE00D3AFF0 /* Setting.swift */,
 				3D32ACE71ECA02BD00F7BE98 /* Page.swift */,
 				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
+				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
 			);
 			name = Models;
@@ -589,6 +600,8 @@
 				882DB683205FA7E100C37F85 /* ProductView.xib */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
+				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
+				88D539E02060F00B0089F7E2 /* SettingIcon.xib */,
 			);
 			path = Roll;
 			sourceTree = "<group>";
@@ -607,6 +620,8 @@
 			isa = PBXGroup;
 			children = (
 				88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */,
+				88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */,
+				88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -725,6 +740,7 @@
 				73B81AE21FBA056A0071EF66 /* GoogleService-Info.plist in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
+				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
 				7373DA552006513C00DC77E8 /* wizard1.storyboard in Resources */,
@@ -733,6 +749,7 @@
 				882DB680205FA4EE00C37F85 /* RollView.xib in Resources */,
 				3DEE9A1D1EC0F68D00CA8B8D /* RobotoCondensed-Light.ttf in Resources */,
 				3D1A65C31EC3189E007F1C1F /* ProgressView.xib in Resources */,
+				88D539DF2060E3F10089F7E2 /* SettingAvatar.xib in Resources */,
 				3DEE9A1F1EC0F68D00CA8B8D /* RobotoCondensed-Regular.ttf in Resources */,
 				882DB688205FCC2F00C37F85 /* Setting.xib in Resources */,
 				7373DA59200653F100DC77E8 /* base.storyboard in Resources */,
@@ -886,6 +903,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D539E32060F01B0089F7E2 /* SettingIconView.swift in Sources */,
 				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
@@ -893,6 +911,7 @@
 				880551AB205D69080065F766 /* FullNameVC.swift in Sources */,
 				9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */,
 				7371073F2046FA190092689D /* HalfModalPresentationController.swift in Sources */,
+				88D539E52060F4A00089F7E2 /* SettingsContactListAdapter.swift in Sources */,
 				3D32ACE81ECA02BD00F7BE98 /* Page.swift in Sources */,
 				882DB676205FA4CE00C37F85 /* Pooling.swift in Sources */,
 				3DEE9A2C1EC1B62000CA8B8D /* DrawerViewController.swift in Sources */,
@@ -910,6 +929,7 @@
 				910C08461EC6077300D25694 /* RecommendationsViewController.swift in Sources */,
 				3D5F21901EBDCCFA0044A9A8 /* UserDataResponse.swift in Sources */,
 				882DB681205FA4EE00C37F85 /* Adapter.swift in Sources */,
+				88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */,
 				3D7D712F1EBCC75C00E71211 /* Constants.swift in Sources */,
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
 				3D0148871EC0C38F00804F54 /* UIColor+Hexa.swift in Sources */,

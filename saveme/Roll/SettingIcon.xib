@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingAvatarView" customModule="saveme" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingIconView" customModule="saveme" customModuleProvider="target">
             <connections>
                 <outlet property="avatar" destination="OOG-Hj-RL3" id="OtY-vN-IJ3"/>
                 <outlet property="key" destination="HI1-77-WYB" id="f6k-Gh-8Le"/>

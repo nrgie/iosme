@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingAvatarView: UIView {
+class SettingIconView: UIView {
     
 
     @IBOutlet weak var key: UILabel!
@@ -19,7 +19,7 @@ class SettingAvatarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let contentView = Bundle.main.loadNibNamed("SettingAvatar", owner: self, options: nil)?.last as! UIView
+        let contentView = Bundle.main.loadNibNamed("SettingIcon", owner: self, options: nil)?.last as! UIView
         contentView.frame = bounds
         //contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         
@@ -29,6 +29,7 @@ class SettingAvatarView: UIView {
     func fill(with item: Setting) {
         key.text = item.key
         value.text = item.value
+        avatar.image = UIImage(named:item.icon!)
     }
     
     required init?(coder aDecoder: NSCoder) {

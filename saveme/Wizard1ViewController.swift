@@ -57,31 +57,6 @@ class Wizard1ViewController : UIViewController {
                 Setting("", "Parent Control", "", "parent")
         ]
  
-        /*
-        let adapter = ProductsAdapter()
-        adapter.products = [
-            
-            "SOS alert",
-            "Calling Emergency number in the background",
-            "SMS notification to Emergency number",
-            "Police Emergency Alert",
-            "Calling Police Emergency number in the background",
-            "SMS notification to Police Emergency number",
-            "Fire Department Emergency Alert",
-            "Calling Fire Department Emergency number in the background",
-            "SMS notification to Fire Department Emergency number",
-            "Ambulance Emergency Alert",
-            "Calling Ambulance Emergency number in the background",
-            "SMS notification to Ambulance Emergency number",
-            "Terrorist Attack Emergency Alert",
-            "Calling Emergency Number in the background",
-            "SMS to Emergency Number",
-            
-            "Notify your Guardian Angels by phone call in the background",
-            "Notify your Guardian Angels by sms in the background",
-            "Notify your Guardian Angels by e-mail",
-        ]
- */
         listview.adapter = adapter
         listview.reload()
     }
