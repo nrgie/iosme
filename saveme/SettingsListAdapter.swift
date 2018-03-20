@@ -32,12 +32,12 @@ class SettingsListAdapter: Adapter {
             let result : SettingAvatarView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingAvatarView
             result.fill(with: items[position])
             UITapGestureRecognizer(addToView: result) {
-                FullNameDialog().show("Birth Day".localized, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
+                FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {
                     (date) -> Void in
                     if let dt = date {
-                        let formatter = DateFormatter()
-                        formatter.dateFormat = "yyyy-MM-dd"
-                        self.user?.bday = formatter.string(from: dt)
+                        //let formatter = DateFormatter()
+                        //formatter.dateFormat = "yyyy-MM-dd"
+                        //self.user?.bday = formatter.string(from: dt)
                         self.reload()
                     }
                 }

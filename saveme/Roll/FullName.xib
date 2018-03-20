@@ -15,7 +15,14 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullNameView" customModule="saveme" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullNameView" customModule="saveme" customModuleProvider="target">
+            <connections>
+                <outlet property="av" destination="OOG-Hj-RL3" id="gEm-Hw-NrW"/>
+                <outlet property="n1txt" destination="QvM-47-r4f" id="4bk-hV-DBQ"/>
+                <outlet property="n2txt" destination="imx-6X-PCr" id="wuD-of-Bpm"/>
+                <outlet property="n3txt" destination="02K-l1-TKR" id="ELW-Mz-ELC"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="172" height="171"/>
@@ -50,18 +57,27 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <connections>
+                        <action selector="n1:" destination="-1" eventType="editingDidEnd" id="5mt-uH-fEJ"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imx-6X-PCr">
                     <rect key="frame" x="72" y="87" width="97" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <connections>
+                        <action selector="n2:" destination="-1" eventType="editingDidEnd" id="8tl-is-20f"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02K-l1-TKR">
                     <rect key="frame" x="72" y="141" width="97" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <connections>
+                        <action selector="n3:" destination="-1" eventType="editingDidEnd" id="kmQ-ao-sgB"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-GB-lhB">
                     <rect key="frame" x="9" y="109" width="46" height="30"/>
@@ -69,6 +85,9 @@
                     <state key="normal" title="Edit">
                         <color key="titleColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="editpic:" destination="-1" eventType="touchUpInside" id="5d5-NT-KD4"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="OOG-Hj-RL3">
                     <rect key="frame" x="9" y="33" width="46" height="60"/>

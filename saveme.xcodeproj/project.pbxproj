@@ -101,7 +101,7 @@
 		882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB68B205FCFE200C37F85 /* SettingView.swift */; };
 		8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */; };
 		8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0032061044E00FA4578 /* GuardListAdapter.swift */; };
-		8891F0062061109F00FA4578 /* FullNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8891F0052061109F00FA4578 /* FullNameView.xib */; };
+		8891F0062061109F00FA4578 /* FullName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8891F0052061109F00FA4578 /* FullName.xib */; };
 		8891F008206110B300FA4578 /* FullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F007206110B300FA4578 /* FullNameView.swift */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
@@ -268,7 +268,7 @@
 		882DB68B205FCFE200C37F85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNumbersListAdapter.swift; sourceTree = "<group>"; };
 		8891F0032061044E00FA4578 /* GuardListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardListAdapter.swift; sourceTree = "<group>"; };
-		8891F0052061109F00FA4578 /* FullNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullNameView.xib; sourceTree = "<group>"; };
+		8891F0052061109F00FA4578 /* FullName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullName.xib; sourceTree = "<group>"; };
 		8891F007206110B300FA4578 /* FullNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameView.swift; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
@@ -610,7 +610,7 @@
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
 				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
-				8891F0052061109F00FA4578 /* FullNameView.xib */,
+				8891F0052061109F00FA4578 /* FullName.xib */,
 				88D539E02060F00B0089F7E2 /* SettingIcon.xib */,
 			);
 			path = Roll;
@@ -752,7 +752,7 @@
 				73B81AE21FBA056A0071EF66 /* GoogleService-Info.plist in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
-				8891F0062061109F00FA4578 /* FullNameView.xib in Resources */,
+				8891F0062061109F00FA4578 /* FullName.xib in Resources */,
 				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
@@ -1154,7 +1154,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1169,6 +1170,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -1246,6 +1248,7 @@
 		737A4E7A20475D6C00D38D16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QL2865V3BX;
 				INFOPLIST_FILE = "SaveMe Quick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

@@ -84,7 +84,7 @@ open class FullNameDialog: UIView {
         self.frame = UIScreen.main.bounds
         let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         dialogView.frame = CGRect(x: (UIScreen.main.bounds.size.width - dialogSize.width) / 2,
-                                  y: (UIScreen.main.bounds.size.height - dialogSize.height) / 2,
+                                  y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)-120),
                                   width: dialogSize.width,
                                   height: dialogSize.height)
     }
@@ -128,6 +128,10 @@ open class FullNameDialog: UIView {
                                                selector: .deviceOrientationDidChange,
                                                name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: Selector("close"),
+                                               name: Constants.Notifications.CloseDialog, object: nil)
+        
         /* Anim */
         UIView.animate(
             withDuration: 0.2,
@@ -137,12 +141,12 @@ open class FullNameDialog: UIView {
                 self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
                 self.dialogView!.layer.opacity = 1
                 self.dialogView!.layer.transform = CATransform3DMakeScale(1, 1, 1)
-        }
+            }
         )
     }
     
     /// Dialog close animation then cleaning and removing the view from the parent
-    private func close() {
+    public func close() {
         let currentTransform = self.dialogView.layer.transform
         
         let startRotation = (self.value(forKeyPath: "layer.transform.rotation.z") as? NSNumber) as? Double ?? 0.0
@@ -175,21 +179,28 @@ open class FullNameDialog: UIView {
         let screenSize = UIScreen.main.bounds.size
         let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         
+        
+        
         // For the black background
         self.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         
         // This is the dialog's container; we attach the custom content and the buttons to this one
         let container = UIView(frame: CGRect(x: (screenSize.width - dialogSize.width) / 2,
-                                             y: (screenSize.height - dialogSize.height) / 2,
+                                             y: ((screenSize.height - dialogSize.height) / 2)-120,
                                              width: dialogSize.width,
                                              height: dialogSize.height))
         
         // First, we style the dialog to match the iOS8 UIAlertView >>>
         let gradient: CAGradientLayer = CAGradientLayer(layer: self.layer)
         gradient.frame = container.bounds
+        /*
         gradient.colors = [UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor,
                            UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1).cgColor,
                            UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor]
+        */
+        gradient.colors = [UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor,
+                           UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor,
+                           UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor]
         
         let cornerRadius = kCornerRadius
         gradient.cornerRadius = cornerRadius
@@ -232,19 +243,12 @@ open class FullNameDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> SettingAvatarView {
+    fileprivate func configureLayer() -> FullNameView {
+        // 40 label.
+        let contentFrame = CGRect(x:0, y:40, width: 300, height: 172)
         
-        let result : SettingAvatarView! = SettingAvatarView(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
+        let result : FullNameView! = FullNameView(frame: contentFrame)
         return result
-        /*
-        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
-        datePicker.setValue(self.textColor, forKeyPath: "textColor")
-        datePicker.autoresizingMask = .flexibleRightMargin
-        datePicker.frame.size.width = 300
-        datePicker.frame.size.height = 216
-        return datePicker
-        */
-        
     }
     
     /// Add buttons to container
