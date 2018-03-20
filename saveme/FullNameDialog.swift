@@ -232,14 +232,18 @@ open class FullNameDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> UIDatePicker {
+    fileprivate func configureLayer() -> SettingAvatarView {
         
+        let result : SettingAvatarView! = SettingAvatarView(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
+        return result
+        /*
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
         datePicker.setValue(self.textColor, forKeyPath: "textColor")
         datePicker.autoresizingMask = .flexibleRightMargin
         datePicker.frame.size.width = 300
         datePicker.frame.size.height = 216
         return datePicker
+        */
         
     }
     
@@ -295,7 +299,7 @@ open class FullNameDialog: UIView {
     
     @objc func buttonTapped(sender: UIButton!) {
         if sender.tag == kDoneButtonTag {
-            self.callback?(self.datePicker.date)
+            self.callback?(nil) //self.datePicker.date)
         } else {
             self.callback?(nil)
         }

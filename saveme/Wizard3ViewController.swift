@@ -51,12 +51,14 @@ class Wizard3ViewController : UIViewController {
         
         let adapter = SettingsHealthListAdapter()
         adapter.items = [
-            Setting("", "Social insurance number".localized, "", "facebook"),
-            Setting("", "Blood type".localized, "", "viber"),
-            Setting("", "Height".localized, "", "whatsapp"),
-            Setting("", "Weight".localized, "", "skype"),
-            Setting("", "Allergies".localized, "", "snapchat"),
-            
+            Setting("", "Social insurance number".localized, "", "insurance"),
+            Setting("", "Blood type".localized, "", "bloodtype"),
+            Setting("", "Height".localized, "", "height"),
+            Setting("", "Weight".localized, "", "weight"),
+            Setting("", "Allergies".localized, "", "allergies"),
+            Setting("", "Past or continues medial intervention".localized, "", "medinfo"),
+            Setting("", "Your permanent medicines".localized, "", "medicines"),
+            Setting("", "List of your doctors".localized, "", "doctors"),
         ]
        
         listview.adapter = adapter

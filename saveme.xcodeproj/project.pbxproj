@@ -99,6 +99,10 @@
 		882DB688205FCC2F00C37F85 /* Setting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB687205FCC2F00C37F85 /* Setting.xib */; };
 		882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */; };
 		882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB68B205FCFE200C37F85 /* SettingView.swift */; };
+		8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */; };
+		8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0032061044E00FA4578 /* GuardListAdapter.swift */; };
+		8891F0062061109F00FA4578 /* FullNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8891F0052061109F00FA4578 /* FullNameView.xib */; };
+		8891F008206110B300FA4578 /* FullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F007206110B300FA4578 /* FullNameView.swift */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
 		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
@@ -262,6 +266,10 @@
 		882DB687205FCC2F00C37F85 /* Setting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Setting.xib; sourceTree = "<group>"; };
 		882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAvatarView.swift; sourceTree = "<group>"; };
 		882DB68B205FCFE200C37F85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNumbersListAdapter.swift; sourceTree = "<group>"; };
+		8891F0032061044E00FA4578 /* GuardListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardListAdapter.swift; sourceTree = "<group>"; };
+		8891F0052061109F00FA4578 /* FullNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullNameView.xib; sourceTree = "<group>"; };
+		8891F007206110B300FA4578 /* FullNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameView.swift; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
@@ -534,6 +542,7 @@
 				735778C5200F59AE00D3AFF0 /* Setting.swift */,
 				3D32ACE71ECA02BD00F7BE98 /* Page.swift */,
 				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
+				8891F007206110B300FA4578 /* FullNameView.swift */,
 				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
 			);
@@ -601,6 +610,7 @@
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
 				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
+				8891F0052061109F00FA4578 /* FullNameView.xib */,
 				88D539E02060F00B0089F7E2 /* SettingIcon.xib */,
 			);
 			path = Roll;
@@ -622,6 +632,8 @@
 				88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */,
 				88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */,
 				88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */,
+				8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */,
+				8891F0032061044E00FA4578 /* GuardListAdapter.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -740,6 +752,7 @@
 				73B81AE21FBA056A0071EF66 /* GoogleService-Info.plist in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
+				8891F0062061109F00FA4578 /* FullNameView.xib in Resources */,
 				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
@@ -904,6 +917,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D539E32060F01B0089F7E2 /* SettingIconView.swift in Sources */,
+				8891F008206110B300FA4578 /* FullNameView.swift in Sources */,
 				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
@@ -936,6 +950,7 @@
 				882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */,
 				3D62BA0C1EC5C87700F6B122 /* CustomNavigationController.swift in Sources */,
 				3DEE9A241EC0FD4700CA8B8D /* MenuItemCell.swift in Sources */,
+				8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */,
 				7373DA5B2006574200DC77E8 /* BaseViewController.swift in Sources */,
 				732D648D1F0245C5007142A6 /* RunDay.swift in Sources */,
 				91AF74811EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift in Sources */,
@@ -966,6 +981,7 @@
 				88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */,
 				73132C2020070439002B690B /* GuardsMapViewController.swift in Sources */,
 				E6E957E91EFBACA700C5CA3E /* DecideViewController.swift in Sources */,
+				8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */,
 				3D7D71281EBCC2E900E71211 /* SplashViewController.swift in Sources */,
 				882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */,
 				910884B21EC98D7400B95B4C /* Intensity.swift in Sources */,

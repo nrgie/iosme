@@ -44,45 +44,14 @@ class Wizard5ViewController : UIViewController {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Constants.Notifications.ReloadListView, object: nil)
-        
-        //scroll.contentSize = CGSize();
-        //scoll.contentSize.height = 540
+
         listview.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         
-        let adapter = SettingsListAdapter()
+        let adapter = GuardListAdapter()
         adapter.items = [
-            Setting("facebook_ikon", "Facebook account".localized, "", "facebook"),
-            Setting("viber_ikon", "Viber".localized, "", "viber"),
-            Setting("whatsapp_ikon", "Whatsapp".localized, "", "whatsapp"),
-            Setting("skype_ikon", "Skype".localized, "", "skype"),
-            Setting("snapchat_ikon", "Snapchat".localized, "", "snapchat")
+            Setting("", "guard1".localized, "", "facebook")
         ]
-        
-        /*
-         let adapter = ProductsAdapter()
-         adapter.products = [
-         
-         "SOS alert",
-         "Calling Emergency number in the background",
-         "SMS notification to Emergency number",
-         "Police Emergency Alert",
-         "Calling Police Emergency number in the background",
-         "SMS notification to Police Emergency number",
-         "Fire Department Emergency Alert",
-         "Calling Fire Department Emergency number in the background",
-         "SMS notification to Fire Department Emergency number",
-         "Ambulance Emergency Alert",
-         "Calling Ambulance Emergency number in the background",
-         "SMS notification to Ambulance Emergency number",
-         "Terrorist Attack Emergency Alert",
-         "Calling Emergency Number in the background",
-         "SMS to Emergency Number",
-         
-         "Notify your Guardian Angels by phone call in the background",
-         "Notify your Guardian Angels by sms in the background",
-         "Notify your Guardian Angels by e-mail",
-         ]
-         */
+    
         listview.adapter = adapter
         listview.reload()
     }

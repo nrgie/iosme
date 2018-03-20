@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ObjectMapper
 
-class SettingsHealthListAdapter: Adapter {
+class SettingsNumbersListAdapter: Adapter {
 
     var items: [Setting]!
     let user = DataStore.shared.userData

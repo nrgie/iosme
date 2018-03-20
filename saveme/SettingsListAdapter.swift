@@ -32,7 +32,15 @@ class SettingsListAdapter: Adapter {
             let result : SettingAvatarView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingAvatarView
             result.fill(with: items[position])
             UITapGestureRecognizer(addToView: result) {
-                print("OK!")
+                FullNameDialog().show("Birth Day".localized, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
+                    (date) -> Void in
+                    if let dt = date {
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "yyyy-MM-dd"
+                        self.user?.bday = formatter.string(from: dt)
+                        self.reload()
+                    }
+                }
             }
             result.isUserInteractionEnabled = true
             return result
