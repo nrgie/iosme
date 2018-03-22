@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import Contacts
 import ContactsUI
+import EPContactsPicker
 
-class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
+class Wizard5ViewController : UIViewController, EPPickerDelegate {
 
     @IBOutlet weak var listview: RollView!
     
@@ -24,13 +25,45 @@ class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
     
     @IBAction func addnew(_ sender: Any) {
         self.askForContactAccess()
+        let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.email)
+        let navigationController = UINavigationController(rootViewController: contactPickerScene)
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    func epContactPicker(_: EPContactsPicker, didContactFetchFailed error : NSError) {
+        print("Failed with error \(error.description)")
+    }
+    
+    func epContactPicker(_: EPContactsPicker, didSelectContact contact : EPContact) {
+
+        let guser = UserData()
+        guser.name1 = contact.firstName
+        guser.name3 = contact.lastName
         
-        let contactPicker = CNContactPickerViewController()
-        contactPicker.delegate = self
-        contactPicker.predicateForEnablingContact = NSPredicate(format: "emailAddresses.@count > 0")
-        contactPicker.displayedPropertyKeys = [CNContactNicknameKey, CNContactEmailAddressesKey]
-        self.present(contactPicker, animated: true, completion: nil)
+        /*
+         birthday = Calendar(identifier: Calendar.Identifier.gregorian).date(from: birthdayDate)
+         let dateFormatter = DateFormatter()
+         dateFormatter.dateFormat = EPGlobalConstants.Strings.birdtdayDateFormat
+         //Example Date Formats:  Oct 4, Sep 18, Mar 9
+         birthdayString = dateFormatter.string(from: birthday!)
+         */
         
+        if contact.phoneNumbers.count > 0 {
+            guser.phone = contact.phoneNumbers[0].phoneNumber
+        }
+        
+        if contact.emails.count > 0 {
+            guser.email = contact.emails[0].email
+        }
+        guser.enabled = false
+    
+        DataStore.shared.userData?.guards.append(guser)
+        self.reload()
+        
+    }
+    
+    func epContactPicker(_: EPContactsPicker, didCancel error : NSError) {
+        print("User canceled the selection");
     }
     
     func askForContactAccess() {
@@ -57,34 +90,6 @@ class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
         }
     }
     
-    func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
-
-        print(contact)
-        let name1 = contact.givenName
-        let name3 = contact.familyName
-        var phone = ""
-        var email = ""
-        
-        if contact.phoneNumbers.count > 0 {
-            phone = ((contact.phoneNumbers[0].value as! CNPhoneNumber).value(forKey: "digits") as? String)!
-        }
-        
-        if contact.emailAddresses.count > 0 {
-            email = "\(contact.emailAddresses[0].value)"
-        }
-        
-        let guser = UserData()
-        
-        guser.name1 = name1
-        guser.name3 = name3
-        guser.phone = phone
-        guser.email = email
-        
-        //DataStore.shared.userData.guards
-        
-        //NotificationCenter.default.postNotificationName("addNewContact", object: nil, object: ["contactToAdd": contact])
-    }
-    
     @IBAction func prev(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard4", bundle: nil)
         let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "wizard4") as! Wizard4ViewController
@@ -105,8 +110,6 @@ class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
         
         super.viewDidLoad()
         
-        self.askForContactAccess()  
-        
         if spage == true {
             // ide kellene amit elrejtünk. pl. back és save gombok. a lap alján a nevük és a funk hozzá.
         }
@@ -116,9 +119,7 @@ class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
         listview.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         
         let adapter = GuardListAdapter()
-        adapter.items = [
-            //Setting("", "guard1".localized, "", "facebook")
-        ]
+        adapter.items = DataStore.shared.userData?.guards
     
         listview.adapter = adapter
         listview.reload()

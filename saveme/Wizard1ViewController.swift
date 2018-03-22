@@ -38,11 +38,7 @@ class Wizard1ViewController : UIViewController {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Constants.Notifications.ReloadListView, object: nil)
-        
-        //scroll.contentSize = CGSize();
-        //scoll.contentSize.height = 540
         listview.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
-        
         let adapter = SettingsListAdapter()
         adapter.items = [
                 Setting("", "Fullname", "", "name"),

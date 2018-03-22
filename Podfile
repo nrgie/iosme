@@ -29,6 +29,6 @@ target 'saveme' do
   pod 'PureLayout'
   pod 'PopupDialog', '~> 0.5.4'
   pod 'CountryPickerSwift', '1.4.4'
-  pod 'Pooling', '1.0.1'
+  pod 'EPContactsPicker'
   pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 end

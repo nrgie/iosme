@@ -129,6 +129,11 @@
 		88E4952A206391EE001584E9 /* MedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E49529206391EE001584E9 /* MedModel.swift */; };
 		88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952B2063926D001584E9 /* MedicalModel.swift */; };
 		88E4952E206392AF001584E9 /* PendingGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952D206392AF001584E9 /* PendingGuard.swift */; };
+		88E495302063AF6A001584E9 /* QuickSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */; };
+		88E495322063B8FE001584E9 /* QuickSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E495312063B8FE001584E9 /* QuickSettingsViewController.swift */; };
+		88E495342063BA0D001584E9 /* QucikSettingsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E495332063BA0D001584E9 /* QucikSettingsListAdapter.swift */; };
+		88E495362063D054001584E9 /* ListSeparator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E495352063D054001584E9 /* ListSeparator.xib */; };
+		88E495382063D0CB001584E9 /* ListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E495372063D0CB001584E9 /* ListSeparator.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
 		9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6951EC444D9005167B6 /* CustomCalendar.swift */; };
@@ -303,6 +308,11 @@
 		88E49529206391EE001584E9 /* MedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedModel.swift; sourceTree = "<group>"; };
 		88E4952B2063926D001584E9 /* MedicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalModel.swift; sourceTree = "<group>"; };
 		88E4952D206392AF001584E9 /* PendingGuard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingGuard.swift; sourceTree = "<group>"; };
+		88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickSettings.storyboard; sourceTree = "<group>"; };
+		88E495312063B8FE001584E9 /* QuickSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickSettingsViewController.swift; path = Controllers/QuickSettingsViewController.swift; sourceTree = "<group>"; };
+		88E495332063BA0D001584E9 /* QucikSettingsListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QucikSettingsListAdapter.swift; sourceTree = "<group>"; };
+		88E495352063D054001584E9 /* ListSeparator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSeparator.xib; sourceTree = "<group>"; };
+		88E495372063D0CB001584E9 /* ListSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSeparator.swift; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
 		9109E6951EC444D9005167B6 /* CustomCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCalendar.swift; path = Views/CustomCalendar.swift; sourceTree = "<group>"; };
@@ -408,6 +418,7 @@
 				7373DA542006513C00DC77E8 /* wizard1.storyboard */,
 				88C40070205D715800CF1E9D /* wizard2.storyboard */,
 				88C40072205D716900CF1E9D /* wizard3.storyboard */,
+				88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */,
 				88C40074205D717600CF1E9D /* wizard4.storyboard */,
 				88C40076205D718500CF1E9D /* wizard5.storyboard */,
 				88C40078205D719A00CF1E9D /* wizard6.storyboard */,
@@ -488,6 +499,7 @@
 				9109E6931EC35277005167B6 /* CalendarViewController.swift */,
 				73132C1B20068391002B690B /* SigninViewController.swift */,
 				732D648A1F024587007142A6 /* SettingsViewController.swift */,
+				88E495312063B8FE001584E9 /* QuickSettingsViewController.swift */,
 				7373DA56200651CD00DC77E8 /* Wizard1ViewController.swift */,
 				88C4007A205D71FA00CF1E9D /* Wizard2ViewController.swift */,
 				88C4007C205D720D00CF1E9D /* Wizard3ViewController.swift */,
@@ -566,6 +578,7 @@
 				8891F007206110B300FA4578 /* FullNameView.swift */,
 				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
+				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -628,6 +641,7 @@
 				882DB67D205FA4EE00C37F85 /* ContainerView.swift */,
 				882DB67A205FA4EE00C37F85 /* RollView.swift */,
 				882DB683205FA7E100C37F85 /* ProductView.xib */,
+				88E495352063D054001584E9 /* ListSeparator.xib */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
 				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
@@ -651,6 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */,
+				88E495332063BA0D001584E9 /* QucikSettingsListAdapter.swift */,
 				88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */,
 				88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */,
 				8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */,
@@ -775,6 +790,7 @@
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
 				8891F0062061109F00FA4578 /* FullName.xib in Resources */,
 				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
+				88E495302063AF6A001584E9 /* QuickSettings.storyboard in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
 				7373DA552006513C00DC77E8 /* wizard1.storyboard in Resources */,
@@ -796,6 +812,7 @@
 				88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */,
 				738BF2F120177FE400773420 /* medical.storyboard in Resources */,
 				3D3B1AE31EBCBC17005DE871 /* Main.storyboard in Resources */,
+				88E495362063D054001584E9 /* ListSeparator.xib in Resources */,
 				88C40073205D716900CF1E9D /* wizard3.storyboard in Resources */,
 				3DEE9A1B1EC0F68D00CA8B8D /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				3D7D71251EBCC07A00E71211 /* Splash.storyboard in Resources */,
@@ -826,6 +843,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CountryPickerSwift/CountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/EPContactsPicker/EPContactsPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
@@ -853,6 +871,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPContactsPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
@@ -965,6 +984,7 @@
 				910C08461EC6077300D25694 /* RecommendationsViewController.swift in Sources */,
 				3D5F21901EBDCCFA0044A9A8 /* UserDataResponse.swift in Sources */,
 				882DB681205FA4EE00C37F85 /* Adapter.swift in Sources */,
+				88E495342063BA0D001584E9 /* QucikSettingsListAdapter.swift in Sources */,
 				88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */,
 				3D7D712F1EBCC75C00E71211 /* Constants.swift in Sources */,
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
@@ -1032,10 +1052,12 @@
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
 				88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */,
 				88E4952A206391EE001584E9 /* MedModel.swift in Sources */,
+				88E495382063D0CB001584E9 /* ListSeparator.swift in Sources */,
 				7303FF761FB9886500247D54 /* AppDelegate.swift in Sources */,
 				88E4952620638FF1001584E9 /* DoctorModel.swift in Sources */,
 				3DE201201EC8B8D4004B19EB /* Program.swift in Sources */,
 				3D5F219F1EC05B340044A9A8 /* FATextfield.swift in Sources */,
+				88E495322063B8FE001584E9 /* QuickSettingsViewController.swift in Sources */,
 				3DEE9A111EC0D5C800CA8B8D /* WebController.swift in Sources */,
 				9164E97D1EC34FD200BFDD4E /* WeightInputViewController.swift in Sources */,
 				910C08441EC5A23300D25694 /* PageIndicatorView.swift in Sources */,

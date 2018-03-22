@@ -29,6 +29,7 @@ PODS:
   - CountryPickerSwift (1.4.4)
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
+  - EPContactsPicker (2.0.2)
   - Fabric (1.7.5)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
@@ -103,6 +104,7 @@ DEPENDENCIES:
   - CHIPageControl (~> 0.1.3)
   - CountryPickerSwift (= 1.4.4)
   - Crashlytics
+  - EPContactsPicker
   - Fabric
   - FacebookCore
   - FacebookLogin
@@ -130,6 +132,7 @@ SPEC CHECKSUMS:
   CHIPageControl: 79d19a8ee2e35fa3c1da6533adb5364c77b5cfea
   CountryPickerSwift: e31e67f2b95eb1fa6ad230e9eb0b49b020526d99
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  EPContactsPicker: 89b5702dd19564066c390febc8b59b8aa4737748
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
@@ -158,6 +161,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIImageViewAlignedSwift: 2e09096e6081ad26b848e19b4bc35a7d69165740
 
-PODFILE CHECKSUM: 53ffc5a68255a2987cb376832cafeb2f81ebde99
+PODFILE CHECKSUM: 05061b7bf4d09390b31a923ec1d7d5bc8e15b2d7
 
 COCOAPODS: 1.4.0

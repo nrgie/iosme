@@ -100,8 +100,8 @@ class BaseViewController : UIViewController {
     func settingsTap(gestureRecognizer: UITapGestureRecognizer){
         //let tappedImage = tapGestureRecognizer.view as! UIImageView
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "QuickSettings", bundle: nil)
+        let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "QuickSettings") as! QuickSettingsViewController
         UIApplication.shared.delegate?.window??.rootViewController = settingsController
         
     }

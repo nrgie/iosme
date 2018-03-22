@@ -75,8 +75,6 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
         }
         
         
-        
-        
         self.key.isUserInteractionEnabled = true
         self.go.isUserInteractionEnabled = true
         self.icon.isUserInteractionEnabled = true
@@ -138,9 +136,9 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
         
         newContainerViewFrame.size = CGSize(width:self.key.frame.size.width, height:newContainerViewHeight)
         
-        newContainerViewFrame.origin.y - containerViewHeightDifference
+        //newContainerViewFrame.origin.y - containerViewHeightDifference
         
-        self.key.frame = newContainerViewFrame
+        //self.key.frame = newContainerViewFrame
 
     }
     

@@ -61,7 +61,7 @@ class SettingsViewController: UITableViewController {
         
         ]
         
-        self.tableView.estimatedRowHeight = 40
+        self.tableView.estimatedRowHeight = 52
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.reloadData()
         
@@ -97,7 +97,7 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40.0
+        return 52.0
     }
  
     
