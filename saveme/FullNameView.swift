@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import Photos
+import OpalImagePicker
 
-class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class FullNameView: UIView, OpalImagePickerControllerDelegate {
     
     var imagepicker = UIImagePickerController()
     
@@ -43,10 +44,34 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
     
     @IBOutlet weak var av: UIImageView!
     
+    func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
+        
+    }
+
+    
     @IBAction func editpic(_ sender: Any) {
         
         checkPermission()
         
+        let imagePicker = OpalImagePickerController()
+        imagePicker.maximumSelectionsAllowed = 1
+        
+        NotificationCenter.default.post(name: Constants.Notifications.CloseDialog, object: nil, userInfo: nil)
+        
+        
+        imagePicker.imagePickerDelegate = self as! OpalImagePickerControllerDelegate
+        UIApplication.shared.keyWindow?.rootViewController?.present(imagePicker, animated: true, completion: nil)
+        
+        /*
+        presentOpalImagePickerController(imagePicker, animated: true,
+        select: { (assets) in
+           //Select Assets
+        }, cancel: {
+            //Cancel
+        })
+        */
+        
+        /*
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             print("Capture img")
             
@@ -56,8 +81,10 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
             UIApplication.shared.keyWindow?.rootViewController?.present(imagepicker, animated: true, completion: nil)
             
         }
+        */
         
     }
+    
     
     @IBOutlet weak var n1txt: UITextField!
     @IBOutlet weak var n2txt: UITextField!
@@ -78,9 +105,7 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
         DataStore.shared.userData?.name = n1txt.text! + " " + n2txt.text! + " " + n3txt.text!
         reload()
     }
-//    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-        //self.dismiss(animated:true, completion: { () -> Void in } )
-        
+    /*
      @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             
             //obtaining saving path
@@ -98,6 +123,7 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
         }
         imagepicker.dismiss(animated: true, completion: nil)
     }
+     */
   //  }
     
     func reload() {
@@ -140,9 +166,7 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
         n1txt.text = DataStore.shared.userData?.name1!
         n2txt.text = DataStore.shared.userData?.name2!
         n3txt.text = DataStore.shared.userData?.name3!
-        imagepicker.delegate = self
-        imagepicker.sourceType = .savedPhotosAlbum
-        imagepicker.allowsEditing = false
+      
     }
     
     override init(frame: CGRect) {
