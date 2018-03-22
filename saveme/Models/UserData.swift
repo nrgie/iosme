@@ -1,15 +1,8 @@
-
-
 import Foundation
 import ObjectMapper
 
 class UserData : Mappable {
-    
-    //var id: String!
-//    var userName: String!
- //   var firstName: String!
-  //  var lastName: String!
-    
+
     var email: String!
     var gender: String!
     
@@ -38,17 +31,15 @@ class UserData : Mappable {
     var weight: String!;
     var allergy: String!;
     
-    /*
     var langs: Array<LangModel>!;
     var allergies: Array<AllergyModel>!;
     var customallergies: Array<AllergyModel>!;
     var med: Array<MedModel>!;
     var medinfo: Array<MedicalModel>!;
-    var doctors: Array<DoctorModel>!;
     var pending : Array<PendingGuard>!;
+    var doctors: Array<DoctorModel>!;
     var protecteds: Array<ProtectedModel>!;
     var guards: Array<UserData>!;
-    */
     
     var lat: String!;
     var lng: String!;
@@ -218,8 +209,15 @@ class UserData : Mappable {
         registered <- map["registered"]
         datasetuped <- map["datasetuped"]
         enabled <- map["enabled"]
-
-        
+        langs <- map["langs"]
+        allergies <- map["allergies"]
+        customallergies <- map["customallergies"]
+        med <- map["med"]
+        medinfo <- map["medinfo"]
+        pending <- map["pending"]
+        doctors <- map["doctors"]
+        protecteds <- map["protecteds"]
+        guards <- map["guards"]
         
     }
     
@@ -305,8 +303,18 @@ class UserData : Mappable {
         rejected: Bool = false,
         registered: Bool = false,
         datasetuped: Bool = false,
-        enabled: Bool = false
-    
+        enabled: Bool = false,
+        
+        langs: Array<LangModel> = Array<LangModel>(),
+        allergies: Array<AllergyModel> = Array<AllergyModel>(),
+        customallergies: Array<AllergyModel> = Array<AllergyModel>(),
+        med: Array<MedModel> = Array<MedModel>(),
+        medinfo: Array<MedicalModel> = Array<MedicalModel>(),
+        pending: Array<PendingGuard> = Array<PendingGuard>(),
+        doctors: Array<DoctorModel> = Array<DoctorModel>(),
+        protecteds: Array<ProtectedModel> = Array<ProtectedModel>(),
+        guards: Array<UserData> = Array<UserData>()
+        
      ) {
         
         //super.init()!
@@ -391,6 +399,16 @@ class UserData : Mappable {
         self.registered = registered
         self.datasetuped = datasetuped
         self.enabled = enabled
+    
+        self.langs = langs
+        self.allergies = allergies
+        self.customallergies = customallergies
+        self.med = med
+        self.medinfo = medinfo
+        self.pending = pending
+        self.doctors = doctors
+        self.protecteds = protecteds
+        self.guards = guards
         
     }
 }

@@ -122,6 +122,13 @@
 		88D539E52060F4A00089F7E2 /* SettingsContactListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */; };
 		88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */; };
 		88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */; };
+		88E4952220638EB2001584E9 /* ProtectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952120638EB2001584E9 /* ProtectedModel.swift */; };
+		88E4952420638FA8001584E9 /* LangModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952320638FA8001584E9 /* LangModel.swift */; };
+		88E4952620638FF1001584E9 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952520638FF1001584E9 /* DoctorModel.swift */; };
+		88E4952820639130001584E9 /* AllergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952720639130001584E9 /* AllergyModel.swift */; };
+		88E4952A206391EE001584E9 /* MedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E49529206391EE001584E9 /* MedModel.swift */; };
+		88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952B2063926D001584E9 /* MedicalModel.swift */; };
+		88E4952E206392AF001584E9 /* PendingGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4952D206392AF001584E9 /* PendingGuard.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
 		9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6951EC444D9005167B6 /* CustomCalendar.swift */; };
@@ -289,6 +296,13 @@
 		88D539E42060F4A00089F7E2 /* SettingsContactListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContactListAdapter.swift; sourceTree = "<group>"; };
 		88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHealthListAdapter.swift; sourceTree = "<group>"; };
 		88DFFC0B205FD391007EF3F7 /* SettingsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListAdapter.swift; sourceTree = "<group>"; };
+		88E4952120638EB2001584E9 /* ProtectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedModel.swift; sourceTree = "<group>"; };
+		88E4952320638FA8001584E9 /* LangModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangModel.swift; sourceTree = "<group>"; };
+		88E4952520638FF1001584E9 /* DoctorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
+		88E4952720639130001584E9 /* AllergyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyModel.swift; sourceTree = "<group>"; };
+		88E49529206391EE001584E9 /* MedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedModel.swift; sourceTree = "<group>"; };
+		88E4952B2063926D001584E9 /* MedicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalModel.swift; sourceTree = "<group>"; };
+		88E4952D206392AF001584E9 /* PendingGuard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingGuard.swift; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
 		9109E6951EC444D9005167B6 /* CustomCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCalendar.swift; path = Views/CustomCalendar.swift; sourceTree = "<group>"; };
@@ -540,6 +554,13 @@
 				910884B11EC98D7400B95B4C /* Intensity.swift */,
 				3DE2011F1EC8B8D4004B19EB /* Program.swift */,
 				735778C5200F59AE00D3AFF0 /* Setting.swift */,
+				88E4952120638EB2001584E9 /* ProtectedModel.swift */,
+				88E4952520638FF1001584E9 /* DoctorModel.swift */,
+				88E4952D206392AF001584E9 /* PendingGuard.swift */,
+				88E4952320638FA8001584E9 /* LangModel.swift */,
+				88E4952B2063926D001584E9 /* MedicalModel.swift */,
+				88E49529206391EE001584E9 /* MedModel.swift */,
+				88E4952720639130001584E9 /* AllergyModel.swift */,
 				3D32ACE71ECA02BD00F7BE98 /* Page.swift */,
 				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
 				8891F007206110B300FA4578 /* FullNameView.swift */,
@@ -925,6 +946,7 @@
 				880551AB205D69080065F766 /* FullNameVC.swift in Sources */,
 				9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */,
 				7371073F2046FA190092689D /* HalfModalPresentationController.swift in Sources */,
+				88E4952820639130001584E9 /* AllergyModel.swift in Sources */,
 				88D539E52060F4A00089F7E2 /* SettingsContactListAdapter.swift in Sources */,
 				3D32ACE81ECA02BD00F7BE98 /* Page.swift in Sources */,
 				882DB676205FA4CE00C37F85 /* Pooling.swift in Sources */,
@@ -954,6 +976,7 @@
 				7373DA5B2006574200DC77E8 /* BaseViewController.swift in Sources */,
 				732D648D1F0245C5007142A6 /* RunDay.swift in Sources */,
 				91AF74811EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift in Sources */,
+				88E4952420638FA8001584E9 /* LangModel.swift in Sources */,
 				3DEE9A131EC0D5EE00CA8B8D /* MenuViewController.swift in Sources */,
 				88C4007D205D720D00CF1E9D /* Wizard3ViewController.swift in Sources */,
 				73132C2220075290002B690B /* MapBack.swift in Sources */,
@@ -990,6 +1013,7 @@
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
 				88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */,
+				88E4952220638EB2001584E9 /* ProtectedModel.swift in Sources */,
 				3D5F21961EBF64960044A9A8 /* Theme.swift in Sources */,
 				737A4E802047932600D38D16 /* LocationManager.swift in Sources */,
 				9109E69C1EC4A093005167B6 /* AnswersCell.swift in Sources */,
@@ -1004,8 +1028,12 @@
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
 				88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */,
 				88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */,
+				88E4952E206392AF001584E9 /* PendingGuard.swift in Sources */,
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
+				88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */,
+				88E4952A206391EE001584E9 /* MedModel.swift in Sources */,
 				7303FF761FB9886500247D54 /* AppDelegate.swift in Sources */,
+				88E4952620638FF1001584E9 /* DoctorModel.swift in Sources */,
 				3DE201201EC8B8D4004B19EB /* Program.swift in Sources */,
 				3D5F219F1EC05B340044A9A8 /* FATextfield.swift in Sources */,
 				3DEE9A111EC0D5C800CA8B8D /* WebController.swift in Sources */,
@@ -1195,7 +1223,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Onone";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.saveme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.savemepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1221,7 +1249,7 @@
 				INFOPLIST_FILE = saveme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.saveme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.savemepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1238,7 +1266,7 @@
 				DEVELOPMENT_TEAM = QL2865V3BX;
 				INFOPLIST_FILE = "SaveMe Quick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.saveme.quick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.savemepro.quick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1252,7 +1280,7 @@
 				DEVELOPMENT_TEAM = QL2865V3BX;
 				INFOPLIST_FILE = "SaveMe Quick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.saveme.quick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueobjectltd.savemepro.quick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

@@ -7,12 +7,25 @@
 		<key>SaveMe Quick.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>1</integer>
 		</dict>
 		<key>saveme.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3D3B1AD91EBCBC17005DE871</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>737A4E6B20475D6C00D38D16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

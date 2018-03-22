@@ -16,10 +16,10 @@ class Theme {
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navigationBarBG")!.resizableImage(withCapInsets: UIEdgeInsetsMake(30, 0, 30, 0), resizingMode: .stretch), for: .default)
         */
         
-        UINavigationBar.appearance().tintColor = .white
+        //UINavigationBar.appearance().tintColor = .white
         
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : self.robotoFont(size: 16.0), NSForegroundColorAttributeName: UIColor.white]
-        UINavigationBar.appearance().shadowImage = UIImage()
+        //UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : self.robotoFont(size: 16.0), NSForegroundColorAttributeName: UIColor.white]
+        //UINavigationBar.appearance().shadowImage = UIImage()
         
         
         (UIApplication.shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = UIColor(netHex: 0x000000)

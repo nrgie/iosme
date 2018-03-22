@@ -12,7 +12,7 @@ import ObjectMapper
 
 class GuardListAdapter: Adapter {
 
-    var items: [Setting]!
+    var items: [UserData]!
     let user = DataStore.shared.userData
     
     var count: Int {
@@ -25,13 +25,14 @@ class GuardListAdapter: Adapter {
 
     func view(forPosition position: Int, convertView: UIView?) -> UIView {
         
-        let item : Setting = items[position]
+        let item : UserData = items[position]
         
         let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
-        result.fill(with: items[position])
+        //result.fill(with: items[position])
         result.isUserInteractionEnabled = true
             
         UITapGestureRecognizer(addToView: result) {
+            /*
             if item.action == "facebook" {
                 var value = self.user?.safe(key: "facebook")
                 if value == nil { value = "" }
@@ -43,6 +44,7 @@ class GuardListAdapter: Adapter {
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
+            
             if item.action == "viber" {
                 var value = self.user?.safe(key: "viber")
                 if value == nil { value = "" }
@@ -87,6 +89,7 @@ class GuardListAdapter: Adapter {
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
+            */
         }
         return result
     }

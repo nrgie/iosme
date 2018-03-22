@@ -19,6 +19,11 @@ class SigninPageViewController : UIViewController {
     @IBOutlet weak var emailF: UITextField!
     @IBOutlet weak var passF: UITextField!
     
+    @IBAction func back(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Splash", bundle: nil)
+        let baseController = mainStoryboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
+        UIApplication.shared.delegate?.window??.rootViewController = baseController
+    }
     let disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {

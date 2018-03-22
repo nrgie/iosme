@@ -8,15 +8,81 @@
 
 import Foundation
 import UIKit
+import Contacts
+import ContactsUI
 
-
-class Wizard5ViewController : UIViewController {
+class Wizard5ViewController : UIViewController, CNContactPickerDelegate {
 
     @IBOutlet weak var listview: RollView!
+    
+    var contactStore = CNContactStore()
     
     var spage: Bool = false
     public func forSettings() {
         spage = true
+    }
+    
+    @IBAction func addnew(_ sender: Any) {
+        self.askForContactAccess()
+        
+        let contactPicker = CNContactPickerViewController()
+        contactPicker.delegate = self
+        contactPicker.predicateForEnablingContact = NSPredicate(format: "emailAddresses.@count > 0")
+        contactPicker.displayedPropertyKeys = [CNContactNicknameKey, CNContactEmailAddressesKey]
+        self.present(contactPicker, animated: true, completion: nil)
+        
+    }
+    
+    func askForContactAccess() {
+        let authorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
+        
+        switch authorizationStatus {
+        case .denied, .notDetermined:
+            self.contactStore.requestAccess(for: CNEntityType.contacts, completionHandler: { (access, accessError) -> Void in
+                if !access {
+                    if authorizationStatus == CNAuthorizationStatus.denied {
+                        DispatchQueue.main.async(){ () -> Void in
+                            let message = "\(accessError!.localizedDescription)\n\nPlease allow the app to access your contacts through the Settings."
+                            let alertController = UIAlertController(title: "Contacts", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                            let dismissAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action) -> Void in }
+                            alertController.addAction(dismissAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                    }
+                }
+            })
+            break
+        default:
+            break
+        }
+    }
+    
+    func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
+
+        print(contact)
+        let name1 = contact.givenName
+        let name3 = contact.familyName
+        var phone = ""
+        var email = ""
+        
+        if contact.phoneNumbers.count > 0 {
+            phone = ((contact.phoneNumbers[0].value as! CNPhoneNumber).value(forKey: "digits") as? String)!
+        }
+        
+        if contact.emailAddresses.count > 0 {
+            email = "\(contact.emailAddresses[0].value)"
+        }
+        
+        let guser = UserData()
+        
+        guser.name1 = name1
+        guser.name3 = name3
+        guser.phone = phone
+        guser.email = email
+        
+        //DataStore.shared.userData.guards
+        
+        //NotificationCenter.default.postNotificationName("addNewContact", object: nil, object: ["contactToAdd": contact])
     }
     
     @IBAction func prev(_ sender: Any) {
@@ -39,6 +105,8 @@ class Wizard5ViewController : UIViewController {
         
         super.viewDidLoad()
         
+        self.askForContactAccess()  
+        
         if spage == true {
             // ide kellene amit elrejtünk. pl. back és save gombok. a lap alján a nevük és a funk hozzá.
         }
@@ -49,7 +117,7 @@ class Wizard5ViewController : UIViewController {
         
         let adapter = GuardListAdapter()
         adapter.items = [
-            Setting("", "guard1".localized, "", "facebook")
+            //Setting("", "guard1".localized, "", "facebook")
         ]
     
         listview.adapter = adapter

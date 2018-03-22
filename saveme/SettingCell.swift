@@ -85,6 +85,10 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
         self.icon.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(SettingCell.tap)))
         self.go.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(SettingCell.tap)))
         
+        if self.val.text == "" {
+            self.updateKeyHeight(heightDifference: 50.0)
+        }
+        
         
         /*
         self.bg.sd_setImage(with: URL(string: self.day?.img ?? ""))
@@ -115,17 +119,15 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
     }
     
     
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         //super.setSelected(selected, animated: animated)
     }
     
-    func updateDescHeight(heightDifference: CGFloat) {
+    func updateKeyHeight(heightDifference: CGFloat) {
+    
+        var newContainerViewFrame: CGRect = self.key.frame
         
-        /*
-        var newContainerViewFrame: CGRect = self.desc.frame
-        
-        let containerViewHeight = self.desc.frame.size.height
+        let containerViewHeight = self.key.frame.size.height
         print("container view height: \(containerViewHeight)\n")
         
         let newContainerViewHeight = containerViewHeight + heightDifference
@@ -134,13 +136,12 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
         let containerViewHeightDifference = containerViewHeight - newContainerViewHeight
         print("container view height difference: \(containerViewHeightDifference)\n")
         
-        newContainerViewFrame.size = CGSize(width:self.desc.frame.size.width, height:newContainerViewHeight)
+        newContainerViewFrame.size = CGSize(width:self.key.frame.size.width, height:newContainerViewHeight)
         
         newContainerViewFrame.origin.y - containerViewHeightDifference
         
-        self.desc.frame = newContainerViewFrame
-        */
-        
+        self.key.frame = newContainerViewFrame
+
     }
     
     func tap(){
@@ -253,7 +254,5 @@ class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePicke
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         //self.dismiss(animated:true, completion: { () -> Void in } )
-
-        
     }
 }

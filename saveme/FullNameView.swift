@@ -8,13 +8,14 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var imagepicker = UIImagePickerController()
     
     func checkPermission() {
-        /*
+
         let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
         switch photoAuthorizationStatus {
         case .authorized:
@@ -36,7 +37,7 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
             // same same
             print("User has denied the permission.")
         }
- */
+
     }
     
     
@@ -44,10 +45,14 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
     
     @IBAction func editpic(_ sender: Any) {
         
+        checkPermission()
+        
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             print("Capture img")
             
             NotificationCenter.default.post(name: Constants.Notifications.CloseDialog, object: nil, userInfo: nil)
+            
+            imagepicker.modalPresentationStyle = .popover
             UIApplication.shared.keyWindow?.rootViewController?.present(imagepicker, animated: true, completion: nil)
             
         }
@@ -76,14 +81,14 @@ class FullNameView: UIView, UINavigationControllerDelegate, UIImagePickerControl
 //    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         //self.dismiss(animated:true, completion: { () -> Void in } )
         
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             
             //obtaining saving path
         let fileManager = FileManager.default
         let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
         let imagePath = documentsPath?.appendingPathComponent("avatar.jpg")
             
-            // extract image from the picker and save it
+        // extract image from the picker and save it
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             try! UIImageJPEGRepresentation(pickedImage, 0.0)?.write(to: imagePath!)
             
