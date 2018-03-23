@@ -116,6 +116,10 @@
 		88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */; };
 		88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40080205D722500CF1E9D /* Wizard5ViewController.swift */; };
 		88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C40082205D723100CF1E9D /* Wizard6ViewController.swift */; };
+		88CCC0292064F8C3002119CC /* SettingIconViewOneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */; };
+		88CCC02B2064F8D2002119CC /* SettingIconOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CCC02A2064F8D2002119CC /* SettingIconOne.xib */; };
+		88CCC02D206509EC002119CC /* wizardcontent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CCC02C206509EC002119CC /* wizardcontent.storyboard */; };
+		88CCC03120650CBE002119CC /* WizardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCC03020650CBE002119CC /* WizardContent.swift */; };
 		88D539DF2060E3F10089F7E2 /* SettingAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */; };
 		88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D539E02060F00B0089F7E2 /* SettingIcon.xib */; };
 		88D539E32060F01B0089F7E2 /* SettingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D539E22060F01B0089F7E2 /* SettingIconView.swift */; };
@@ -295,6 +299,10 @@
 		88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard4ViewController.swift; sourceTree = "<group>"; };
 		88C40080205D722500CF1E9D /* Wizard5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard5ViewController.swift; sourceTree = "<group>"; };
 		88C40082205D723100CF1E9D /* Wizard6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard6ViewController.swift; sourceTree = "<group>"; };
+		88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIconViewOneLine.swift; sourceTree = "<group>"; };
+		88CCC02A2064F8D2002119CC /* SettingIconOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingIconOne.xib; sourceTree = "<group>"; };
+		88CCC02C206509EC002119CC /* wizardcontent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = wizardcontent.storyboard; sourceTree = "<group>"; };
+		88CCC03020650CBE002119CC /* WizardContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardContent.swift; sourceTree = "<group>"; };
 		88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingAvatar.xib; sourceTree = "<group>"; };
 		88D539E02060F00B0089F7E2 /* SettingIcon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingIcon.xib; sourceTree = "<group>"; };
 		88D539E22060F01B0089F7E2 /* SettingIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIconView.swift; sourceTree = "<group>"; };
@@ -417,6 +425,7 @@
 				73132C1920066E65002B690B /* Login.storyboard */,
 				7373DA542006513C00DC77E8 /* wizard1.storyboard */,
 				88C40070205D715800CF1E9D /* wizard2.storyboard */,
+				88CCC02C206509EC002119CC /* wizardcontent.storyboard */,
 				88C40072205D716900CF1E9D /* wizard3.storyboard */,
 				88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */,
 				88C40074205D717600CF1E9D /* wizard4.storyboard */,
@@ -501,6 +510,7 @@
 				732D648A1F024587007142A6 /* SettingsViewController.swift */,
 				88E495312063B8FE001584E9 /* QuickSettingsViewController.swift */,
 				7373DA56200651CD00DC77E8 /* Wizard1ViewController.swift */,
+				88CCC03020650CBE002119CC /* WizardContent.swift */,
 				88C4007A205D71FA00CF1E9D /* Wizard2ViewController.swift */,
 				88C4007C205D720D00CF1E9D /* Wizard3ViewController.swift */,
 				88C4007E205D721900CF1E9D /* Wizard4ViewController.swift */,
@@ -577,6 +587,7 @@
 				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
 				8891F007206110B300FA4578 /* FullNameView.swift */,
 				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
+				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
 				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 			);
@@ -647,6 +658,7 @@
 				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
 				8891F0052061109F00FA4578 /* FullName.xib */,
 				88D539E02060F00B0089F7E2 /* SettingIcon.xib */,
+				88CCC02A2064F8D2002119CC /* SettingIconOne.xib */,
 			);
 			path = Roll;
 			sourceTree = "<group>";
@@ -784,6 +796,7 @@
 				3D3B1AE81EBCBC17005DE871 /* LaunchScreen.storyboard in Resources */,
 				73132C1A20066E65002B690B /* Login.storyboard in Resources */,
 				88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */,
+				88CCC02D206509EC002119CC /* wizardcontent.storyboard in Resources */,
 				73529F5B200F8C3000F5C9F5 /* Localizable.strings in Resources */,
 				73B81AE21FBA056A0071EF66 /* GoogleService-Info.plist in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
@@ -809,6 +822,7 @@
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
+				88CCC02B2064F8D2002119CC /* SettingIconOne.xib in Resources */,
 				88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */,
 				738BF2F120177FE400773420 /* medical.storyboard in Resources */,
 				3D3B1AE31EBCBC17005DE871 /* Main.storyboard in Resources */,
@@ -1007,6 +1021,7 @@
 				88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */,
 				88BA88722060125E0028C5AF /* UIGesture.swift in Sources */,
 				882DB677205FA4CE00C37F85 /* Pool.swift in Sources */,
+				88CCC0292064F8C3002119CC /* SettingIconViewOneLine.swift in Sources */,
 				737107412046FC090092689D /* AppNC.swift in Sources */,
 				911EFA4C1EC0719700CF9ABF /* UserDataEditorEmbedViewController.swift in Sources */,
 				911EFA4A1EC0715800CF9ABF /* RegistrationViewController.swift in Sources */,
@@ -1016,6 +1031,7 @@
 				882DB67E205FA4EE00C37F85 /* AdapterView.swift in Sources */,
 				3D5F21941EBDD2320044A9A8 /* Subscription.swift in Sources */,
 				732D648F1F0245F3007142A6 /* RunDayCell.swift in Sources */,
+				88CCC03120650CBE002119CC /* WizardContent.swift in Sources */,
 				911EFA501EC09FAD00CF9ABF /* CustomUIElements.swift in Sources */,
 				3D116C841EC36BAB00219929 /* ProgressView.swift in Sources */,
 				882DB678205FA4CE00C37F85 /* PThreadMutex.swift in Sources */,

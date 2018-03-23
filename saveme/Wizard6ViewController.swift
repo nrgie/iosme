@@ -86,7 +86,6 @@ class Wizard6ViewController : UIViewController {
         
         let adapter = ProductsAdapter()
         adapter.products = [
-
             "SOS alert",
             "Calling Emergency number in the background",
             "SMS notification to Emergency number",

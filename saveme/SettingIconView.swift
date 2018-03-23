@@ -30,15 +30,6 @@ class SettingIconView: UIView {
         value.text = item.value
         avatar.image = UIImage(named:item.icon!)
         
-        if item.value == "" {
-            let of = key.frame
-            key.frame = CGRect(x:of.minX, y:0, width:of.width, height:100)
-            key.baselineAdjustment = .alignCenters
-            print("-----")
-            print(key.frame)
-            print("-----")
-        }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -31,27 +31,27 @@ class QuickSettingsViewController: UIViewController {
             
             Setting("", "quicksettings".localized, "", "separator"),
             
-            Setting("pause", "learnmode".localized, "learnmodesub".localized, "studentmode"),
-            Setting("gps", "tracking".localized, "trackingsub".localized, "studentmode"),
-            Setting("flag", "currentcountry".localized, "currentcountrysub".localized, "studentmode"),
+            Setting("ic_pause_circle_outline_black_24dp", "learnmode".localized, "learnmodesub".localized, "studentmode"),
+            Setting("ic_gps_fixed_black_24dp", "tracking".localized, "trackingsub".localized, "studentmode"),
+            Setting("ic_flag_black_24dp", "currentcountry".localized, "currentcountrysub".localized, "studentmode"),
             
             Setting("", "detailsettings".localized, "", "separator"),
             
-            Setting("male", "generalsettings".localized, "", "w1"),
-            Setting("vcard", "sublabel_contact".localized, "", "w2"),
-            Setting("list", "medilabel".localized, "", "w3"),
-            Setting("peoples", "guardshandling".localized, "", "w4"),
-            Setting("shield", "protectedstracking".localized, "", "w5"),
-            Setting("alert", "signalsetup".localized, "", "w6"),
+            Setting("ic_verified_user_black_24dp", "generalsettings".localized, "", "w1"),
+            Setting("ic_contact_mail_black_24dp", "sublabel_contact".localized, "", "w2"),
+            Setting("ic_library_books_black_24dp", "medilabel".localized, "", "w3"),
+            Setting("ic_supervisor_account_black_24dp", "guardshandling".localized, "", "w4"),
+            //Setting("ic_verified_user_black_24dp", "protectedstracking".localized, "", "w5"),
+            Setting("ic_warning_black_24dp", "signalsetup".localized, "", "w6"),
 
             Setting("", "informations".localized, "", "separator"),
             
-            Setting("alert", "help".localized, "", "helppage"),
-            Setting("alert", "applang".localized, "", "langpage"),
-            Setting("alert", "terms".localized, "", "termspage"),
-            Setting("alert", "appinvite".localized, "", "invitepage"),
-            Setting("alert", "playdemosos".localized, "", "playsound"),
-            Setting("alert", "exit".localized, "", "exit")
+            Setting("ic_help_black_24dp", "help".localized, "", "helppage"),
+            Setting("ic_flag_black_24dp", "applang".localized, "", "langpage"),
+            Setting("ic_bookmark_border_black_24dp", "terms".localized, "", "termspage"),
+            Setting("ic_send_black_24dp", "appinvite".localized, "", "invitepage"),
+            Setting("ic_speaker_phone_black_24dp", "playdemosos".localized, "", "playsound"),
+            Setting("ic_clear_black_24dp", "exit".localized, "", "exit")
         
         ]
         
