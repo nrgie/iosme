@@ -13,8 +13,10 @@ import UIKit
 class WizardContent : UIViewController {
 
     @IBOutlet weak var listview: RollView!
+    @IBOutlet weak var uititle: UILabel!
     
     var pagetype: Int = 1
+    var label: String = "SETTINGS"
     
     public func forSettings(type:Int) {
         pagetype = type
@@ -35,6 +37,8 @@ class WizardContent : UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Constants.Notifications.ReloadListView, object: nil)
         listview.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
+        
+        uititle.text = label
         
         if pagetype == 1 {
             let adapter = SettingsListAdapter()
@@ -63,6 +67,8 @@ class WizardContent : UIViewController {
                 Setting("skype_ikon", "Skype".localized, "", "skype"),
                 Setting("snapchat_ikon", "Snapchat".localized, "", "snapchat")
             ]
+            listview.adapter = adapter
+            listview.reload()
         }
         
         if pagetype == 3 {

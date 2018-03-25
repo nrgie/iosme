@@ -271,7 +271,10 @@ open class OpalImagePickerRootViewController: UIViewController {
     }
     
     func doneTapped() {
+        
         guard let imagePicker = navigationController as? OpalImagePickerController else { return }
+        
+        print("DONE tapped")
         
         let indexPathsForSelectedItems = collectionView?.indexPathsForSelectedItems ?? []
         let externalIndexPaths = externalCollectionView?.indexPathsForSelectedItems ?? []
@@ -286,14 +289,31 @@ open class OpalImagePickerRootViewController: UIViewController {
             photoAssets += [self.photoAssets.object(at: indexPath.item)]
         }
         delegate?.imagePicker?(imagePicker, didFinishPickingAssets: photoAssets)
+        delegate?.imagePicker?(imagePicker, didFinishPickingImages: imagesDict.values.flatMap({ $0 }))
+        
+        let image = imagesDict.first?.value
+        
+        let fileManager = FileManager.default
+        let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        let imagePath = documentsPath?.appendingPathComponent("avatar.jpg")
+        try! UIImageJPEGRepresentation(image!, 0.0)?.write(to: imagePath!)
+        
+        print(imagePath?.absoluteString)
+        
+        DataStore.shared.userData?.avatar = imagePath?.absoluteString
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
+        
+        cancelTapped()
+        return
         
         var selectedURLs: [URL] = []
         for indexPath in externalIndexPaths {
             guard let url = delegate?.imagePicker?(imagePicker, imageURLforExternalItemAtIndex: indexPath.item) else { continue }
             selectedURLs += [url]
         }
+        
         delegate?.imagePicker?(imagePicker, didFinishPickingExternalURLs: selectedURLs)
-        delegate?.imagePicker?(imagePicker, didFinishPickingImages: imagesDict.values.flatMap({ $0 }))
+        //delegate?.imagePicker?(imagePicker, didFinishPickingImages: imagesDict.values.flatMap({ $0 }))
     }
     
     fileprivate func set(image: UIImage?, indexPath: IndexPath, isExternal: Bool) {

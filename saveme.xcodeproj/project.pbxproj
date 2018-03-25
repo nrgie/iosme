@@ -95,7 +95,6 @@
 		882DB681205FA4EE00C37F85 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB67C205FA4EE00C37F85 /* Adapter.swift */; };
 		882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB67D205FA4EE00C37F85 /* ContainerView.swift */; };
 		882DB684205FA7E200C37F85 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB683205FA7E100C37F85 /* ProductView.xib */; };
-		882DB686205FC0A400C37F85 /* fullname.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882DB685205FC0A400C37F85 /* fullname.storyboard */; };
 		882DB688205FCC2F00C37F85 /* Setting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB687205FCC2F00C37F85 /* Setting.xib */; };
 		882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */; };
 		882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB68B205FCFE200C37F85 /* SettingView.swift */; };
@@ -138,6 +137,12 @@
 		88E495342063BA0D001584E9 /* QucikSettingsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E495332063BA0D001584E9 /* QucikSettingsListAdapter.swift */; };
 		88E495362063D054001584E9 /* ListSeparator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E495352063D054001584E9 /* ListSeparator.xib */; };
 		88E495382063D0CB001584E9 /* ListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E495372063D0CB001584E9 /* ListSeparator.swift */; };
+		88E512F520677B240070F407 /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512F420677B240070F407 /* ImagePickerCollectionViewCell.swift */; };
+		88E512F720677B280070F407 /* OpalImagePickerCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512F620677B280070F407 /* OpalImagePickerCollectionViewLayout.swift */; };
+		88E512F920677B2C0070F407 /* OpalImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512F820677B2C0070F407 /* OpalImagePickerConfiguration.swift */; };
+		88E512FB20677B310070F407 /* OpalImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512FA20677B310070F407 /* OpalImagePickerController.swift */; };
+		88E512FD20677B360070F407 /* OpalImagePickerRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512FC20677B360070F407 /* OpalImagePickerRootViewController.swift */; };
+		88E512FF20677B390070F407 /* UIViewController+OpalImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E512FE20677B390070F407 /* UIViewController+OpalImagePicker.swift */; };
 		910884B21EC98D7400B95B4C /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910884B11EC98D7400B95B4C /* Intensity.swift */; };
 		9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6931EC35277005167B6 /* CalendarViewController.swift */; };
 		9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109E6951EC444D9005167B6 /* CustomCalendar.swift */; };
@@ -278,7 +283,6 @@
 		882DB67C205FA4EE00C37F85 /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		882DB67D205FA4EE00C37F85 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		882DB683205FA7E100C37F85 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
-		882DB685205FC0A400C37F85 /* fullname.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = fullname.storyboard; sourceTree = "<group>"; };
 		882DB687205FCC2F00C37F85 /* Setting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Setting.xib; sourceTree = "<group>"; };
 		882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAvatarView.swift; sourceTree = "<group>"; };
 		882DB68B205FCFE200C37F85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -321,6 +325,12 @@
 		88E495332063BA0D001584E9 /* QucikSettingsListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QucikSettingsListAdapter.swift; sourceTree = "<group>"; };
 		88E495352063D054001584E9 /* ListSeparator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSeparator.xib; sourceTree = "<group>"; };
 		88E495372063D0CB001584E9 /* ListSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSeparator.swift; sourceTree = "<group>"; };
+		88E512F420677B240070F407 /* ImagePickerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		88E512F620677B280070F407 /* OpalImagePickerCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpalImagePickerCollectionViewLayout.swift; sourceTree = "<group>"; };
+		88E512F820677B2C0070F407 /* OpalImagePickerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpalImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		88E512FA20677B310070F407 /* OpalImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpalImagePickerController.swift; sourceTree = "<group>"; };
+		88E512FC20677B360070F407 /* OpalImagePickerRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpalImagePickerRootViewController.swift; sourceTree = "<group>"; };
+		88E512FE20677B390070F407 /* UIViewController+OpalImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OpalImagePicker.swift"; sourceTree = "<group>"; };
 		910884B11EC98D7400B95B4C /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Intensity.swift; path = Models/Intensity.swift; sourceTree = "<group>"; };
 		9109E6931EC35277005167B6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
 		9109E6951EC444D9005167B6 /* CustomCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCalendar.swift; path = Views/CustomCalendar.swift; sourceTree = "<group>"; };
@@ -407,37 +417,22 @@
 		3D3B1ADC1EBCBC17005DE871 /* saveme */ = {
 			isa = PBXGroup;
 			children = (
+				3D3B1AE41EBCBC17005DE871 /* Assets.xcassets */,
+				3D7D71261EBCC2CA00E71211 /* Controllers */,
+				88E5130120679FC90070F407 /* Storyboards */,
 				88DFFC0A205FD36C007EF3F7 /* adapter */,
-				882DB672205FA4BF00C37F85 /* Pool */,
+				88E512F320677AF30070F407 /* ImagePicker */,
 				882DB671205FA4B600C37F85 /* Roll */,
-				737107312046D9A90092689D /* saveme.entitlements */,
+				88E5130020679EDC0070F407 /* Dialogs */,
 				3D5F219C1EC05AE80044A9A8 /* Views */,
 				3D5F21991EBF97C10044A9A8 /* Fonts */,
 				3DA38CE41EBD369C003E09CD /* Models */,
 				3D7D71291EBCC40A00E71211 /* Utilities */,
-				3D7D71261EBCC2CA00E71211 /* Controllers */,
 				3D3B1ADD1EBCBC17005DE871 /* AppDelegate.swift */,
-				3D3B1AE11EBCBC17005DE871 /* Main.storyboard */,
-				3D3B1AE41EBCBC17005DE871 /* Assets.xcassets */,
-				3D7D71231EBCC07A00E71211 /* Splash.storyboard */,
-				3D3B1AE61EBCBC17005DE871 /* LaunchScreen.storyboard */,
-				730B6FF9200626F400D83914 /* Settings.storyboard */,
-				73132C1920066E65002B690B /* Login.storyboard */,
-				7373DA542006513C00DC77E8 /* wizard1.storyboard */,
-				88C40070205D715800CF1E9D /* wizard2.storyboard */,
-				88CCC02C206509EC002119CC /* wizardcontent.storyboard */,
-				88C40072205D716900CF1E9D /* wizard3.storyboard */,
-				88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */,
-				88C40074205D717600CF1E9D /* wizard4.storyboard */,
-				88C40076205D718500CF1E9D /* wizard5.storyboard */,
-				88C40078205D719A00CF1E9D /* wizard6.storyboard */,
-				882DB685205FC0A400C37F85 /* fullname.storyboard */,
-				7373DA58200653F100DC77E8 /* base.storyboard */,
-				738BF2F020177FE400773420 /* medical.storyboard */,
 				3D3B1AE91EBCBC17005DE871 /* Info.plist */,
 				73529F5D200F8C3000F5C9F5 /* Localizable.strings */,
-				73132C1D200702E0002B690B /* guardsMap.storyboard */,
 				73B81AE11FBA056A0071EF66 /* GoogleService-Info.plist */,
+				737107312046D9A90092689D /* saveme.entitlements */,
 			);
 			path = saveme;
 			sourceTree = "<group>";
@@ -485,8 +480,6 @@
 				910C08431EC5A23300D25694 /* PageIndicatorView.swift */,
 				91AF74821EC9ADD100DAD6D1 /* RecommendationCell.swift */,
 				73132C23200F5013002B690B /* SettingCell.swift */,
-				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
-				88BA887520603D530028C5AF /* FullNameDialog.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -532,6 +525,7 @@
 		3D7D71291EBCC40A00E71211 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				882DB672205FA4BF00C37F85 /* Pool */,
 				3DEE9A2D1EC25A6800CA8B8D /* WebView */,
 				3D7D712D1EBCC74F00E71211 /* Shared */,
 				3D7D712A1EBCC41300E71211 /* Network */,
@@ -584,12 +578,6 @@
 				88E49529206391EE001584E9 /* MedModel.swift */,
 				88E4952720639130001584E9 /* AllergyModel.swift */,
 				3D32ACE71ECA02BD00F7BE98 /* Page.swift */,
-				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
-				8891F007206110B300FA4578 /* FullNameView.swift */,
-				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
-				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
-				882DB68B205FCFE200C37F85 /* SettingView.swift */,
-				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -647,6 +635,11 @@
 		882DB671205FA4B600C37F85 /* Roll */ = {
 			isa = PBXGroup;
 			children = (
+				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
+				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
+				882DB68B205FCFE200C37F85 /* SettingView.swift */,
+				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
+				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 				882DB67C205FA4EE00C37F85 /* Adapter.swift */,
 				882DB679205FA4ED00C37F85 /* AdapterView.swift */,
 				882DB67D205FA4EE00C37F85 /* ContainerView.swift */,
@@ -684,6 +677,52 @@
 				8891F0032061044E00FA4578 /* GuardListAdapter.swift */,
 			);
 			name = adapter;
+			sourceTree = "<group>";
+		};
+		88E512F320677AF30070F407 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				88E512FE20677B390070F407 /* UIViewController+OpalImagePicker.swift */,
+				88E512FC20677B360070F407 /* OpalImagePickerRootViewController.swift */,
+				88E512FA20677B310070F407 /* OpalImagePickerController.swift */,
+				88E512F820677B2C0070F407 /* OpalImagePickerConfiguration.swift */,
+				88E512F620677B280070F407 /* OpalImagePickerCollectionViewLayout.swift */,
+				88E512F420677B240070F407 /* ImagePickerCollectionViewCell.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		88E5130020679EDC0070F407 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				8891F007206110B300FA4578 /* FullNameView.swift */,
+				88BA887520603D530028C5AF /* FullNameDialog.swift */,
+				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
+			);
+			name = Dialogs;
+			sourceTree = "<group>";
+		};
+		88E5130120679FC90070F407 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3D3B1AE11EBCBC17005DE871 /* Main.storyboard */,
+				73132C1D200702E0002B690B /* guardsMap.storyboard */,
+				3D7D71231EBCC07A00E71211 /* Splash.storyboard */,
+				3D3B1AE61EBCBC17005DE871 /* LaunchScreen.storyboard */,
+				730B6FF9200626F400D83914 /* Settings.storyboard */,
+				73132C1920066E65002B690B /* Login.storyboard */,
+				88CCC02C206509EC002119CC /* wizardcontent.storyboard */,
+				88E4952F2063AF6A001584E9 /* QuickSettings.storyboard */,
+				7373DA542006513C00DC77E8 /* wizard1.storyboard */,
+				88C40070205D715800CF1E9D /* wizard2.storyboard */,
+				88C40072205D716900CF1E9D /* wizard3.storyboard */,
+				88C40074205D717600CF1E9D /* wizard4.storyboard */,
+				88C40076205D718500CF1E9D /* wizard5.storyboard */,
+				88C40078205D719A00CF1E9D /* wizard6.storyboard */,
+				7373DA58200653F100DC77E8 /* base.storyboard */,
+				738BF2F020177FE400773420 /* medical.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		E2A5507AB903D134B0630158 /* Frameworks */ = {
@@ -818,7 +857,6 @@
 				7373DA59200653F100DC77E8 /* base.storyboard in Resources */,
 				3DEE9A1A1EC0F68D00CA8B8D /* RobotoCondensed-Bold.ttf in Resources */,
 				730B6FFA200626F400D83914 /* Settings.storyboard in Resources */,
-				882DB686205FC0A400C37F85 /* fullname.storyboard in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
@@ -867,7 +905,6 @@
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
@@ -896,7 +933,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
@@ -978,6 +1014,7 @@
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
 				3D8BBD351EC0CC2100F459E7 /* UserResponse.swift in Sources */,
+				88E512F520677B240070F407 /* ImagePickerCollectionViewCell.swift in Sources */,
 				880551AB205D69080065F766 /* FullNameVC.swift in Sources */,
 				9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */,
 				7371073F2046FA190092689D /* HalfModalPresentationController.swift in Sources */,
@@ -1031,13 +1068,16 @@
 				882DB67E205FA4EE00C37F85 /* AdapterView.swift in Sources */,
 				3D5F21941EBDD2320044A9A8 /* Subscription.swift in Sources */,
 				732D648F1F0245F3007142A6 /* RunDayCell.swift in Sources */,
+				88E512FB20677B310070F407 /* OpalImagePickerController.swift in Sources */,
 				88CCC03120650CBE002119CC /* WizardContent.swift in Sources */,
 				911EFA501EC09FAD00CF9ABF /* CustomUIElements.swift in Sources */,
 				3D116C841EC36BAB00219929 /* ProgressView.swift in Sources */,
 				882DB678205FA4CE00C37F85 /* PThreadMutex.swift in Sources */,
 				3DA38CE81EBD36F0003E09CD /* BaseResponse.swift in Sources */,
+				88E512FD20677B360070F407 /* OpalImagePickerRootViewController.swift in Sources */,
 				91AF74851EC9C9E100DAD6D1 /* ProgramInfoViewController.swift in Sources */,
 				73132C24200F5013002B690B /* SettingCell.swift in Sources */,
+				88E512F720677B280070F407 /* OpalImagePickerCollectionViewLayout.swift in Sources */,
 				3DEE9A211EC0FA7A00CA8B8D /* MenuItem.swift in Sources */,
 				88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */,
 				73132C2020070439002B690B /* GuardsMapViewController.swift in Sources */,
@@ -1045,11 +1085,13 @@
 				8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */,
 				3D7D71281EBCC2E900E71211 /* SplashViewController.swift in Sources */,
 				882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */,
+				88E512FF20677B390070F407 /* UIViewController+OpalImagePicker.swift in Sources */,
 				910884B21EC98D7400B95B4C /* Intensity.swift in Sources */,
 				3D62BA0A1EC493FA00F6B122 /* SearchInputView.swift in Sources */,
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
+				88E512F920677B2C0070F407 /* OpalImagePickerConfiguration.swift in Sources */,
 				88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */,
 				88E4952220638EB2001584E9 /* ProtectedModel.swift in Sources */,
 				3D5F21961EBF64960044A9A8 /* Theme.swift in Sources */,

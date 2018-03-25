@@ -85,7 +85,6 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - ObjectMapper (3.1.0)
-  - OpalImagePicker (1.4.0)
   - PopupDialog (0.5.4)
   - Protobuf (3.5.0)
   - PureLayout (3.0.2)
@@ -117,7 +116,6 @@ DEPENDENCIES:
   - KYDrawerController
   - M13Checkbox
   - ObjectMapper (~> 3.1)
-  - OpalImagePicker (~> 1.4.0)
   - PopupDialog (~> 0.5.4)
   - PureLayout
   - RxCocoa (~> 3.0)
@@ -153,7 +151,6 @@ SPEC CHECKSUMS:
   M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  OpalImagePicker: 64c2d87f8e1839d1233a6720d3909a22504e3c5d
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
@@ -164,6 +161,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIImageViewAlignedSwift: 2e09096e6081ad26b848e19b4bc35a7d69165740
 
-PODFILE CHECKSUM: ce39c5260cce41b2ee08de0f8a132aac182c6035
+PODFILE CHECKSUM: 05061b7bf4d09390b31a923ec1d7d5bc8e15b2d7
 
 COCOAPODS: 1.4.0

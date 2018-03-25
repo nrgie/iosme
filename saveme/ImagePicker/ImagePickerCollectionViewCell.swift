@@ -213,7 +213,7 @@ class ImagePickerCollectionViewCell: UICollectionViewCell {
         let overlayImageView = UIImageView(frame: frame)
         overlayImageView.translatesAutoresizingMaskIntoConstraints = false
         overlayImageView.contentMode = .center
-        overlayImageView.image = selectionImage ?? UIImage(named: "checkmark", in: Bundle.podBundle(forClass: type(of: self).self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        overlayImageView.image = selectionImage ?? UIImage(named: "checkmark")
         overlayImageView.tintColor = selectionImageTintColor
         overlayImageView.alpha = 0
         contentView.addSubview(overlayImageView)

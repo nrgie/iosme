@@ -43,36 +43,42 @@ class QuickSettingsListAdapter: Adapter {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 1
+                        c.label = "General Settings"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     if item.action == "w2" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 2
+                        c.label = "Contact Settings"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     if item.action == "w3" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 3
+                        c.label = "Medical Settings"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     if item.action == "w4" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 4
+                        c.label = "Phone Numbers"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     if item.action == "w5" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 5
+                        c.label = "Guardians Settings"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     if item.action == "w6" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
                         let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
                         c.pagetype = 6
+                        c.label = "Alert Settings"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     
@@ -82,6 +88,20 @@ class QuickSettingsListAdapter: Adapter {
                         let baseController = mainStoryboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
                         UIApplication.shared.delegate?.window??.rootViewController = baseController
                     }
+                    
+                    if item.action == "learn" {
+                        //checkbox
+                        FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {_ in
+                            self.reload()
+                        }
+                    }
+                    if item.action == "tracking" {}
+                    if item.action == "helppage" {}
+                    if item.action == "langpage" {}
+                    if item.action == "termspage" {}
+                    if item.action == "invitepage" {}
+                    if item.action == "playsound" {}
+                    
                 }
                 
                 result.isUserInteractionEnabled = true
@@ -137,16 +157,13 @@ class QuickSettingsListAdapter: Adapter {
                         let baseController = mainStoryboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
                         UIApplication.shared.delegate?.window??.rootViewController = baseController
                     }
-                    /*
-                     FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {
-                     (date) -> Void in
-                     if let dt = date {
-                     //let formatter = DateFormatter()
-                     //formatter.dateFormat = "yyyy-MM-dd"
-                     //self.user?.bday = formatter.string(from: dt)
-                     self.reload()
-                     }
-                     }*/
+                    
+                    if item.action == "learn" {
+                        //checkbox
+                        FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {_ in
+                            self.reload()
+                        }
+                    }
                     
                 }
                 

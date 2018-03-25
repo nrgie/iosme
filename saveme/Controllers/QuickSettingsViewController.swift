@@ -31,9 +31,9 @@ class QuickSettingsViewController: UIViewController {
             
             Setting("", "quicksettings".localized, "", "separator"),
             
-            Setting("ic_pause_circle_outline_black_24dp", "learnmode".localized, "learnmodesub".localized, "studentmode"),
-            Setting("ic_gps_fixed_black_24dp", "tracking".localized, "trackingsub".localized, "studentmode"),
-            Setting("ic_flag_black_24dp", "currentcountry".localized, "currentcountrysub".localized, "studentmode"),
+            Setting("ic_pause_circle_outline_black_24dp", "learnmode".localized, "learnmodesub".localized, "learn"),
+            Setting("ic_gps_fixed_black_24dp", "tracking".localized, "trackingsub".localized, "tracking"),
+            Setting("ic_flag_black_24dp", "currentcountry".localized, "currentcountrysub".localized, "w5"),
             
             Setting("", "detailsettings".localized, "", "separator"),
             
@@ -41,7 +41,6 @@ class QuickSettingsViewController: UIViewController {
             Setting("ic_contact_mail_black_24dp", "sublabel_contact".localized, "", "w2"),
             Setting("ic_library_books_black_24dp", "medilabel".localized, "", "w3"),
             Setting("ic_supervisor_account_black_24dp", "guardshandling".localized, "", "w4"),
-            //Setting("ic_verified_user_black_24dp", "protectedstracking".localized, "", "w5"),
             Setting("ic_warning_black_24dp", "signalsetup".localized, "", "w6"),
 
             Setting("", "informations".localized, "", "separator"),

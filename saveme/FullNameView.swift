@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Photos
-import OpalImagePicker
 
 class FullNameView: UIView, OpalImagePickerControllerDelegate {
     
@@ -41,14 +40,7 @@ class FullNameView: UIView, OpalImagePickerControllerDelegate {
 
     }
     
-    
     @IBOutlet weak var av: UIImageView!
-    
-    func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
-        
-    }
-
-    
     @IBAction func editpic(_ sender: Any) {
         
         checkPermission()
@@ -58,30 +50,8 @@ class FullNameView: UIView, OpalImagePickerControllerDelegate {
         
         NotificationCenter.default.post(name: Constants.Notifications.CloseDialog, object: nil, userInfo: nil)
         
-        
-        imagePicker.imagePickerDelegate = self as! OpalImagePickerControllerDelegate
+        imagePicker.imagePickerDelegate = self as OpalImagePickerControllerDelegate
         UIApplication.shared.keyWindow?.rootViewController?.present(imagePicker, animated: true, completion: nil)
-        
-        /*
-        presentOpalImagePickerController(imagePicker, animated: true,
-        select: { (assets) in
-           //Select Assets
-        }, cancel: {
-            //Cancel
-        })
-        */
-        
-        /*
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            print("Capture img")
-            
-            NotificationCenter.default.post(name: Constants.Notifications.CloseDialog, object: nil, userInfo: nil)
-            
-            imagepicker.modalPresentationStyle = .popover
-            UIApplication.shared.keyWindow?.rootViewController?.present(imagepicker, animated: true, completion: nil)
-            
-        }
-        */
         
     }
     
@@ -167,6 +137,18 @@ class FullNameView: UIView, OpalImagePickerControllerDelegate {
         n2txt.text = DataStore.shared.userData?.name2!
         n3txt.text = DataStore.shared.userData?.name3!
       
+        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
+        let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        if let dirPath          = paths.first
+        {
+            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("avatar.jpg")
+            let image    = UIImage(contentsOfFile: imageURL.path)
+            if(image != nil) {
+                av.image = image
+            }
+        }
+        
     }
     
     override init(frame: CGRect) {
