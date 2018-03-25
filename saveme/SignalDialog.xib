@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignalDialogView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyQ-cu-rRV">
+                    <rect key="frame" x="50" y="41" width="122" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Call Now">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="callnow:" destination="-1" eventType="touchUpInside" id="LSM-UT-dUd"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-9A-MEF">
+                    <rect key="frame" x="16" y="43" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="oH9-Cw-IFo"/>
+                        <constraint firstAttribute="width" constant="26" id="z51-op-3c3"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_gps_fixed_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="eam-ve-GFZ">
+                    <rect key="frame" x="16" y="85" width="26" height="26"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-UY-KUd">
+                    <rect key="frame" x="50" y="83" width="122" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Nearest on map">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="showmap:" destination="-1" eventType="touchUpInside" id="RXx-K3-E0b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eam-ve-GFZ" firstAttribute="centerY" secondItem="iQs-UY-KUd" secondAttribute="centerY" id="4Ls-jI-xGx"/>
+                <constraint firstItem="iQs-UY-KUd" firstAttribute="top" secondItem="LyQ-cu-rRV" secondAttribute="bottom" constant="12" id="Gdh-ZV-9be"/>
+                <constraint firstItem="eam-ve-GFZ" firstAttribute="top" secondItem="mgi-9A-MEF" secondAttribute="bottom" constant="16" id="Lkr-Sh-eKh"/>
+                <constraint firstItem="mgi-9A-MEF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="43" id="N28-IN-f6I"/>
+                <constraint firstItem="iQs-UY-KUd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NgO-4b-JnI"/>
+                <constraint firstItem="LyQ-cu-rRV" firstAttribute="leading" secondItem="mgi-9A-MEF" secondAttribute="trailing" constant="8" symbolic="YES" id="X1g-lY-XCn"/>
+                <constraint firstItem="LyQ-cu-rRV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="41" id="eaE-Se-ak4"/>
+                <constraint firstItem="LyQ-cu-rRV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ege-MQ-YTO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iQs-UY-KUd" secondAttribute="bottom" constant="58" id="gRC-bT-KSa"/>
+                <constraint firstItem="mgi-9A-MEF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="hIZ-zq-6DQ"/>
+                <constraint firstItem="iQs-UY-KUd" firstAttribute="leading" secondItem="eam-ve-GFZ" secondAttribute="trailing" constant="8" symbolic="YES" id="kFm-MU-ef3"/>
+                <constraint firstItem="mgi-9A-MEF" firstAttribute="centerY" secondItem="LyQ-cu-rRV" secondAttribute="centerY" id="nM7-7J-dT5"/>
+                <constraint firstAttribute="trailing" secondItem="LyQ-cu-rRV" secondAttribute="trailing" id="oZ0-Tu-b88"/>
+                <constraint firstItem="LyQ-cu-rRV" firstAttribute="trailing" secondItem="iQs-UY-KUd" secondAttribute="trailing" id="pxG-eo-9Fe"/>
+                <constraint firstItem="mgi-9A-MEF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rQH-35-WkU"/>
+                <constraint firstItem="LyQ-cu-rRV" firstAttribute="leading" secondItem="iQs-UY-KUd" secondAttribute="leading" id="wqC-2B-LDd"/>
+                <constraint firstItem="eam-ve-GFZ" firstAttribute="leading" secondItem="mgi-9A-MEF" secondAttribute="leading" id="yP6-LX-ML7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-96" y="-383.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_call_black_24dp" width="48" height="48"/>
+        <image name="ic_gps_fixed_black_24dp" width="48" height="48"/>
+    </resources>
+</document>

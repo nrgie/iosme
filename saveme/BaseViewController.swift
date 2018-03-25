@@ -37,134 +37,152 @@ class BaseViewController : UIViewController {
         segue.destination.transitioningDelegate = self.halfModalTransitioningDelegate
     }
     
-    
     override func viewDidLoad() {
         let helptap = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.helpTap))
-        let helplongtap = UILongPressGestureRecognizer(target: self, action: #selector(BaseViewController.helpLongTapped))
 
+        let TAlongtap = UILongPressGestureRecognizer(target: self, action: #selector(self.TALongTapped))
+        let Pollongtap = UILongPressGestureRecognizer(target: self, action: #selector(self.PoliceLongTapped))
+        let Amblongtap = UILongPressGestureRecognizer(target: self, action: #selector(self.AmbLongTapped))
+        let Firelongtap = UILongPressGestureRecognizer(target: self, action: #selector(self.FireLongTapped))
+        let Soslongtap = UILongPressGestureRecognizer(target: self, action: #selector(self.SOSLongTapped))
+        
+        let TAtap = UITapGestureRecognizer(target: self, action: #selector(self.tatap))
+        let Poltap = UITapGestureRecognizer(target: self, action: #selector(self.poltap))
+        let Firetap = UITapGestureRecognizer(target: self, action: #selector(self.firetap))
+        let Ambtap = UITapGestureRecognizer(target: self, action: #selector(self.ambtap))
+        
         let settingstap = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.settingsTap))
         let guardstap = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.guardsTap))
         let medinfotap = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.medinfoTap))
-        
-        let settingslongtap = UILongPressGestureRecognizer(target: self, action: #selector(BaseViewController.helpLongTapped))
-        let guardslongtap = UILongPressGestureRecognizer(target: self, action: #selector(BaseViewController.helpLongTapped))
-        let medinfolongtap = UILongPressGestureRecognizer(target: self, action: #selector(BaseViewController.helpLongTapped))
-        
+      
         helptap.numberOfTapsRequired = 1
         helpButton.addGestureRecognizer(helptap)
-        helpButton.addGestureRecognizer(helplongtap)
         helpButton.isUserInteractionEnabled = true
 
         settingstap.numberOfTapsRequired = 1
         settingsButton.addGestureRecognizer(settingstap)
-        settingsButton.addGestureRecognizer(settingslongtap)
         settingsButton.isUserInteractionEnabled = true
         
         guardstap.numberOfTapsRequired = 1
         guardsButton.addGestureRecognizer(guardstap)
-        guardsButton.addGestureRecognizer(guardslongtap)
         guardsButton.isUserInteractionEnabled = true
         
         medinfotap.numberOfTapsRequired = 1
         medInfoButton.addGestureRecognizer(medinfotap)
-        medInfoButton.addGestureRecognizer(medinfolongtap)
         medInfoButton.isUserInteractionEnabled = true
+
+        TAtap.numberOfTapsRequired = 1
+        tabtn.addGestureRecognizer(TAtap)
+        tabtn.addGestureRecognizer(TAlongtap)
+        tabtn.isUserInteractionEnabled = true
+        
+        Poltap.numberOfTapsRequired = 1
+        policebtn.addGestureRecognizer(Poltap)
+        policebtn.addGestureRecognizer(Pollongtap)
+        policebtn.isUserInteractionEnabled = true
+        
+        Firetap.numberOfTapsRequired = 1
+        firebtn.addGestureRecognizer(Firetap)
+        firebtn.addGestureRecognizer(Firelongtap)
+        firebtn.isUserInteractionEnabled = true
+     
+        Ambtap.numberOfTapsRequired = 1
+        ambulancebtn.addGestureRecognizer(Ambtap)
+        ambulancebtn.addGestureRecognizer(Amblongtap)
+        ambulancebtn.isUserInteractionEnabled = true
+        
+        sosbtn.addGestureRecognizer(Soslongtap)
+        sosbtn.isUserInteractionEnabled = true
+        
+        if AppDelegate.shared.doAfterLaunch != "" {
+            // nem reagál...
+            let alert = UIAlertController(title: "INFOBOX".localized, message: AppDelegate.shared.doAfterLaunch, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in }))
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            
+        }
         
     }
     
-    func helpTap(gestureRecognizer: UITapGestureRecognizer){
-        
-        let title = "THIS IS THE DIALOG TITLE"
-        let message = "This is the message section of the popup dialog default view"
-        let image = UIImage(named: "logo")
-        let popup = PopupDialog(title: title, message: message, image: image)
-        let buttonOne = CancelButton(title: "CANCEL") {
-            print("You canceled the car dialog.")
-        }
-        popup.addButton(buttonOne)
-        //popup.addButtons([buttonOne])
-        UIApplication.shared.keyWindow?.rootViewController?.present(popup, animated: true, completion: nil)
-        
+    func helpTap(gestureRecognizer: UITapGestureRecognizer) {
+        HelpDialog().show("PLEASE SELECT HELP") {_ in }
     }
 
     func guardsTap(gestureRecognizer: UITapGestureRecognizer){
-        //let tappedImage = tapGestureRecognizer.view as! UIImageView
-        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "guardsMap", bundle: nil)
         let mapController = mainStoryboard.instantiateViewController(withIdentifier: "GuardsMapViewController") as! GuardsMapViewController
         UIApplication.shared.delegate?.window??.rootViewController = mapController
-    
     }
     
-    
     func settingsTap(gestureRecognizer: UITapGestureRecognizer){
-        //let tappedImage = tapGestureRecognizer.view as! UIImageView
-        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "QuickSettings", bundle: nil)
         let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "QuickSettings") as! QuickSettingsViewController
         UIApplication.shared.delegate?.window??.rootViewController = settingsController
-        
     }
     
-    func medinfoTap(gestureRecognizer: UITapGestureRecognizer){
-        //let tappedImage = tapGestureRecognizer.view as! UIImageView
-        print("scrolldown infobox")
-        
-        /*
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "medical", bundle: nil)
-        let baseController = mainStoryboard.instantiateViewController(withIdentifier: "medical") as! BaseViewController
-        UIApplication.shared.delegate?.window??.rootViewController = baseController
-        */
+    func medinfoTap(gestureRecognizer: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        
     }
     
-    func helpLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
-        
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+    func tatap(gestureRecognizer: UITapGestureRecognizer) {}
+    
+    func poltap(gestureRecognizer: UITapGestureRecognizer) {
+        SignalDialog().show("SELECT QUICK ACTION", type:"police") {_ in }
     }
-    
-    
+    func firetap(gestureRecognizer: UITapGestureRecognizer) {
+        SignalDialog().show("SELECT QUICK ACTION", type:"fire") {_ in }
+    }
+    func ambtap(gestureRecognizer: UITapGestureRecognizer) {
+        SignalDialog().show("SELECT QUICK ACTION", type:"ambulance") {_ in }
+    }
+
     func TALongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
-        
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.terrornumber)
     }
     func PoliceLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.policenumber)
     }
     func AmbLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.ambulancenumber)
     }
     func FireLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.firenumber)
     }
     
     func SOSLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        print("long tapped")
-        // send sos
         self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        guard let number = URL(string:"tel://100") else { return; }
-        UIApplication.shared.open(number);
+        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.emnumber)
     }
+    
+    /*
+     
+     for load and parse local JSON
+     
+     var list = [GMUWeightedLatLng]()
+     do {
+     // Get the data: latitude/longitude positions of police stations.
+     if let path = Bundle.main.url(forResource: "police_stations", withExtension: "json") {
+     let data = try Data(contentsOf: path)
+     let json = try JSONSerialization.jsonObject(with: data, options: [])
+     if let object = json as? [[String: Any]] {
+     for item in object {
+     let lat = item["lat"]
+     let lng = item["lng"]
+     let coords = GMUWeightedLatLng(coordinate: CLLocationCoordinate2DMake(lat as! CLLocationDegrees, lng as! CLLocationDegrees), intensity: 1.0)
+     list.append(coords)
+     }
+     } else {
+     print("Could not read the JSON.")
+     }
+     }
+     } catch {
+     print(error.localizedDescription)
+     }
+     
+     */
     
 }

@@ -30,63 +30,69 @@ class SettingsNumbersListAdapter: Adapter {
         let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
         result.fill(with: items[position])
         result.isUserInteractionEnabled = true
-            
+        
         UITapGestureRecognizer(addToView: result) {
-            if item.action == "facebook" {
-                var value = self.user?.safe(key: "facebook")
+            
+            if item.action == "country" {
+                
+            }
+            
+            if item.action == "emnumber" {
+                var value = self.user?.safe(key: "emnumber")
                 if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Emergency number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
                 alert.addTextField { (textField) in textField.text = value as? String }
                 alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.facebook = alert?.textFields![0].text
+                    self.user?.emnumber = alert?.textFields![0].text
                     self.reload()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
-            if item.action == "viber" {
-                var value = self.user?.safe(key: "viber")
+            if item.action == "policenumber" {
+                var value = self.user?.safe(key: "policenumber")
                 if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Police number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
                 alert.addTextField { (textField) in textField.text = value as? String }
                 alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.viber = alert?.textFields![0].text
+                    self.user?.policenumber = alert?.textFields![0].text
                     self.reload()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
-            if item.action == "whatsapp" {
-                var value = self.user?.safe(key: "whatsapp")
+            if item.action == "firenumber" {
+                var value = self.user?.safe(key: "firenumber")
                 if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Fire department number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
                 alert.addTextField { (textField) in textField.text = value as? String }
                 alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.whatsapp = alert?.textFields![0].text
+                    self.user?.firenumber = alert?.textFields![0].text
                     self.reload()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
-            if item.action == "skype" {
-                var value = self.user?.safe(key: "skype")
+            if item.action == "ambulancenumber" {
+                var value = self.user?.safe(key: "ambulancenumber")
                 if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Amulance number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
                 alert.addTextField { (textField) in textField.text = value as? String }
                 alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.skype = alert?.textFields![0].text
+                    self.user?.ambulancenumber = alert?.textFields![0].text
                     self.reload()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
-            if item.action == "snapchat" {
-                var value = self.user?.safe(key: "snapchat")
+            if item.action == "terrornumber" {
+                var value = self.user?.safe(key: "terrornumber")
                 if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Anti-terror org. number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
                 alert.addTextField { (textField) in textField.text = value as? String }
                 alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.snapchat = alert?.textFields![0].text
+                    self.user?.terrornumber = alert?.textFields![0].text
                     self.reload()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
+            
         }
         return result
     }

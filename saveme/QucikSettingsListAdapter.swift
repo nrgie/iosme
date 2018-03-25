@@ -114,40 +114,12 @@ class QuickSettingsListAdapter: Adapter {
                 
                 UITapGestureRecognizer(addToView: result) {
                     
-                    if item.action == "w1" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard1", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard1") as! Wizard1ViewController
-                        c.spage = true
-                        UIApplication.shared.delegate?.window??.rootViewController = c
-                    }
-                    if item.action == "w2" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard2", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard2") as! Wizard2ViewController
-                        c.spage = true
-                        UIApplication.shared.delegate?.window??.rootViewController = c
-                    }
-                    if item.action == "w3" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard3", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard3") as! Wizard3ViewController
-                        c.spage = true
-                        UIApplication.shared.delegate?.window??.rootViewController = c
-                    }
+                    
                     if item.action == "w4" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard4", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard4") as! Wizard4ViewController
-                        c.spage = true
-                        UIApplication.shared.delegate?.window??.rootViewController = c
-                    }
-                    if item.action == "w5" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard5", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard5") as! Wizard5ViewController
-                        c.spage = true
-                        UIApplication.shared.delegate?.window??.rootViewController = c
-                    }
-                    if item.action == "w6" {
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizard6", bundle: nil)
-                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizard6") as! Wizard6ViewController
-                        c.spage = true
+                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
+                        let c = mainStoryboard.instantiateViewController(withIdentifier: "wizardcontent") as! WizardContent
+                        c.pagetype = 4
+                        c.label = "Emergency Numbers"
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     
@@ -159,10 +131,12 @@ class QuickSettingsListAdapter: Adapter {
                     }
                     
                     if item.action == "learn" {
-                        //checkbox
-                        FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {_ in
-                            self.reload()
-                        }
+                        SwitchDialog().show("Learning Mode".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "On", offTitle:"Off", switchType: "learn", switchState: AppDelegate.shared.learnmode)
+                            {_ in self.reload() }
+                    }
+                    
+                    if item.action == "tracking" {
+                        SwitchDialog().show("Can others watch your location ?".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "Enabled", offTitle:"Disabled", switchType: "track", switchState: (DataStore.shared.userData?.cantrack)!) {_ in self.reload() }
                     }
                     
                 }

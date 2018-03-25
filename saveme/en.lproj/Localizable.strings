@@ -46,8 +46,7 @@
 "Profile.Error.PasswordNotMatched" = "A két jelszó nem egyezik";
 "Profile.Update.Success" = "Adatait sikeresen rögzítettük!";
 
-"Programs.Recommended.Programs" = "AJÁNLOTT PROGRAMOK";
-"Programs.Title" = "PROGRAMOK";
+
 
 "Receipt.Favourited" = "Sikeresen hozzáadva a kedvencekhez";
 "Receipt.UnFavourited" = "Sikeresen eltávolítva a kedvencekből";
@@ -354,7 +353,7 @@
 "notfoundprot" = "Not found any protecteds to track";
 "presscallbtn" = "Please press the call launcher button to confirm you are in a real emergency";
 "timercontinue" = "Please unlock your phone to continue !";
-"onlypro" = "This feaute is only available in Pro version. Please install the Pro version from the Play store";
+"onlypro" = "This feaute is only available in Pro version. Please install the Pro version from the store";
 "applang" = "App language";
 "terrortitle" = "TERROR ATTACK !";
 "terrorbody" = "Terror attack near you! Tap to show in map";
