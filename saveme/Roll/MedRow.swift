@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 
-class SwitchView: UIView {
+class MedRow: UIView {
 
-    
     @IBOutlet private var label: UILabel!
     
     @IBOutlet weak var sw: UISwitch!
@@ -22,19 +21,13 @@ class SwitchView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let contentView = Bundle.main.loadNibNamed("SwitchView", owner: self, options: nil)?.last as! UIView
+        let contentView = Bundle.main.loadNibNamed("MedRow", owner: self, options: nil)?.last as! UIView
         contentView.frame = bounds
         //contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         addSubview(contentView)
     }
     
-    func fill(with item: LangModel) {
-        label.text = item.name!
-        // fill with userdata
-        sw.isOn = false
-    }
-    
-    func fill(with item: AllergyModel) {
+    func fill(with item: MedModel) {
         label.text = item.name!
         // fill with userdata
         sw.isOn = false

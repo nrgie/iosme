@@ -25,17 +25,16 @@ class SettingIconView: UIView {
         addSubview(contentView)
     }
     
-    func fill(with item: Setting) {
+    func fill(with item: Setting, with asLabel:Bool = true) {
         key.text = item.key
-        let v = DataStore.shared.userData?.safe(key: item.action) as? String
+        avatar.image = UIImage(named:item.icon!)
         
-        if v == "" {
+        if asLabel == true {
             value.text = item.value
         } else {
+            let v = DataStore.shared.userData?.safe(key: item.action) as? String
             value.text = v
         }
-        
-        avatar.image = UIImage(named:item.icon!)
         
     }
     

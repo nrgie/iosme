@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class SwitchView: UIView {
+class AllergySwitchView: UIView {
 
     
     @IBOutlet private var label: UILabel!
@@ -22,16 +22,10 @@ class SwitchView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let contentView = Bundle.main.loadNibNamed("SwitchView", owner: self, options: nil)?.last as! UIView
+        let contentView = Bundle.main.loadNibNamed("AllergySwitchView", owner: self, options: nil)?.last as! UIView
         contentView.frame = bounds
         //contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         addSubview(contentView)
-    }
-    
-    func fill(with item: LangModel) {
-        label.text = item.name!
-        // fill with userdata
-        sw.isOn = false
     }
     
     func fill(with item: AllergyModel) {

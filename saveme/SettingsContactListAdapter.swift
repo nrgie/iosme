@@ -28,7 +28,7 @@ class SettingsContactListAdapter: Adapter {
         let item : Setting = items[position]
         
         let result: SettingIconView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingIconView
-        result.fill(with: items[position])
+        result.fill(with: items[position], with:false)
         result.isUserInteractionEnabled = true
             
         UITapGestureRecognizer(addToView: result) {

@@ -95,6 +95,8 @@ open class OpalImagePickerRootViewController: UIViewController {
     weak var doneButton: UIBarButtonItem?
     weak var cancelButton: UIBarButtonItem?
     
+    var saveTo: String!
+    
     internal var collectionViewLayout: OpalImagePickerCollectionViewLayout? {
         return collectionView?.collectionViewLayout as? OpalImagePickerCollectionViewLayout
     }
@@ -186,7 +188,7 @@ open class OpalImagePickerRootViewController: UIViewController {
         collectionView.allowsMultipleSelection = true
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.delegate = self as! UICollectionViewDelegate
         collectionView.register(ImagePickerCollectionViewCell.self, forCellWithReuseIdentifier: ImagePickerCollectionViewCell.reuseId)
     }
     
@@ -295,7 +297,7 @@ open class OpalImagePickerRootViewController: UIViewController {
         
         let fileManager = FileManager.default
         let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
-        let imagePath = documentsPath?.appendingPathComponent("avatar.jpg")
+        let imagePath = documentsPath?.appendingPathComponent(self.saveTo)
         try! UIImageJPEGRepresentation(image!, 0.0)?.write(to: imagePath!)
         
         print(imagePath?.absoluteString)

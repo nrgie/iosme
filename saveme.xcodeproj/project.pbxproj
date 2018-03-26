@@ -128,6 +128,36 @@
 		88AEE95320694BBF002562B3 /* SpokenListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */; };
 		88AEE9552069529F002562B3 /* SwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9542069529F002562B3 /* SwitchView.xib */; };
 		88AEE957206952EB002562B3 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE956206952EB002562B3 /* SwitchView.swift */; };
+		88AEE95A20696941002562B3 /* InsuranceDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95920696941002562B3 /* InsuranceDialog.swift */; };
+		88AEE95C206969AF002562B3 /* BloodDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95B206969AF002562B3 /* BloodDialog.swift */; };
+		88AEE95E20696A56002562B3 /* AllergyDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95D20696A56002562B3 /* AllergyDialog.swift */; };
+		88AEE96020696B53002562B3 /* MedicineDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95F20696B53002562B3 /* MedicineDialog.swift */; };
+		88AEE96220697662002562B3 /* MedDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE96120697662002562B3 /* MedDialog.swift */; };
+		88AEE96420697678002562B3 /* DoctorsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE96320697678002562B3 /* DoctorsDialog.swift */; };
+		88AEE96620697864002562B3 /* InsuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE96520697864002562B3 /* InsuranceView.swift */; };
+		88AEE96820697872002562B3 /* Insurance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE96720697872002562B3 /* Insurance.xib */; };
+		88AEE96E20697E08002562B3 /* BloodDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE96D20697E08002562B3 /* BloodDialog.xib */; };
+		88AEE97020697E2A002562B3 /* BloodDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE96F20697E2A002562B3 /* BloodDialogView.swift */; };
+		88AEE972206982F0002562B3 /* AllergyDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE971206982F0002562B3 /* AllergyDialogView.swift */; };
+		88AEE97420698444002562B3 /* AllergyListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97320698444002562B3 /* AllergyListAdapter.swift */; };
+		88AEE976206984DB002562B3 /* AllergyDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE975206984DB002562B3 /* AllergyDialog.xib */; };
+		88AEE97820698624002562B3 /* AllergySwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE97720698624002562B3 /* AllergySwitch.xib */; };
+		88AEE97A20698635002562B3 /* AllergySwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97920698635002562B3 /* AllergySwitchView.swift */; };
+		88AEE97C2069887E002562B3 /* DoctorsDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */; };
+		88AEE97E2069888D002562B3 /* DoctorsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97D2069888D002562B3 /* DoctorsListAdapter.swift */; };
+		88AEE98020698897002562B3 /* MedListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97F20698897002562B3 /* MedListAdapter.swift */; };
+		88AEE9822069889E002562B3 /* MedicalListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE9812069889E002562B3 /* MedicalListAdapter.swift */; };
+		88AEE9842069891A002562B3 /* DoctorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9832069891A002562B3 /* DoctorRow.xib */; };
+		88AEE98620698922002562B3 /* MedRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE98520698922002562B3 /* MedRow.xib */; };
+		88AEE98820698929002562B3 /* MedicalRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE98720698929002562B3 /* MedicalRow.xib */; };
+		88AEE98A20698942002562B3 /* MedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98920698942002562B3 /* MedRow.swift */; };
+		88AEE98C2069894B002562B3 /* DoctorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98B2069894B002562B3 /* DoctorRow.swift */; };
+		88AEE98E20698954002562B3 /* MedicalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98D20698954002562B3 /* MedicalRow.swift */; };
+		88AEE99020698AAE002562B3 /* DoctorDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE98F20698AAE002562B3 /* DoctorDialog.xib */; };
+		88AEE99220698AD0002562B3 /* MedDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE99120698AD0002562B3 /* MedDialog.xib */; };
+		88AEE99420698AD7002562B3 /* MedicalDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE99320698AD7002562B3 /* MedicalDialog.xib */; };
+		88AEE99620698AE2002562B3 /* MedDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE99520698AE2002562B3 /* MedDialogView.swift */; };
+		88AEE99820698B11002562B3 /* MedicalDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE99720698B11002562B3 /* MedicalDialogView.swift */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
 		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
@@ -358,6 +388,36 @@
 		88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpokenListAdapter.swift; sourceTree = "<group>"; };
 		88AEE9542069529F002562B3 /* SwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchView.xib; sourceTree = "<group>"; };
 		88AEE956206952EB002562B3 /* SwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		88AEE95920696941002562B3 /* InsuranceDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceDialog.swift; sourceTree = "<group>"; };
+		88AEE95B206969AF002562B3 /* BloodDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodDialog.swift; sourceTree = "<group>"; };
+		88AEE95D20696A56002562B3 /* AllergyDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyDialog.swift; sourceTree = "<group>"; };
+		88AEE95F20696B53002562B3 /* MedicineDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDialog.swift; sourceTree = "<group>"; };
+		88AEE96120697662002562B3 /* MedDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedDialog.swift; sourceTree = "<group>"; };
+		88AEE96320697678002562B3 /* DoctorsDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsDialog.swift; sourceTree = "<group>"; };
+		88AEE96520697864002562B3 /* InsuranceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceView.swift; sourceTree = "<group>"; };
+		88AEE96720697872002562B3 /* Insurance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Insurance.xib; sourceTree = "<group>"; };
+		88AEE96D20697E08002562B3 /* BloodDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BloodDialog.xib; sourceTree = "<group>"; };
+		88AEE96F20697E2A002562B3 /* BloodDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodDialogView.swift; sourceTree = "<group>"; };
+		88AEE971206982F0002562B3 /* AllergyDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyDialogView.swift; sourceTree = "<group>"; };
+		88AEE97320698444002562B3 /* AllergyListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyListAdapter.swift; sourceTree = "<group>"; };
+		88AEE975206984DB002562B3 /* AllergyDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllergyDialog.xib; sourceTree = "<group>"; };
+		88AEE97720698624002562B3 /* AllergySwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllergySwitch.xib; sourceTree = "<group>"; };
+		88AEE97920698635002562B3 /* AllergySwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergySwitchView.swift; sourceTree = "<group>"; };
+		88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsDialogView.swift; sourceTree = "<group>"; };
+		88AEE97D2069888D002562B3 /* DoctorsListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsListAdapter.swift; sourceTree = "<group>"; };
+		88AEE97F20698897002562B3 /* MedListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedListAdapter.swift; sourceTree = "<group>"; };
+		88AEE9812069889E002562B3 /* MedicalListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalListAdapter.swift; sourceTree = "<group>"; };
+		88AEE9832069891A002562B3 /* DoctorRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRow.xib; sourceTree = "<group>"; };
+		88AEE98520698922002562B3 /* MedRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedRow.xib; sourceTree = "<group>"; };
+		88AEE98720698929002562B3 /* MedicalRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalRow.xib; sourceTree = "<group>"; };
+		88AEE98920698942002562B3 /* MedRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedRow.swift; sourceTree = "<group>"; };
+		88AEE98B2069894B002562B3 /* DoctorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorRow.swift; sourceTree = "<group>"; };
+		88AEE98D20698954002562B3 /* MedicalRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRow.swift; sourceTree = "<group>"; };
+		88AEE98F20698AAE002562B3 /* DoctorDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDialog.xib; sourceTree = "<group>"; };
+		88AEE99120698AD0002562B3 /* MedDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedDialog.xib; sourceTree = "<group>"; };
+		88AEE99320698AD7002562B3 /* MedicalDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalDialog.xib; sourceTree = "<group>"; };
+		88AEE99520698AE2002562B3 /* MedDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedDialogView.swift; sourceTree = "<group>"; };
+		88AEE99720698B11002562B3 /* MedicalDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalDialogView.swift; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
@@ -714,6 +774,10 @@
 				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
 				88AEE956206952EB002562B3 /* SwitchView.swift */,
+				88AEE97920698635002562B3 /* AllergySwitchView.swift */,
+				88AEE98920698942002562B3 /* MedRow.swift */,
+				88AEE98B2069894B002562B3 /* DoctorRow.swift */,
+				88AEE98D20698954002562B3 /* MedicalRow.swift */,
 				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
 				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 				882DB67C205FA4EE00C37F85 /* Adapter.swift */,
@@ -722,6 +786,10 @@
 				882DB67A205FA4EE00C37F85 /* RollView.swift */,
 				882DB683205FA7E100C37F85 /* ProductView.xib */,
 				88AEE9542069529F002562B3 /* SwitchView.xib */,
+				88AEE97720698624002562B3 /* AllergySwitch.xib */,
+				88AEE9832069891A002562B3 /* DoctorRow.xib */,
+				88AEE98520698922002562B3 /* MedRow.xib */,
+				88AEE98720698929002562B3 /* MedicalRow.xib */,
 				88E495352063D054001584E9 /* ListSeparator.xib */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
@@ -776,6 +844,10 @@
 				8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */,
 				8891F0032061044E00FA4578 /* GuardListAdapter.swift */,
 				88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */,
+				88AEE97D2069888D002562B3 /* DoctorsListAdapter.swift */,
+				88AEE97F20698897002562B3 /* MedListAdapter.swift */,
+				88AEE9812069889E002562B3 /* MedicalListAdapter.swift */,
+				88AEE97320698444002562B3 /* AllergyListAdapter.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -797,33 +869,51 @@
 			isa = PBXGroup;
 			children = (
 				8891F0052061109F00FA4578 /* FullName.xib */,
+				88AEE96720697872002562B3 /* Insurance.xib */,
 				88E513082067A49B0070F407 /* SwitchDialog.xib */,
 				88E513122067C5000070F407 /* HelpDialog.xib */,
 				88AEE94A20694952002562B3 /* AddressDialog.xib */,
 				88AEE950206949AB002562B3 /* PinDialog.xib */,
 				88E513142067C5080070F407 /* SignalDialog.xib */,
 				88AEE9232068FF16002562B3 /* LangDialog.xib */,
+				88AEE96D20697E08002562B3 /* BloodDialog.xib */,
 				88AEE92D2069020E002562B3 /* CountryDialog.xib */,
 				88AEE94420694915002562B3 /* SpokenDialog.xib */,
+				88AEE98F20698AAE002562B3 /* DoctorDialog.xib */,
+				88AEE99120698AD0002562B3 /* MedDialog.xib */,
+				88AEE99320698AD7002562B3 /* MedicalDialog.xib */,
+				88AEE975206984DB002562B3 /* AllergyDialog.xib */,
 				88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */,
 				8891F007206110B300FA4578 /* FullNameView.swift */,
+				88AEE96520697864002562B3 /* InsuranceView.swift */,
 				88E513062067A4930070F407 /* SwitchDialogView.swift */,
 				88E5130E2067C4C00070F407 /* HelpDialogView.swift */,
 				88AEE94E20694999002562B3 /* PinDialogView.swift */,
 				88AEE94820694941002562B3 /* AddressDialogView.swift */,
 				88AEE91B2068FE27002562B3 /* LangDialogView.swift */,
+				88AEE96F20697E2A002562B3 /* BloodDialogView.swift */,
 				88AEE92B206901FA002562B3 /* CountryDialogView.swift */,
 				88AEE942206948FA002562B3 /* SpokenDialogView.swift */,
+				88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */,
+				88AEE99520698AE2002562B3 /* MedDialogView.swift */,
+				88AEE99720698B11002562B3 /* MedicalDialogView.swift */,
+				88AEE971206982F0002562B3 /* AllergyDialogView.swift */,
 				88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */,
 				88E513102067C4D30070F407 /* SignalDialogView.swift */,
 				88BA887520603D530028C5AF /* FullNameDialog.swift */,
+				88AEE95920696941002562B3 /* InsuranceDialog.swift */,
 				88E513042067A2310070F407 /* SwitchDialog.swift */,
 				88E5130A2067C4730070F407 /* HelpDialog.swift */,
 				88AEE94C20694991002562B3 /* PinDialog.swift */,
 				88AEE94620694931002562B3 /* AddressDialog.swift */,
 				88AEE91D2068FE36002562B3 /* LangDialog.swift */,
 				88AEE929206901EB002562B3 /* CountryDialog.swift */,
+				88AEE95B206969AF002562B3 /* BloodDialog.swift */,
 				88AEE940206948E9002562B3 /* SpokenDialog.swift */,
+				88AEE95D20696A56002562B3 /* AllergyDialog.swift */,
+				88AEE95F20696B53002562B3 /* MedicineDialog.swift */,
+				88AEE96120697662002562B3 /* MedDialog.swift */,
+				88AEE96320697678002562B3 /* DoctorsDialog.swift */,
 				88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */,
 				88E5130C2067C4A10070F407 /* SignalDialog.swift */,
 				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
@@ -992,6 +1082,8 @@
 			files = (
 				3D3B1AE81EBCBC17005DE871 /* LaunchScreen.storyboard in Resources */,
 				88AEE94520694915002562B3 /* SpokenDialog.xib in Resources */,
+				88AEE98820698929002562B3 /* MedicalRow.xib in Resources */,
+				88AEE976206984DB002562B3 /* AllergyDialog.xib in Resources */,
 				73132C1A20066E65002B690B /* Login.storyboard in Resources */,
 				88E513152067C5080070F407 /* SignalDialog.xib in Resources */,
 				88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */,
@@ -1002,11 +1094,13 @@
 				88E513092067A49B0070F407 /* SwitchDialog.xib in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				88E513132067C5000070F407 /* HelpDialog.xib in Resources */,
+				88AEE9842069891A002562B3 /* DoctorRow.xib in Resources */,
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
 				8891F0062061109F00FA4578 /* FullName.xib in Resources */,
 				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
 				88E495302063AF6A001584E9 /* QuickSettings.storyboard in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
+				88AEE99020698AAE002562B3 /* DoctorDialog.xib in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
 				88AEE93F206933D6002562B3 /* SwiftCountryView.xib in Resources */,
 				88AEE939206933C3002562B3 /* SwiftCountryPicker.bundle in Resources */,
@@ -1021,20 +1115,26 @@
 				3DEE9A1F1EC0F68D00CA8B8D /* RobotoCondensed-Regular.ttf in Resources */,
 				882DB688205FCC2F00C37F85 /* Setting.xib in Resources */,
 				7373DA59200653F100DC77E8 /* base.storyboard in Resources */,
+				88AEE98620698922002562B3 /* MedRow.xib in Resources */,
 				3DEE9A1A1EC0F68D00CA8B8D /* RobotoCondensed-Bold.ttf in Resources */,
+				88AEE96E20697E08002562B3 /* BloodDialog.xib in Resources */,
 				88E513172067D3B80070F407 /* Map.storyboard in Resources */,
+				88AEE99420698AD7002562B3 /* MedicalDialog.xib in Resources */,
 				730B6FFA200626F400D83914 /* Settings.storyboard in Resources */,
 				88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
+				88AEE96820697872002562B3 /* Insurance.xib in Resources */,
 				88AEE9552069529F002562B3 /* SwitchView.xib in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				88AEE92820690113002562B3 /* demo_en.mp3 in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
 				88AEE9242068FF16002562B3 /* LangDialog.xib in Resources */,
+				88AEE99220698AD0002562B3 /* MedDialog.xib in Resources */,
 				88CCC02B2064F8D2002119CC /* SettingIconOne.xib in Resources */,
 				88AEE951206949AB002562B3 /* PinDialog.xib in Resources */,
 				88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */,
 				88E5131B2067D8720070F407 /* nums.json in Resources */,
+				88AEE97820698624002562B3 /* AllergySwitch.xib in Resources */,
 				738BF2F120177FE400773420 /* medical.storyboard in Resources */,
 				3D3B1AE31EBCBC17005DE871 /* Main.storyboard in Resources */,
 				88E495362063D054001584E9 /* ListSeparator.xib in Resources */,
@@ -1183,6 +1283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AEE972206982F0002562B3 /* AllergyDialogView.swift in Sources */,
 				88D539E32060F01B0089F7E2 /* SettingIconView.swift in Sources */,
 				8891F008206110B300FA4578 /* FullNameView.swift in Sources */,
 				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
@@ -1222,10 +1323,12 @@
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
 				3D0148871EC0C38F00804F54 /* UIColor+Hexa.swift in Sources */,
 				882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */,
+				88AEE96620697864002562B3 /* InsuranceView.swift in Sources */,
 				3D62BA0C1EC5C87700F6B122 /* CustomNavigationController.swift in Sources */,
 				3DEE9A241EC0FD4700CA8B8D /* MenuItemCell.swift in Sources */,
 				8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */,
 				7373DA5B2006574200DC77E8 /* BaseViewController.swift in Sources */,
+				88AEE97A20698635002562B3 /* AllergySwitchView.swift in Sources */,
 				732D648D1F0245C5007142A6 /* RunDay.swift in Sources */,
 				88E5130B2067C4730070F407 /* HelpDialog.swift in Sources */,
 				91AF74811EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift in Sources */,
@@ -1245,10 +1348,14 @@
 				737107412046FC090092689D /* AppNC.swift in Sources */,
 				911EFA4C1EC0719700CF9ABF /* UserDataEditorEmbedViewController.swift in Sources */,
 				911EFA4A1EC0715800CF9ABF /* RegistrationViewController.swift in Sources */,
+				88AEE98C2069894B002562B3 /* DoctorRow.swift in Sources */,
 				737107392046FA000092689D /* HalfModalTransitioningDelegate.swift in Sources */,
 				9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */,
 				88E513212067D9560070F407 /* Gmap.swift in Sources */,
+				88AEE96020696B53002562B3 /* MedicineDialog.swift in Sources */,
+				88AEE97C2069887E002562B3 /* DoctorsDialogView.swift in Sources */,
 				88AEE94F20694999002562B3 /* PinDialogView.swift in Sources */,
+				88AEE98A20698942002562B3 /* MedRow.swift in Sources */,
 				91AF74831EC9ADD100DAD6D1 /* RecommendationCell.swift in Sources */,
 				882DB67E205FA4EE00C37F85 /* AdapterView.swift in Sources */,
 				3D5F21941EBDD2320044A9A8 /* Subscription.swift in Sources */,
@@ -1274,26 +1381,35 @@
 				88AEE92C206901FA002562B3 /* CountryDialogView.swift in Sources */,
 				3D7D71281EBCC2E900E71211 /* SplashViewController.swift in Sources */,
 				882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */,
+				88AEE96420697678002562B3 /* DoctorsDialog.swift in Sources */,
 				88E5130D2067C4A10070F407 /* SignalDialog.swift in Sources */,
 				88E512FF20677B390070F407 /* UIViewController+OpalImagePicker.swift in Sources */,
 				910884B21EC98D7400B95B4C /* Intensity.swift in Sources */,
 				88E5130F2067C4C00070F407 /* HelpDialogView.swift in Sources */,
 				3D62BA0A1EC493FA00F6B122 /* SearchInputView.swift in Sources */,
+				88AEE97420698444002562B3 /* AllergyListAdapter.swift in Sources */,
 				88AEE94920694941002562B3 /* AddressDialogView.swift in Sources */,
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
 				88AEE957206952EB002562B3 /* SwitchView.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
+				88AEE9822069889E002562B3 /* MedicalListAdapter.swift in Sources */,
 				88E512F920677B2C0070F407 /* OpalImagePickerConfiguration.swift in Sources */,
 				88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */,
 				88E4952220638EB2001584E9 /* ProtectedModel.swift in Sources */,
+				88AEE95C206969AF002562B3 /* BloodDialog.swift in Sources */,
 				3D5F21961EBF64960044A9A8 /* Theme.swift in Sources */,
+				88AEE95E20696A56002562B3 /* AllergyDialog.swift in Sources */,
 				737A4E802047932600D38D16 /* LocationManager.swift in Sources */,
 				9109E69C1EC4A093005167B6 /* AnswersCell.swift in Sources */,
 				73529F60200F9FD200F5C9F5 /* navbarView.swift in Sources */,
+				88AEE99820698B11002562B3 /* MedicalDialogView.swift in Sources */,
 				3D01487B1EC0743000804F54 /* UITextField+Dismiss.swift in Sources */,
 				3D01487D1EC0751F00804F54 /* LoginPageViewController.swift in Sources */,
 				3D0148811EC0B89900804F54 /* String+Locale.swift in Sources */,
+				88AEE97E2069888D002562B3 /* DoctorsListAdapter.swift in Sources */,
+				88AEE95A20696941002562B3 /* InsuranceDialog.swift in Sources */,
+				88AEE97020697E2A002562B3 /* BloodDialogView.swift in Sources */,
 				735778C6200F59AE00D3AFF0 /* Setting.swift in Sources */,
 				7371073B2046FA080092689D /* HalfModalTransitionAnimator.swift in Sources */,
 				88AEE91E2068FE36002562B3 /* LangDialog.swift in Sources */,
@@ -1301,6 +1417,7 @@
 				7371073D2046FA0C0092689D /* HalfModalInteractiveTransition.swift in Sources */,
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
 				88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */,
+				88AEE98020698897002562B3 /* MedListAdapter.swift in Sources */,
 				88AEE943206948FA002562B3 /* SpokenDialogView.swift in Sources */,
 				88E513192067D3C30070F407 /* MapViewController.swift in Sources */,
 				88E513052067A2310070F407 /* SwitchDialog.swift in Sources */,
@@ -1309,13 +1426,16 @@
 				88E4952E206392AF001584E9 /* PendingGuard.swift in Sources */,
 				88AEE91C2068FE27002562B3 /* LangDialogView.swift in Sources */,
 				88AEE9202068FE59002562B3 /* PlaySoundDialog.swift in Sources */,
+				88AEE96220697662002562B3 /* MedDialog.swift in Sources */,
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
 				88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */,
+				88AEE99620698AE2002562B3 /* MedDialogView.swift in Sources */,
 				88E4952A206391EE001584E9 /* MedModel.swift in Sources */,
 				88E495382063D0CB001584E9 /* ListSeparator.swift in Sources */,
 				7303FF761FB9886500247D54 /* AppDelegate.swift in Sources */,
 				88E4952620638FF1001584E9 /* DoctorModel.swift in Sources */,
 				3DE201201EC8B8D4004B19EB /* Program.swift in Sources */,
+				88AEE98E20698954002562B3 /* MedicalRow.swift in Sources */,
 				3D5F219F1EC05B340044A9A8 /* FATextfield.swift in Sources */,
 				88E495322063B8FE001584E9 /* QuickSettingsViewController.swift in Sources */,
 				3DEE9A111EC0D5C800CA8B8D /* WebController.swift in Sources */,

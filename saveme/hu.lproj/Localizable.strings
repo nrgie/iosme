@@ -52,6 +52,26 @@
 "Receipt.Favourited" = "Sikeresen hozzáadva a kedvencekhez";
 "Receipt.UnFavourited" = "Sikeresen eltávolítva a kedvencekből";
 
+"Pollen" = "Pollen";
+"Animal dander" = "Animal dander";
+"Domestic dust" = "Domestic dust";
+"Gluten" = "Gluten";
+"Shellfish" = "Shellfish";
+"Eggs" = "Eggs";
+"Fish" = "Fish";
+"Peanut" = "Peanut";
+"Soy" = "Soy";
+"Milk (lactose)" = "Milk (lactose)";
+"Nuts" = "Nuts";
+"Celery" = "Celery";
+"Mustard" = "Mustard";
+"Sesame seed" = "Sesame seed";
+"Sulfur-dioxide" = "Sulfur-dioxide";
+"Lupine" = "Lupine";
+"Molluscs" = "Molluscs";
+
+
+
 "ProgressionCell.Title" = "Programom";
 
 "Error.AlreadyEnteredWeight" = "Ma már megadtad a súlyod";

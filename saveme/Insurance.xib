@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InsuranceView" customModule="saveme" customModuleProvider="target">
+            <connections>
+                <outlet property="av" destination="OOG-Hj-RL3" id="gEm-Hw-NrW"/>
+                <outlet property="n1txt" destination="QvM-47-r4f" id="4bk-hV-DBQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social insurance number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI1-77-WYB">
+                    <rect key="frame" x="63" y="42" width="100" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvM-47-r4f">
+                    <rect key="frame" x="63" y="69" width="97" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <connections>
+                        <action selector="n1:" destination="-1" eventType="editingDidEnd" id="5mt-uH-fEJ"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="OOG-Hj-RL3">
+                    <rect key="frame" x="9" y="33" width="46" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Ysj-5a-DaQ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-GB-lhB">
+                    <rect key="frame" x="9" y="87" width="46" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="Edit">
+                        <color key="titleColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="editpic:" destination="-1" eventType="touchUpInside" id="5d5-NT-KD4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QvM-47-r4f" secondAttribute="trailing" constant="12" id="Ed8-u6-fRb"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="63" id="Gn2-nX-0Cn"/>
+                <constraint firstItem="OOG-Hj-RL3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="KGF-ML-4In"/>
+                <constraint firstItem="QvM-47-r4f" firstAttribute="leading" secondItem="OOG-Hj-RL3" secondAttribute="trailing" constant="8" id="R0X-eA-dn1"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="leading" secondItem="QvM-47-r4f" secondAttribute="leading" id="V29-70-HE1"/>
+                <constraint firstItem="OOG-Hj-RL3" firstAttribute="trailing" secondItem="Kiv-GB-lhB" secondAttribute="trailing" id="YRh-ms-mrt"/>
+                <constraint firstItem="HI1-77-WYB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="42" id="Yze-t6-EAi"/>
+                <constraint firstItem="QvM-47-r4f" firstAttribute="top" secondItem="HI1-77-WYB" secondAttribute="bottom" constant="8" id="eyh-QX-CdJ"/>
+                <constraint firstAttribute="trailing" secondItem="HI1-77-WYB" secondAttribute="trailing" constant="9" id="iJI-6F-JxX"/>
+                <constraint firstItem="OOG-Hj-RL3" firstAttribute="leading" secondItem="Kiv-GB-lhB" secondAttribute="leading" id="iuf-N5-aqd"/>
+                <constraint firstItem="OOG-Hj-RL3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="33" id="o31-Fe-5b7"/>
+                <constraint firstItem="Kiv-GB-lhB" firstAttribute="top" secondItem="OOG-Hj-RL3" secondAttribute="bottom" constant="-6" id="twH-Yb-qse"/>
+                <constraint firstItem="OOG-Hj-RL3" firstAttribute="top" secondItem="QvM-47-r4f" secondAttribute="top" constant="-36" id="yZa-oy-RxR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-96" y="-383.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar" width="640" height="570"/>
+    </resources>
+</document>

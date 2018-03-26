@@ -114,6 +114,13 @@ open class OpalImagePickerController: UINavigationController {
         }
     }
     
+    open var saveTo: String = "" {
+        didSet {
+            let rootVC = viewControllers.first as? OpalImagePickerRootViewController
+            rootVC?.saveTo = saveTo
+        }
+    }
+    
     /// Allowed Media Types that can be fetched. See `PHAssetMediaType`
     open var allowedMediaTypes: Set<PHAssetMediaType>? {
         didSet {
