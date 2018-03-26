@@ -27,7 +27,14 @@ class SettingIconView: UIView {
     
     func fill(with item: Setting) {
         key.text = item.key
-        value.text = item.value
+        let v = DataStore.shared.userData?.safe(key: item.action) as? String
+        
+        if v == "" {
+            value.text = item.value
+        } else {
+            value.text = v
+        }
+        
         avatar.image = UIImage(named:item.icon!)
         
     }

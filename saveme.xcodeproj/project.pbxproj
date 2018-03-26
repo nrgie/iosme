@@ -126,6 +126,8 @@
 		88AEE94F20694999002562B3 /* PinDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE94E20694999002562B3 /* PinDialogView.swift */; };
 		88AEE951206949AB002562B3 /* PinDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE950206949AB002562B3 /* PinDialog.xib */; };
 		88AEE95320694BBF002562B3 /* SpokenListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */; };
+		88AEE9552069529F002562B3 /* SwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9542069529F002562B3 /* SwitchView.xib */; };
+		88AEE957206952EB002562B3 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE956206952EB002562B3 /* SwitchView.swift */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
 		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
@@ -354,6 +356,8 @@
 		88AEE94E20694999002562B3 /* PinDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinDialogView.swift; sourceTree = "<group>"; };
 		88AEE950206949AB002562B3 /* PinDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinDialog.xib; sourceTree = "<group>"; };
 		88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpokenListAdapter.swift; sourceTree = "<group>"; };
+		88AEE9542069529F002562B3 /* SwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchView.xib; sourceTree = "<group>"; };
+		88AEE956206952EB002562B3 /* SwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
@@ -632,20 +636,14 @@
 		3DA38CE41EBD369C003E09CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88AEE95820695642002562B3 /* old */,
 				3DA38CE71EBD36F0003E09CD /* BaseResponse.swift */,
 				3DA38CEB1EBDA7CF003E09CD /* OAuthResponse.swift */,
 				3DA38CE91EBDA74D003E09CD /* UserResponse.swift */,
 				3D5F218F1EBDCCFA0044A9A8 /* UserDataResponse.swift */,
 				3D5F21911EBDCD460044A9A8 /* UserData.swift */,
 				88E5131E2067D9230070F407 /* GoogleAutocompleteJSONModel.swift */,
-				3D5F21931EBDD2320044A9A8 /* Subscription.swift */,
 				3D0148841EC0BFC000804F54 /* DataStore.swift */,
-				3DEE9A201EC0FA7A00CA8B8D /* MenuItem.swift */,
-				9109E69D1EC4AC02005167B6 /* Question.swift */,
-				732D648C1F0245C5007142A6 /* RunDay.swift */,
-				9109E69F1EC4AC11005167B6 /* Answer.swift */,
-				910884B11EC98D7400B95B4C /* Intensity.swift */,
-				3DE2011F1EC8B8D4004B19EB /* Program.swift */,
 				735778C5200F59AE00D3AFF0 /* Setting.swift */,
 				88E4952120638EB2001584E9 /* ProtectedModel.swift */,
 				88E4952520638FF1001584E9 /* DoctorModel.swift */,
@@ -715,6 +713,7 @@
 				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
 				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
 				882DB68B205FCFE200C37F85 /* SettingView.swift */,
+				88AEE956206952EB002562B3 /* SwitchView.swift */,
 				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
 				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 				882DB67C205FA4EE00C37F85 /* Adapter.swift */,
@@ -722,6 +721,7 @@
 				882DB67D205FA4EE00C37F85 /* ContainerView.swift */,
 				882DB67A205FA4EE00C37F85 /* RollView.swift */,
 				882DB683205FA7E100C37F85 /* ProductView.xib */,
+				88AEE9542069529F002562B3 /* SwitchView.xib */,
 				88E495352063D054001584E9 /* ListSeparator.xib */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
@@ -750,6 +750,20 @@
 				88AEE93C206933D5002562B3 /* SwiftCountryView.xib */,
 			);
 			path = CountryPicker;
+			sourceTree = "<group>";
+		};
+		88AEE95820695642002562B3 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				3D5F21931EBDD2320044A9A8 /* Subscription.swift */,
+				3DEE9A201EC0FA7A00CA8B8D /* MenuItem.swift */,
+				9109E69D1EC4AC02005167B6 /* Question.swift */,
+				732D648C1F0245C5007142A6 /* RunDay.swift */,
+				9109E69F1EC4AC11005167B6 /* Answer.swift */,
+				910884B11EC98D7400B95B4C /* Intensity.swift */,
+				3DE2011F1EC8B8D4004B19EB /* Program.swift */,
+			);
+			name = old;
 			sourceTree = "<group>";
 		};
 		88DFFC0A205FD36C007EF3F7 /* adapter */ = {
@@ -1012,6 +1026,7 @@
 				730B6FFA200626F400D83914 /* Settings.storyboard in Resources */,
 				88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
+				88AEE9552069529F002562B3 /* SwitchView.xib in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				88AEE92820690113002562B3 /* demo_en.mp3 in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
@@ -1266,6 +1281,7 @@
 				3D62BA0A1EC493FA00F6B122 /* SearchInputView.swift in Sources */,
 				88AEE94920694941002562B3 /* AddressDialogView.swift in Sources */,
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
+				88AEE957206952EB002562B3 /* SwitchView.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
 				88E512F920677B2C0070F407 /* OpalImagePickerConfiguration.swift in Sources */,

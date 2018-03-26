@@ -25,7 +25,18 @@ class SpokenDialogView: UIView {
     
     func setup() {
         let adapter = SpokenListAdapter()
-        adapter.items = []
+        adapter.items = [
+            LangModel("English", false),
+            LangModel("Spanish", false),
+            LangModel("Portuguese", false),
+            LangModel("Russian", false),
+            LangModel("Hungarian", false),
+            LangModel("Italian", false),
+            LangModel("French", false),
+            LangModel("German", false),
+            LangModel("Japanese", false),
+            LangModel("Mandarin", false)
+        ]
         listview.adapter = adapter
         listview.reload()
     }

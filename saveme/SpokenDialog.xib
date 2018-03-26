@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpokenDialogView" customModule="saveme" customModuleProvider="target">
             <connections>
-                <outlet property="countrypicker" destination="bmr-ZD-4gh" id="jlb-rp-7KV"/>
                 <outlet property="listview" destination="bmr-ZD-4gh" id="tux-0y-RxO"/>
             </connections>
         </placeholder>

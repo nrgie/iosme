@@ -18,6 +18,11 @@ class LangModel: Mappable {
         //super.init(map: map)
     }
     
+    init(_ name:String!, _ checked: Bool!) {
+        self.name = name
+        self.checked = checked
+    }
+    
     func mapping(map: Map) {
         //super.mapping(map: map)
         name <- map["name"]

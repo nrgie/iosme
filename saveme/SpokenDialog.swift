@@ -286,7 +286,6 @@ open class SpokenDialog: UIView {
     
     @objc func buttonTapped(sender: UIButton!) {
         if sender.tag == kDoneButtonTag {
-            self.slayer.getSelected()
             self.callback?(nil) //self.datePicker.date)
         } else {
             self.callback?(nil)

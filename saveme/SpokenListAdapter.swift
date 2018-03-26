@@ -12,7 +12,7 @@ import ObjectMapper
 
 class SpokenListAdapter: Adapter {
 
-    var items: [UserData]!
+    var items: [LangModel]!
     let user = DataStore.shared.userData
     
     var count: Int {
@@ -24,20 +24,15 @@ class SpokenListAdapter: Adapter {
     }
 
     func view(forPosition position: Int, convertView: UIView?) -> UIView {
-        
-        let item : UserData = items[position]
-        let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
-        //result.fill(with: items[position])
+        let item : LangModel = items[position]
+        let result: SwitchView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SwitchView
+        result.fill(with: items[position])
         result.isUserInteractionEnabled = true
-            
-        UITapGestureRecognizer(addToView: result) {
-        
-        }
         return result
     }
     
     func viewType(forPosition position: Int) -> UIView.Type {
-        return SettingView.self
+        return SwitchView.self
     }
     
     func reload() {
