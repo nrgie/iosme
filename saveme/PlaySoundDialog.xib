@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaySoundDialogView" customModule="saveme" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0R-Ba-EoT">
+                    <rect key="frame" x="50" y="49" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="Jta-Sm-g5m"/>
+                        <constraint firstAttribute="width" constant="72" id="WUT-sr-hJO"/>
+                    </constraints>
+                    <state key="normal" image="ic_play_circle_outline_black_36dp"/>
+                    <connections>
+                        <action selector="playdemo:" destination="-1" eventType="touchUpInside" id="kjG-ql-ISO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a0R-Ba-EoT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2V1-77-fQc"/>
+                <constraint firstItem="a0R-Ba-EoT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="g4o-cD-zDc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-96" y="-383.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_play_circle_outline_black_36dp" width="72" height="72"/>
+    </resources>
+</document>

@@ -48,9 +48,9 @@ class QuickSettingsViewController: UIViewController {
             Setting("ic_help_black_24dp", "help".localized, "", "helppage"),
             Setting("ic_flag_black_24dp", "applang".localized, "", "langpage"),
             Setting("ic_bookmark_border_black_24dp", "terms".localized, "", "termspage"),
-            Setting("ic_send_black_24dp", "appinvite".localized, "", "invitepage"),
+            //Setting("ic_send_black_24dp", "appinvite".localized, "", "invitepage"),
             Setting("ic_speaker_phone_black_24dp", "playdemosos".localized, "", "playsound"),
-            Setting("ic_clear_black_24dp", "exit".localized, "", "exit")
+            Setting("ic_exit_to_app_black_24dp", "exit".localized, "", "exit")
         
         ]
         

@@ -104,6 +104,41 @@ class SettingsListAdapter: Adapter {
                     }
                 }
                 
+                if item.action == "gender" {
+                    
+                    var state: Bool = false
+                    if DataStore.shared.userData?.gender == "0" {
+                        state = false
+                    } else {
+                        state = true
+                    }
+                    
+                    SwitchDialog(showCancelButton:false).show("Your gender".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "Male", offTitle:"Female", switchType: "gender", switchState: state)
+                    {_ in self.reload() }
+                }
+                
+                if item.action == "national" {
+                    CountryDialog(textColor: UIColor.black, buttonColor: UIColor.blue, type: "national", font: .boldSystemFont(ofSize: 15), locale: nil, showCancelButton: false).show("Choose your national".localized) { _ in }
+                }
+                
+                if item.action == "spoken" {
+                    
+                    // spoken array dialog
+                    
+                }
+                
+                if item.action == "address" {
+                    
+                    // address dialog
+                    
+                }
+                
+                if item.action == "parent" {
+                    
+                    // pin kód dialog
+                    
+                }
+                
             }
             
             return result

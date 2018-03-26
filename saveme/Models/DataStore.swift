@@ -41,6 +41,13 @@ class DataStore {
         }
     }
     
+    public func getLang() -> String? {
+        return self.readValue(for: "APPLANG") as? String
+    }
+    
+    public func setLang(token: String) {
+        self.persist(value: token, key: "APPLANG")
+    }
     
     public func getAccessToken() -> String? {
         return self.readValue(for: Constants.DataKeys.AccessTokenKey) as? String

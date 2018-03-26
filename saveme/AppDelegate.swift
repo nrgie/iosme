@@ -42,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
+    func languageWillChange(notification:NSNotification){
+        let targetLang = notification.object as! String
+        DataStore.shared.setLang(token: targetLang)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
@@ -58,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
     
         application.registerForRemoteNotifications()
+        
+        // lang
         
         _ = Theme.shared
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -224,17 +231,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         vc.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
         
-        var locationManager: CLLocationManager!
+        //var locationManager: CLLocationManager!
         
-        let lastlocation = locationManager.location!
+        //let lastlocation = locationManager.location
         
         var latitude:Double = 0
         var longitude:Double = 0
         
-        if(lastlocation != nil) {
-            latitude = lastlocation.coordinate.latitude
-            longitude = lastlocation.coordinate.longitude
-        }
+        //if(lastlocation != nil) {
+            //latitude = (lastlocation?.coordinate.latitude)!
+            //longitude = (lastlocation?.coordinate.longitude)!
+        //}
 
         let user = DataStore.shared.userData
         
@@ -242,7 +249,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         smstext += "lat: \(latitude) \n long: \(longitude) \n\nhttp://maps.google.com/maps?q=\(latitude),\(longitude)"
         
         var calltext = "calltext".localized + "latitude. \(latitude) longitude. \(longitude)"
-        
         
         if type == "police" {
             if user?.gpolicecall == true  {

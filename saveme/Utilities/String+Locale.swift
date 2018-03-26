@@ -15,6 +15,17 @@ extension String {
     }
     
     public var localized: String {
+        
+        var lang = DataStore.shared.getLang()
+        if lang == "" {
+            lang = "en"
+        }
+        
+        if let path = Bundle.main.path(forResource: lang, ofType: "lproj") {
+            if let bundle = Bundle(path: path) {
+                return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+            }
+        }
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
     

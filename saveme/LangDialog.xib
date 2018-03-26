@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LangDialogView" customModule="saveme" customModuleProvider="target">
+            <connections>
+                <outlet property="dropbtn" destination="ZwV-MT-8LU" id="LsR-Z2-YDB"/>
+                <outlet property="flag" destination="fjm-eX-JNx" id="11N-0r-C14"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="us" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-eX-JNx">
+                    <rect key="frame" x="16" y="18" width="41" height="36"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwV-MT-8LU">
+                    <rect key="frame" x="65" y="21" width="30" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="lkJ-03-1L8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="EN">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="drop:" destination="-1" eventType="touchUpInside" id="7Bf-RA-Ny6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fjm-eX-JNx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="MDv-iO-ZiE"/>
+                <constraint firstItem="fjm-eX-JNx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="18" id="RfY-w0-B9n"/>
+                <constraint firstItem="ZwV-MT-8LU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="21" id="Xvf-cz-mRW"/>
+                <constraint firstItem="ZwV-MT-8LU" firstAttribute="leading" secondItem="fjm-eX-JNx" secondAttribute="trailing" constant="8" symbolic="YES" id="awE-nd-4fr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZwV-MT-8LU" secondAttribute="trailing" constant="20" id="fOU-eN-hH6"/>
+                <constraint firstItem="fjm-eX-JNx" firstAttribute="centerY" secondItem="ZwV-MT-8LU" secondAttribute="centerY" id="hk7-co-i5O"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fjm-eX-JNx" secondAttribute="bottom" constant="16" id="hlw-2A-81V"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-104.5" y="-380"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="us" width="80" height="53"/>
+    </resources>
+</document>

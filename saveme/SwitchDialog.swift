@@ -123,7 +123,6 @@ open class SwitchDialog: UIView {
         self.callback = callback
         
         self.defaultDate = defaultDate
-            
         
         self.slayer.onTitle = self.onTitle
         self.slayer.offTitle = self.offTitle

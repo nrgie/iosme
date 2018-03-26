@@ -102,6 +102,16 @@
 		8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0032061044E00FA4578 /* GuardListAdapter.swift */; };
 		8891F0062061109F00FA4578 /* FullName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8891F0052061109F00FA4578 /* FullName.xib */; };
 		8891F008206110B300FA4578 /* FullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F007206110B300FA4578 /* FullNameView.swift */; };
+		88AEE91C2068FE27002562B3 /* LangDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE91B2068FE27002562B3 /* LangDialogView.swift */; };
+		88AEE91E2068FE36002562B3 /* LangDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE91D2068FE36002562B3 /* LangDialog.swift */; };
+		88AEE9202068FE59002562B3 /* PlaySoundDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */; };
+		88AEE9222068FE6C002562B3 /* PlaySoundDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */; };
+		88AEE9242068FF16002562B3 /* LangDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9232068FF16002562B3 /* LangDialog.xib */; };
+		88AEE9262068FF1F002562B3 /* PlaySoundDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */; };
+		88AEE92820690113002562B3 /* demo_en.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE92720690112002562B3 /* demo_en.mp3 */; };
+		88AEE92A206901EB002562B3 /* CountryDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE929206901EB002562B3 /* CountryDialog.swift */; };
+		88AEE92C206901FA002562B3 /* CountryDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE92B206901FA002562B3 /* CountryDialogView.swift */; };
+		88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE92D2069020E002562B3 /* CountryDialog.xib */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
 		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
@@ -306,6 +316,16 @@
 		8891F0032061044E00FA4578 /* GuardListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardListAdapter.swift; sourceTree = "<group>"; };
 		8891F0052061109F00FA4578 /* FullName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullName.xib; sourceTree = "<group>"; };
 		8891F007206110B300FA4578 /* FullNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameView.swift; sourceTree = "<group>"; };
+		88AEE91B2068FE27002562B3 /* LangDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangDialogView.swift; sourceTree = "<group>"; };
+		88AEE91D2068FE36002562B3 /* LangDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangDialog.swift; sourceTree = "<group>"; };
+		88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundDialog.swift; sourceTree = "<group>"; };
+		88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundDialogView.swift; sourceTree = "<group>"; };
+		88AEE9232068FF16002562B3 /* LangDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LangDialog.xib; sourceTree = "<group>"; };
+		88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaySoundDialog.xib; sourceTree = "<group>"; };
+		88AEE92720690112002562B3 /* demo_en.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demo_en.mp3; sourceTree = "<group>"; };
+		88AEE929206901EB002562B3 /* CountryDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDialog.swift; sourceTree = "<group>"; };
+		88AEE92B206901FA002562B3 /* CountryDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDialogView.swift; sourceTree = "<group>"; };
+		88AEE92D2069020E002562B3 /* CountryDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryDialog.xib; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
@@ -467,6 +487,7 @@
 				737107312046D9A90092689D /* saveme.entitlements */,
 				88E5131A2067D8710070F407 /* nums.json */,
 				88E5131C2067D8A90070F407 /* welcome.mp3 */,
+				88AEE92720690112002562B3 /* demo_en.mp3 */,
 			);
 			path = saveme;
 			sourceTree = "<group>";
@@ -724,13 +745,22 @@
 				88E513082067A49B0070F407 /* SwitchDialog.xib */,
 				88E513122067C5000070F407 /* HelpDialog.xib */,
 				88E513142067C5080070F407 /* SignalDialog.xib */,
+				88AEE9232068FF16002562B3 /* LangDialog.xib */,
+				88AEE92D2069020E002562B3 /* CountryDialog.xib */,
+				88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */,
 				8891F007206110B300FA4578 /* FullNameView.swift */,
 				88E513062067A4930070F407 /* SwitchDialogView.swift */,
 				88E5130E2067C4C00070F407 /* HelpDialogView.swift */,
+				88AEE91B2068FE27002562B3 /* LangDialogView.swift */,
+				88AEE92B206901FA002562B3 /* CountryDialogView.swift */,
+				88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */,
 				88E513102067C4D30070F407 /* SignalDialogView.swift */,
 				88BA887520603D530028C5AF /* FullNameDialog.swift */,
 				88E513042067A2310070F407 /* SwitchDialog.swift */,
 				88E5130A2067C4730070F407 /* HelpDialog.swift */,
+				88AEE91D2068FE36002562B3 /* LangDialog.swift */,
+				88AEE929206901EB002562B3 /* CountryDialog.swift */,
+				88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */,
 				88E5130C2067C4A10070F407 /* SignalDialog.swift */,
 				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
 			);
@@ -926,9 +956,12 @@
 				3DEE9A1A1EC0F68D00CA8B8D /* RobotoCondensed-Bold.ttf in Resources */,
 				88E513172067D3B80070F407 /* Map.storyboard in Resources */,
 				730B6FFA200626F400D83914 /* Settings.storyboard in Resources */,
+				88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
+				88AEE92820690113002562B3 /* demo_en.mp3 in Resources */,
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
+				88AEE9242068FF16002562B3 /* LangDialog.xib in Resources */,
 				88CCC02B2064F8D2002119CC /* SettingIconOne.xib in Resources */,
 				88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */,
 				88E5131B2067D8720070F407 /* nums.json in Resources */,
@@ -936,6 +969,7 @@
 				3D3B1AE31EBCBC17005DE871 /* Main.storyboard in Resources */,
 				88E495362063D054001584E9 /* ListSeparator.xib in Resources */,
 				88C40073205D716900CF1E9D /* wizard3.storyboard in Resources */,
+				88AEE9262068FF1F002562B3 /* PlaySoundDialog.xib in Resources */,
 				88E5131D2067D8AA0070F407 /* welcome.mp3 in Resources */,
 				3DEE9A1B1EC0F68D00CA8B8D /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				3D7D71251EBCC07A00E71211 /* Splash.storyboard in Resources */,
@@ -966,6 +1000,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CountryPickerSwift/CountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/EPContactsPicker/EPContactsPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -994,6 +1029,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPContactsPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -1131,6 +1167,7 @@
 				88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */,
 				88BA88722060125E0028C5AF /* UIGesture.swift in Sources */,
 				882DB677205FA4CE00C37F85 /* Pool.swift in Sources */,
+				88AEE9222068FE6C002562B3 /* PlaySoundDialogView.swift in Sources */,
 				88CCC0292064F8C3002119CC /* SettingIconViewOneLine.swift in Sources */,
 				737107412046FC090092689D /* AppNC.swift in Sources */,
 				911EFA4C1EC0719700CF9ABF /* UserDataEditorEmbedViewController.swift in Sources */,
@@ -1151,6 +1188,7 @@
 				88E512FD20677B360070F407 /* OpalImagePickerRootViewController.swift in Sources */,
 				91AF74851EC9C9E100DAD6D1 /* ProgramInfoViewController.swift in Sources */,
 				73132C24200F5013002B690B /* SettingCell.swift in Sources */,
+				88AEE92A206901EB002562B3 /* CountryDialog.swift in Sources */,
 				88E512F720677B280070F407 /* OpalImagePickerCollectionViewLayout.swift in Sources */,
 				3DEE9A211EC0FA7A00CA8B8D /* MenuItem.swift in Sources */,
 				88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */,
@@ -1158,6 +1196,7 @@
 				E6E957E91EFBACA700C5CA3E /* DecideViewController.swift in Sources */,
 				88E513112067C4D30070F407 /* SignalDialogView.swift in Sources */,
 				8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */,
+				88AEE92C206901FA002562B3 /* CountryDialogView.swift in Sources */,
 				3D7D71281EBCC2E900E71211 /* SplashViewController.swift in Sources */,
 				882DB682205FA4EE00C37F85 /* ContainerView.swift in Sources */,
 				88E5130D2067C4A10070F407 /* SignalDialog.swift in Sources */,
@@ -1180,6 +1219,7 @@
 				3D0148811EC0B89900804F54 /* String+Locale.swift in Sources */,
 				735778C6200F59AE00D3AFF0 /* Setting.swift in Sources */,
 				7371073B2046FA080092689D /* HalfModalTransitionAnimator.swift in Sources */,
+				88AEE91E2068FE36002562B3 /* LangDialog.swift in Sources */,
 				3D5F21921EBDCD460044A9A8 /* UserData.swift in Sources */,
 				7371073D2046FA0C0092689D /* HalfModalInteractiveTransition.swift in Sources */,
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
@@ -1189,6 +1229,8 @@
 				88E513072067A4930070F407 /* SwitchDialogView.swift in Sources */,
 				88C40083205D723100CF1E9D /* Wizard6ViewController.swift in Sources */,
 				88E4952E206392AF001584E9 /* PendingGuard.swift in Sources */,
+				88AEE91C2068FE27002562B3 /* LangDialogView.swift in Sources */,
+				88AEE9202068FE59002562B3 /* PlaySoundDialog.swift in Sources */,
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
 				88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */,
 				88E4952A206391EE001584E9 /* MedModel.swift in Sources */,

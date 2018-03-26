@@ -35,6 +35,10 @@ class SwitchDialogView: UIView, OpalImagePickerControllerDelegate {
                 DataStore.shared.userData?.cantrack = true
             }
             
+            if type == "gender" { // lány ha true
+                DataStore.shared.userData?.gender = "1"
+            }
+            
         } else {
             
             if type == "learn" {
@@ -43,6 +47,10 @@ class SwitchDialogView: UIView, OpalImagePickerControllerDelegate {
             
             if type == "track" {
                 DataStore.shared.userData?.cantrack = false
+            }
+            
+            if type == "gender" {
+                DataStore.shared.userData?.gender = "0"
             }
             
         }

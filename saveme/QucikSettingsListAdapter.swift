@@ -88,19 +88,32 @@ class QuickSettingsListAdapter: Adapter {
                         let baseController = mainStoryboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
                         UIApplication.shared.delegate?.window??.rootViewController = baseController
                     }
+
+                    if item.action == "helppage" {
+                        HelpDialog(showCancelButton:false).show("PLEASE SELECT HELP") {_ in }
+                    }
+                    if item.action == "langpage" {
+                        LangDialog(showCancelButton:false).show("APPLICATION LANGUAGE".localized) {_ in }
+                    }
                     
-                    if item.action == "learn" {
-                        //checkbox
-                        FullNameDialog().show("Full Name".localized, doneButtonTitle: "Save".localized, cancelButtonTitle: "Cancel".localized, datePickerMode: .date) {_ in
-                            self.reload()
+                    if item.action == "termspage" {
+                        // open url
+                        guard let url = URL(string: "http://saveme-app.com/terms.html") else {
+                            return
+                        }
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        } else {
+                            UIApplication.shared.openURL(url)
                         }
                     }
-                    if item.action == "tracking" {}
-                    if item.action == "helppage" {}
-                    if item.action == "langpage" {}
-                    if item.action == "termspage" {}
-                    if item.action == "invitepage" {}
-                    if item.action == "playsound" {}
+                    if item.action == "invitepage" {
+                        // firebase ?
+                        // átmenetileg off. kell a google login.
+                    }
+                    if item.action == "playsound" {
+                        PlaySoundDialog(showCancelButton:false).show("PLAY YOUR DEMO EMERGENCY MESSAGE") {_ in }
+                    }
                     
                 }
                 
@@ -114,6 +127,7 @@ class QuickSettingsListAdapter: Adapter {
                 
                 UITapGestureRecognizer(addToView: result) {
                     
+                    // ide jönnek a felsők, subtitles blokkok 3 db.
                     
                     if item.action == "w4" {
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "wizardcontent", bundle: nil)
@@ -123,20 +137,13 @@ class QuickSettingsListAdapter: Adapter {
                         UIApplication.shared.delegate?.window??.rootViewController = c
                     }
                     
-                    if item.action == "exit" {
-                        DataStore.shared.clearData()
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Splash", bundle: nil)
-                        let baseController = mainStoryboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
-                        UIApplication.shared.delegate?.window??.rootViewController = baseController
-                    }
-                    
                     if item.action == "learn" {
-                        SwitchDialog().show("Learning Mode".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "On", offTitle:"Off", switchType: "learn", switchState: AppDelegate.shared.learnmode)
+                        SwitchDialog(showCancelButton:false).show("Learning Mode".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "On", offTitle:"Off", switchType: "learn", switchState: AppDelegate.shared.learnmode)
                             {_ in self.reload() }
                     }
                     
                     if item.action == "tracking" {
-                        SwitchDialog().show("Can others watch your location ?".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "Enabled", offTitle:"Disabled", switchType: "track", switchState: (DataStore.shared.userData?.cantrack)!) {_ in self.reload() }
+                        SwitchDialog(showCancelButton:false).show("Can others watch your location ?".localized, doneButtonTitle: "Ok".localized, cancelButtonTitle: "Cancel".localized, onTitle: "Enabled", offTitle:"Disabled", switchType: "track", switchState: (DataStore.shared.userData?.cantrack)!) {_ in self.reload() }
                     }
                     
                 }

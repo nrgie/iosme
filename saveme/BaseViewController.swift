@@ -105,7 +105,7 @@ class BaseViewController : UIViewController {
     }
     
     func helpTap(gestureRecognizer: UITapGestureRecognizer) {
-        HelpDialog().show("PLEASE SELECT HELP") {_ in }
+        HelpDialog(showCancelButton:false).show("PLEASE SELECT HELP") {_ in }
     }
 
     func guardsTap(gestureRecognizer: UITapGestureRecognizer){
@@ -127,13 +127,13 @@ class BaseViewController : UIViewController {
     func tatap(gestureRecognizer: UITapGestureRecognizer) {}
     
     func poltap(gestureRecognizer: UITapGestureRecognizer) {
-        SignalDialog().show("SELECT QUICK ACTION", type:"police") {_ in }
+        SignalDialog(showCancelButton:false).show("SELECT QUICK ACTION", type:"police") {_ in }
     }
     func firetap(gestureRecognizer: UITapGestureRecognizer) {
-        SignalDialog().show("SELECT QUICK ACTION", type:"fire") {_ in }
+        SignalDialog(showCancelButton:false).show("SELECT QUICK ACTION", type:"fire") {_ in }
     }
     func ambtap(gestureRecognizer: UITapGestureRecognizer) {
-        SignalDialog().show("SELECT QUICK ACTION", type:"ambulance") {_ in }
+        SignalDialog(showCancelButton:false).show("SELECT QUICK ACTION", type:"ambulance") {_ in }
     }
 
     func TALongTapped(gestureRecognizer: UILongPressGestureRecognizer){
