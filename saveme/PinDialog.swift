@@ -14,7 +14,7 @@ private extension Selector {
     static let deviceOrientationDidChange = #selector(DatePickerDialog.deviceOrientationDidChange)
 }
 
-open class CountryDialog: UIView {
+open class PinDialog: UIView {
     public typealias InputCallback = ( Any? ) -> Void
     
     // MARK: - Constants
@@ -25,7 +25,7 @@ open class CountryDialog: UIView {
     
     // MARK: - Views
     private var dialogView: UIView!
-    private var slayer: CountryDialogView!
+    private var slayer: PinDialogView!
     private var titleLabel: UILabel!
     open var datePicker: UIDatePicker!
     private var cancelButton: UIButton!
@@ -42,12 +42,9 @@ open class CountryDialog: UIView {
     private var buttonColor: UIColor!
     private var font: UIFont!
     
-    private var type: String!
-    
     // MARK: - Dialog initialization
     public init(textColor: UIColor = UIColor.black,
                 buttonColor: UIColor = UIColor.blue,
-                type: String = "",
                 font: UIFont = .boldSystemFont(ofSize: 15),
                 locale: Locale? = nil,
                 showCancelButton: Bool = true) {
@@ -56,7 +53,6 @@ open class CountryDialog: UIView {
         self.textColor = textColor
         self.buttonColor = buttonColor
         self.font = font
-        self.type = type
         self.showCancelButton = showCancelButton
         self.locale = locale
         setupView()
@@ -86,7 +82,7 @@ open class CountryDialog: UIView {
     /// Handle device orientation changes
     @objc func deviceOrientationDidChange(_ notification: Notification) {
         self.frame = UIScreen.main.bounds
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         dialogView.frame = CGRect(x: (UIScreen.main.bounds.size.width - dialogSize.width) / 2,
                                   y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)),
                                   width: dialogSize.width,
@@ -106,8 +102,6 @@ open class CountryDialog: UIView {
         }
 
         self.callback = callback
-        
-        self.slayer.type = self.type
         self.slayer.setup()
         
         /* Add dialog to main window */
@@ -165,7 +159,7 @@ open class CountryDialog: UIView {
     /// Creates the container view here: create the dialog, then add the custom content and buttons
     private func createContainerView() -> UIView {
         let screenSize = UIScreen.main.bounds.size
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         
         
         // For the black background
@@ -229,9 +223,9 @@ open class CountryDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> CountryDialogView {
-        let contentFrame = CGRect(x:0, y:40, width: 300, height: 300)
-        let result : CountryDialogView! = CountryDialogView(frame: contentFrame)
+    fileprivate func configureLayer() -> PinDialogView {
+        let contentFrame = CGRect(x:0, y:40, width: 300, height: 172)
+        let result : PinDialogView! = PinDialogView(frame: contentFrame)
         return result
     }
     
@@ -287,7 +281,6 @@ open class CountryDialog: UIView {
     
     @objc func buttonTapped(sender: UIButton!) {
         if sender.tag == kDoneButtonTag {
-            self.slayer.getSelected()
             self.callback?(nil) //self.datePicker.date)
         } else {
             self.callback?(nil)

@@ -112,6 +112,20 @@
 		88AEE92A206901EB002562B3 /* CountryDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE929206901EB002562B3 /* CountryDialog.swift */; };
 		88AEE92C206901FA002562B3 /* CountryDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE92B206901FA002562B3 /* CountryDialogView.swift */; };
 		88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE92D2069020E002562B3 /* CountryDialog.xib */; };
+		88AEE939206933C3002562B3 /* SwiftCountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE938206933C3002562B3 /* SwiftCountryPicker.bundle */; };
+		88AEE93D206933D6002562B3 /* SwiftCountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE93A206933D3002562B3 /* SwiftCountryPicker.swift */; };
+		88AEE93E206933D6002562B3 /* SwiftCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE93B206933D3002562B3 /* SwiftCountryView.swift */; };
+		88AEE93F206933D6002562B3 /* SwiftCountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE93C206933D5002562B3 /* SwiftCountryView.xib */; };
+		88AEE941206948E9002562B3 /* SpokenDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE940206948E9002562B3 /* SpokenDialog.swift */; };
+		88AEE943206948FA002562B3 /* SpokenDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE942206948FA002562B3 /* SpokenDialogView.swift */; };
+		88AEE94520694915002562B3 /* SpokenDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE94420694915002562B3 /* SpokenDialog.xib */; };
+		88AEE94720694931002562B3 /* AddressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE94620694931002562B3 /* AddressDialog.swift */; };
+		88AEE94920694941002562B3 /* AddressDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE94820694941002562B3 /* AddressDialogView.swift */; };
+		88AEE94B20694952002562B3 /* AddressDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE94A20694952002562B3 /* AddressDialog.xib */; };
+		88AEE94D20694991002562B3 /* PinDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE94C20694991002562B3 /* PinDialog.swift */; };
+		88AEE94F20694999002562B3 /* PinDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE94E20694999002562B3 /* PinDialogView.swift */; };
+		88AEE951206949AB002562B3 /* PinDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE950206949AB002562B3 /* PinDialog.xib */; };
+		88AEE95320694BBF002562B3 /* SpokenListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */; };
 		88BA88722060125E0028C5AF /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88712060125E0028C5AF /* UIGesture.swift */; };
 		88BA8874206023BD0028C5AF /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA8873206023BD0028C5AF /* DatePickerDialog.swift */; };
 		88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA887520603D530028C5AF /* FullNameDialog.swift */; };
@@ -326,6 +340,20 @@
 		88AEE929206901EB002562B3 /* CountryDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDialog.swift; sourceTree = "<group>"; };
 		88AEE92B206901FA002562B3 /* CountryDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDialogView.swift; sourceTree = "<group>"; };
 		88AEE92D2069020E002562B3 /* CountryDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryDialog.xib; sourceTree = "<group>"; };
+		88AEE938206933C3002562B3 /* SwiftCountryPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftCountryPicker.bundle; sourceTree = "<group>"; };
+		88AEE93A206933D3002562B3 /* SwiftCountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountryPicker.swift; sourceTree = "<group>"; };
+		88AEE93B206933D3002562B3 /* SwiftCountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountryView.swift; sourceTree = "<group>"; };
+		88AEE93C206933D5002562B3 /* SwiftCountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftCountryView.xib; sourceTree = "<group>"; };
+		88AEE940206948E9002562B3 /* SpokenDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpokenDialog.swift; sourceTree = "<group>"; };
+		88AEE942206948FA002562B3 /* SpokenDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpokenDialogView.swift; sourceTree = "<group>"; };
+		88AEE94420694915002562B3 /* SpokenDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpokenDialog.xib; sourceTree = "<group>"; };
+		88AEE94620694931002562B3 /* AddressDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressDialog.swift; sourceTree = "<group>"; };
+		88AEE94820694941002562B3 /* AddressDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressDialogView.swift; sourceTree = "<group>"; };
+		88AEE94A20694952002562B3 /* AddressDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressDialog.xib; sourceTree = "<group>"; };
+		88AEE94C20694991002562B3 /* PinDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinDialog.swift; sourceTree = "<group>"; };
+		88AEE94E20694999002562B3 /* PinDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinDialogView.swift; sourceTree = "<group>"; };
+		88AEE950206949AB002562B3 /* PinDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinDialog.xib; sourceTree = "<group>"; };
+		88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpokenListAdapter.swift; sourceTree = "<group>"; };
 		88BA88712060125E0028C5AF /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 		88BA8873206023BD0028C5AF /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		88BA887520603D530028C5AF /* FullNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameDialog.swift; sourceTree = "<group>"; };
@@ -473,6 +501,7 @@
 				3D7D71261EBCC2CA00E71211 /* Controllers */,
 				88E5130120679FC90070F407 /* Storyboards */,
 				88DFFC0A205FD36C007EF3F7 /* adapter */,
+				88AEE92F20693284002562B3 /* CountryPicker */,
 				88E512F320677AF30070F407 /* ImagePicker */,
 				882DB671205FA4B600C37F85 /* Roll */,
 				88E5130020679EDC0070F407 /* Dialogs */,
@@ -481,6 +510,7 @@
 				3DA38CE41EBD369C003E09CD /* Models */,
 				3D7D71291EBCC40A00E71211 /* Utilities */,
 				3D3B1ADD1EBCBC17005DE871 /* AppDelegate.swift */,
+				88AEE938206933C3002562B3 /* SwiftCountryPicker.bundle */,
 				3D3B1AE91EBCBC17005DE871 /* Info.plist */,
 				73529F5D200F8C3000F5C9F5 /* Localizable.strings */,
 				73B81AE11FBA056A0071EF66 /* GoogleService-Info.plist */,
@@ -712,6 +742,16 @@
 			path = Pool;
 			sourceTree = "<group>";
 		};
+		88AEE92F20693284002562B3 /* CountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				88AEE93A206933D3002562B3 /* SwiftCountryPicker.swift */,
+				88AEE93B206933D3002562B3 /* SwiftCountryView.swift */,
+				88AEE93C206933D5002562B3 /* SwiftCountryView.xib */,
+			);
+			path = CountryPicker;
+			sourceTree = "<group>";
+		};
 		88DFFC0A205FD36C007EF3F7 /* adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +761,7 @@
 				88D539E62060F7560089F7E2 /* SettingsHealthListAdapter.swift */,
 				8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */,
 				8891F0032061044E00FA4578 /* GuardListAdapter.swift */,
+				88AEE95220694BBF002562B3 /* SpokenListAdapter.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -744,22 +785,31 @@
 				8891F0052061109F00FA4578 /* FullName.xib */,
 				88E513082067A49B0070F407 /* SwitchDialog.xib */,
 				88E513122067C5000070F407 /* HelpDialog.xib */,
+				88AEE94A20694952002562B3 /* AddressDialog.xib */,
+				88AEE950206949AB002562B3 /* PinDialog.xib */,
 				88E513142067C5080070F407 /* SignalDialog.xib */,
 				88AEE9232068FF16002562B3 /* LangDialog.xib */,
 				88AEE92D2069020E002562B3 /* CountryDialog.xib */,
+				88AEE94420694915002562B3 /* SpokenDialog.xib */,
 				88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */,
 				8891F007206110B300FA4578 /* FullNameView.swift */,
 				88E513062067A4930070F407 /* SwitchDialogView.swift */,
 				88E5130E2067C4C00070F407 /* HelpDialogView.swift */,
+				88AEE94E20694999002562B3 /* PinDialogView.swift */,
+				88AEE94820694941002562B3 /* AddressDialogView.swift */,
 				88AEE91B2068FE27002562B3 /* LangDialogView.swift */,
 				88AEE92B206901FA002562B3 /* CountryDialogView.swift */,
+				88AEE942206948FA002562B3 /* SpokenDialogView.swift */,
 				88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */,
 				88E513102067C4D30070F407 /* SignalDialogView.swift */,
 				88BA887520603D530028C5AF /* FullNameDialog.swift */,
 				88E513042067A2310070F407 /* SwitchDialog.swift */,
 				88E5130A2067C4730070F407 /* HelpDialog.swift */,
+				88AEE94C20694991002562B3 /* PinDialog.swift */,
+				88AEE94620694931002562B3 /* AddressDialog.swift */,
 				88AEE91D2068FE36002562B3 /* LangDialog.swift */,
 				88AEE929206901EB002562B3 /* CountryDialog.swift */,
+				88AEE940206948E9002562B3 /* SpokenDialog.swift */,
 				88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */,
 				88E5130C2067C4A10070F407 /* SignalDialog.swift */,
 				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
@@ -927,9 +977,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3B1AE81EBCBC17005DE871 /* LaunchScreen.storyboard in Resources */,
+				88AEE94520694915002562B3 /* SpokenDialog.xib in Resources */,
 				73132C1A20066E65002B690B /* Login.storyboard in Resources */,
 				88E513152067C5080070F407 /* SignalDialog.xib in Resources */,
 				88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */,
+				88AEE94B20694952002562B3 /* AddressDialog.xib in Resources */,
 				88CCC02D206509EC002119CC /* wizardcontent.storyboard in Resources */,
 				73529F5B200F8C3000F5C9F5 /* Localizable.strings in Resources */,
 				73B81AE21FBA056A0071EF66 /* GoogleService-Info.plist in Resources */,
@@ -942,6 +994,8 @@
 				88E495302063AF6A001584E9 /* QuickSettings.storyboard in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
+				88AEE93F206933D6002562B3 /* SwiftCountryView.xib in Resources */,
+				88AEE939206933C3002562B3 /* SwiftCountryPicker.bundle in Resources */,
 				7373DA552006513C00DC77E8 /* wizard1.storyboard in Resources */,
 				88C40077205D718500CF1E9D /* wizard5.storyboard in Resources */,
 				3D5F219B1EBF97D80044A9A8 /* Anton-Regular.ttf in Resources */,
@@ -963,6 +1017,7 @@
 				3DEE9A1C1EC0F68D00CA8B8D /* RobotoCondensed-Italic.ttf in Resources */,
 				88AEE9242068FF16002562B3 /* LangDialog.xib in Resources */,
 				88CCC02B2064F8D2002119CC /* SettingIconOne.xib in Resources */,
+				88AEE951206949AB002562B3 /* PinDialog.xib in Resources */,
 				88C40079205D719A00CF1E9D /* wizard6.storyboard in Resources */,
 				88E5131B2067D8720070F407 /* nums.json in Resources */,
 				738BF2F120177FE400773420 /* medical.storyboard in Resources */,
@@ -999,7 +1054,6 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
-				"${BUILT_PRODUCTS_DIR}/CountryPickerSwift/CountryPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/EPContactsPicker/EPContactsPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -1028,7 +1082,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPContactsPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -1119,8 +1172,10 @@
 				8891F008206110B300FA4578 /* FullNameView.swift in Sources */,
 				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
+				88AEE95320694BBF002562B3 /* SpokenListAdapter.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
 				3D8BBD351EC0CC2100F459E7 /* UserResponse.swift in Sources */,
+				88AEE94720694931002562B3 /* AddressDialog.swift in Sources */,
 				88E512F520677B240070F407 /* ImagePickerCollectionViewCell.swift in Sources */,
 				880551AB205D69080065F766 /* FullNameVC.swift in Sources */,
 				9109E6961EC444D9005167B6 /* CustomCalendar.swift in Sources */,
@@ -1144,7 +1199,9 @@
 				910C08461EC6077300D25694 /* RecommendationsViewController.swift in Sources */,
 				3D5F21901EBDCCFA0044A9A8 /* UserDataResponse.swift in Sources */,
 				882DB681205FA4EE00C37F85 /* Adapter.swift in Sources */,
+				88AEE94D20694991002562B3 /* PinDialog.swift in Sources */,
 				88E495342063BA0D001584E9 /* QucikSettingsListAdapter.swift in Sources */,
+				88AEE941206948E9002562B3 /* SpokenDialog.swift in Sources */,
 				88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */,
 				3D7D712F1EBCC75C00E71211 /* Constants.swift in Sources */,
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
@@ -1169,12 +1226,14 @@
 				882DB677205FA4CE00C37F85 /* Pool.swift in Sources */,
 				88AEE9222068FE6C002562B3 /* PlaySoundDialogView.swift in Sources */,
 				88CCC0292064F8C3002119CC /* SettingIconViewOneLine.swift in Sources */,
+				88AEE93D206933D6002562B3 /* SwiftCountryPicker.swift in Sources */,
 				737107412046FC090092689D /* AppNC.swift in Sources */,
 				911EFA4C1EC0719700CF9ABF /* UserDataEditorEmbedViewController.swift in Sources */,
 				911EFA4A1EC0715800CF9ABF /* RegistrationViewController.swift in Sources */,
 				737107392046FA000092689D /* HalfModalTransitioningDelegate.swift in Sources */,
 				9109E6941EC35277005167B6 /* CalendarViewController.swift in Sources */,
 				88E513212067D9560070F407 /* Gmap.swift in Sources */,
+				88AEE94F20694999002562B3 /* PinDialogView.swift in Sources */,
 				91AF74831EC9ADD100DAD6D1 /* RecommendationCell.swift in Sources */,
 				882DB67E205FA4EE00C37F85 /* AdapterView.swift in Sources */,
 				3D5F21941EBDD2320044A9A8 /* Subscription.swift in Sources */,
@@ -1187,6 +1246,7 @@
 				3DA38CE81EBD36F0003E09CD /* BaseResponse.swift in Sources */,
 				88E512FD20677B360070F407 /* OpalImagePickerRootViewController.swift in Sources */,
 				91AF74851EC9C9E100DAD6D1 /* ProgramInfoViewController.swift in Sources */,
+				88AEE93E206933D6002562B3 /* SwiftCountryView.swift in Sources */,
 				73132C24200F5013002B690B /* SettingCell.swift in Sources */,
 				88AEE92A206901EB002562B3 /* CountryDialog.swift in Sources */,
 				88E512F720677B280070F407 /* OpalImagePickerCollectionViewLayout.swift in Sources */,
@@ -1204,6 +1264,7 @@
 				910884B21EC98D7400B95B4C /* Intensity.swift in Sources */,
 				88E5130F2067C4C00070F407 /* HelpDialogView.swift in Sources */,
 				3D62BA0A1EC493FA00F6B122 /* SearchInputView.swift in Sources */,
+				88AEE94920694941002562B3 /* AddressDialogView.swift in Sources */,
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,
@@ -1224,6 +1285,7 @@
 				7371073D2046FA0C0092689D /* HalfModalInteractiveTransition.swift in Sources */,
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
 				88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */,
+				88AEE943206948FA002562B3 /* SpokenDialogView.swift in Sources */,
 				88E513192067D3C30070F407 /* MapViewController.swift in Sources */,
 				88E513052067A2310070F407 /* SwitchDialog.swift in Sources */,
 				88E513072067A4930070F407 /* SwitchDialogView.swift in Sources */,

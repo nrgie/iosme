@@ -8,7 +8,6 @@
 
 import UIKit
 import PopupDialog
-import CountryPicker
 
 class SettingCell: UITableViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     

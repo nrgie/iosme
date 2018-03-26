@@ -9,20 +9,38 @@
 import Foundation
 import UIKit
 import Photos
-import CountryPicker
 
-class CountryDialogView: UIView, CountryPickerDelegate {
+class CountryDialogView: UIView, MRCountryPickerDelegate {
     
-    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+    func reload() {
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
+    }
+    
+    func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+        
+        print(name)
+        print(countryCode)
+        
         if type == "national" {
             DataStore.shared.userData?.national = countryCode
         }
+        
+        self.reload()
+        
+        //self.countryName.text = name
+        //self.countryCode.text = countryCode
+        //self.phoneCode.text = phoneCode
+        //self.countryFlag.image = flag
+    }
+    
+    func getSelected() {
+        countrypicker.getSelected()
     }
     
   
     var type: String = ""
     
-    @IBOutlet weak var countrypicker: CountryPicker!
+    @IBOutlet weak var countrypicker: MRCountryPicker!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,15 +49,18 @@ class CountryDialogView: UIView, CountryPickerDelegate {
     
     func setup() {
         
-        countrypicker.delegate = self as! UIPickerViewDelegate
+        countrypicker.countryPickerDelegate = self
+        
+        print(type)
         
         if type == "national" {
-            var usernat = DataStore.shared.userData?.national
+            let usernat = DataStore.shared.userData?.national
             if usernat != "" {
                 countrypicker.setCountry(usernat!)
             }
             countrypicker.showPhoneNumbers = false
         }
+        
     }
     
     override init(frame: CGRect) {

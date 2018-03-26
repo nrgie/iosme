@@ -54,6 +54,9 @@ class SwitchDialogView: UIView, OpalImagePickerControllerDelegate {
             }
             
         }
+        
+        reload()
+        
     }
 
     func reload() {

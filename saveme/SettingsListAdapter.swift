@@ -122,21 +122,16 @@ class SettingsListAdapter: Adapter {
                 }
                 
                 if item.action == "spoken" {
-                    
                     // spoken array dialog
-                    
+                    SpokenDialog().show("Spoken Languages".localized) { _ in }
                 }
                 
                 if item.action == "address" {
-                    
-                    // address dialog
-                    
+                    AddressDialog().show("Your detailed address".localized) { _ in }
                 }
                 
                 if item.action == "parent" {
-                    
-                    // pin kód dialog
-                    
+                    PinDialog().show("Enter Pin".localized) { _ in }
                 }
                 
             }

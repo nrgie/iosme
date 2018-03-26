@@ -1,11 +1,3 @@
-//
-//  CountryView.swift
-//  Hyber
-//
-//  Created by Taras on 12/1/16.
-//  Copyright © 2016 Taras Markevych. All rights reserved.
-//
-
 
 import Foundation
 import UIKit
@@ -14,9 +6,6 @@ class NibLoadingView: UIView {
     
     @IBOutlet weak var view: UIView!
     
-    /// Init
-    ///
-    /// - Parameter frame: frame descript
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -27,7 +16,6 @@ class NibLoadingView: UIView {
         nibSetup()
     }
     
-    /// Setup XIB
     fileprivate func nibSetup() {
         backgroundColor = UIColor.clear
         
@@ -39,9 +27,6 @@ class NibLoadingView: UIView {
         addSubview(view)
     }
     
-    /// Load XIB
-    ///
-    /// - Returns: XIBView
     fileprivate func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
@@ -54,8 +39,7 @@ class NibLoadingView: UIView {
 
 
 
-/// Load country view from XIB file
-class CountryView: NibLoadingView {
+class SwiftCountryView: NibLoadingView {
     
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
@@ -69,22 +53,24 @@ class CountryView: NibLoadingView {
         super.init(coder: aDecoder)
     }
     
-    /// Setup custop pickerView to UIPickerView
-    /// initialized by country code
-    /// - Parameter country: Countrycode
-    func setup(_ country: Country) {
-        DispatchQueue.main.async { [weak self] in
-            if let flag = country.flag {
-                self?.flagImageView.layer.borderWidth = 0.5
-                self?.flagImageView.layer.borderColor = UIColor.darkGray.cgColor
-                self?.flagImageView.layer.cornerRadius = 1
-                self?.flagImageView.layer.masksToBounds = true
-                self?.flagImageView.image = flag
-            }
+    func setup(_ country: Country, locale: Locale?) {
+        if let flag = country.flag {
+            flagImageView.layer.borderWidth = 0.5
+            flagImageView.layer.borderColor = UIColor.darkGray.cgColor
+            flagImageView.layer.cornerRadius = 1
+            flagImageView.layer.masksToBounds = true
+            flagImageView.image = flag
         }
-
-        countryNameLabel.text = country.name
+        
         countryCodeLabel.text = country.phoneCode
+
+
+        if let code = country.code,
+            let locale = locale {
+            countryNameLabel.text = locale.localizedString(forRegionCode: code)
+        }else{
+            countryNameLabel.text = country.name
+        }
     }
     
 }

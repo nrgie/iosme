@@ -28,7 +28,6 @@ target 'saveme' do
   pod 'GooglePlaces'
   pod 'PureLayout'
   pod 'PopupDialog', '~> 0.5.4'
-  pod 'CountryPickerSwift', '1.4.4'
   pod 'EPContactsPicker'
   pod 'DropDown'
   pod 'FLEX', '~> 2.0', :configurations => ['Debug']

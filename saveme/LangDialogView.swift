@@ -38,6 +38,7 @@ class LangDialogView: UIView {
                 self.dropbtn.setTitle("HU", for: .normal)
                 DataStore.shared.setLang(token:"hu")
             }
+            NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
         }
         dropDown.show()
         

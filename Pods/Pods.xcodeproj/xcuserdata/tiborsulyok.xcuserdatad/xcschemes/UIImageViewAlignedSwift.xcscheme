@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACEED00FD631CC4C14D9F2FF771B6DC2"
+               BlueprintIdentifier = "44352209BD7CC6CCD6739C3028BD2ECF"
                BlueprintName = "UIImageViewAlignedSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "UIImageViewAlignedSwift.framework">

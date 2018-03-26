@@ -14,7 +14,7 @@ private extension Selector {
     static let deviceOrientationDidChange = #selector(DatePickerDialog.deviceOrientationDidChange)
 }
 
-open class CountryDialog: UIView {
+open class SpokenDialog: UIView {
     public typealias InputCallback = ( Any? ) -> Void
     
     // MARK: - Constants
@@ -25,7 +25,7 @@ open class CountryDialog: UIView {
     
     // MARK: - Views
     private var dialogView: UIView!
-    private var slayer: CountryDialogView!
+    private var slayer: SpokenDialogView!
     private var titleLabel: UILabel!
     open var datePicker: UIDatePicker!
     private var cancelButton: UIButton!
@@ -106,8 +106,7 @@ open class CountryDialog: UIView {
         }
 
         self.callback = callback
-        
-        self.slayer.type = self.type
+
         self.slayer.setup()
         
         /* Add dialog to main window */
@@ -229,9 +228,9 @@ open class CountryDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> CountryDialogView {
+    fileprivate func configureLayer() -> SpokenDialogView {
         let contentFrame = CGRect(x:0, y:40, width: 300, height: 300)
-        let result : CountryDialogView! = CountryDialogView(frame: contentFrame)
+        let result : SpokenDialogView! = SpokenDialogView(frame: contentFrame)
         return result
     }
     
