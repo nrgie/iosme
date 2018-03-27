@@ -19,6 +19,11 @@ class MedModel: Mappable {
         //super.init(map: map)
     }
     
+    init(_ name: String!, _ qty: String!) {
+        self.name = name
+        self.qty = qty
+    }
+    
     func mapping(map: Map) {
         //super.mapping(map: map)
         name <- map["name"]

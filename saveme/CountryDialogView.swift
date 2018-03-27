@@ -25,6 +25,11 @@ class CountryDialogView: UIView, MRCountryPickerDelegate {
             DataStore.shared.userData?.national = countryCode
         }
         
+        if type == "emcountry" {
+            DataStore.shared.userData?.emcountry = countryCode
+            
+        }
+        
         self.reload()
         
         //self.countryName.text = name
@@ -55,6 +60,14 @@ class CountryDialogView: UIView, MRCountryPickerDelegate {
         
         if type == "national" {
             let usernat = DataStore.shared.userData?.national
+            if usernat != "" {
+                countrypicker.setCountry(usernat!)
+            }
+            countrypicker.showPhoneNumbers = false
+        }
+        
+        if type == "emcountry" {
+            let usernat = DataStore.shared.userData?.emcountry
             if usernat != "" {
                 countrypicker.setCountry(usernat!)
             }

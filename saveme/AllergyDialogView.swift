@@ -23,8 +23,10 @@ class AllergyDialogView: UIView {
         setup()
     }
     
+    let adapter = AllergyListAdapter()
+    
     func setup() {
-        let adapter = AllergyListAdapter()
+        
         adapter.items = [
             AllergyModel("Pollen".localized, false),
             AllergyModel("Animal dander".localized, false),
@@ -45,8 +47,19 @@ class AllergyDialogView: UIView {
             AllergyModel("Molluscs".localized, false)
         ]
         
+        if DataStore.shared.userData?.allergies.count == adapter.items.count {
+            adapter.items = DataStore.shared.userData?.allergies
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(save), name: Constants.Notifications.SaveAllergies, object: nil)
         listview.adapter = adapter
         listview.reload()
+    }
+    
+    func save() {
+        DataStore.shared.userData?.allergies.removeAll()
+        DataStore.shared.userData?.allergies = adapter.items
+        reload()
     }
     
     override init(frame: CGRect) {

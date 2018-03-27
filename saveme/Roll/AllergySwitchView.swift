@@ -15,10 +15,13 @@ class AllergySwitchView: UIView {
     
     @IBOutlet private var label: UILabel!
     
+    
     @IBOutlet weak var sw: UISwitch!
     @IBAction func swact(_ sender: Any) {
-    
+        self.checked = sw.isOn
     }
+    
+    var checked: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +34,8 @@ class AllergySwitchView: UIView {
     func fill(with item: AllergyModel) {
         label.text = item.name!
         // fill with userdata
+        // check in loop
+        
         sw.isOn = false
     }
     

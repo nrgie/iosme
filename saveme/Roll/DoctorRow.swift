@@ -12,12 +12,20 @@ import UIKit
 
 class DoctorRow: UIView {
 
+    var item: DoctorModel!
     
     @IBOutlet private var label: UILabel!
     
-    @IBOutlet weak var sw: UISwitch!
-    @IBAction func swact(_ sender: Any) {
+    @IBAction func del(_ sender: Any) {
+        
+    }
     
+    @IBAction func edit(_ sender: Any) {
+        //DocEditDialog()
+    }
+    
+    @IBAction func call(_ sender: Any) {
+        UIApplication.shared.open(URL(string:"tel://"+item.phone)!);
     }
     
     override init(frame: CGRect) {
@@ -29,9 +37,8 @@ class DoctorRow: UIView {
     }
     
     func fill(with item: DoctorModel) {
+        self.item = item
         label.text = item.name!
-        // fill with userdata
-        sw.isOn = false
     }
     
     required init?(coder aDecoder: NSCoder) {

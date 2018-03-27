@@ -12,6 +12,8 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    
+    var signalType: String = ""
     var lat: Double = 0.0
     var lng: Double = 0.0
     var learnmode: Bool = false
@@ -98,7 +100,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = splashViewController
         self.window?.makeKeyAndVisible()
         
-        
         locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
             if error != nil {
                 print(error)
@@ -111,11 +112,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Fabric.with([Crashlytics.self])
+        NotificationCenter.default.addObserver(self, selector: #selector(storeUser), name: Constants.Notifications.ReloadListView, object: nil)
+        
+        DataStore.shared.fillUser()
         
         return shouldPerformAdditionalDelegateHandling
     
     }
     
+    func storeUser() {
+        DataStore.shared.syncUser()
+    }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
@@ -205,6 +212,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
     func sendSOS(type: String!) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "base", bundle: nil)
@@ -229,6 +237,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
+        self.signalType = type
+        
+        StartDialog().show("") {_ in }
+    }
+    
+
+    
+    func Signal(type: String!) {
+    
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "base", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "BaseViewController")
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         vc.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
         
         //var locationManager: CLLocationManager!

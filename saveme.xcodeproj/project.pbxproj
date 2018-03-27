@@ -98,6 +98,27 @@
 		882DB688205FCC2F00C37F85 /* Setting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882DB687205FCC2F00C37F85 /* Setting.xib */; };
 		882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */; };
 		882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB68B205FCFE200C37F85 /* SettingView.swift */; };
+		88787347206A11D1006C3C4E /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787346206A11D1006C3C4E /* CountDown.swift */; };
+		8878734A206A12C7006C3C4E /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787349206A12C7006C3C4E /* LTMorphingLabel.swift */; };
+		8878734C206A12CE006C3C4E /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878734B206A12CE006C3C4E /* LTMorphingLabel+Evaporate.swift */; };
+		8878734E206A12E9006C3C4E /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878734D206A12E8006C3C4E /* LTEmitterView.swift */; };
+		88787350206A12EF006C3C4E /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878734F206A12EF006C3C4E /* LTEasing.swift */; };
+		88787352206A12F8006C3C4E /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787351206A12F8006C3C4E /* LTStringDiffResult.swift */; };
+		88787354206A1301006C3C4E /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787353206A1301006C3C4E /* LTMorphingEffect.swift */; };
+		88787356206A1330006C3C4E /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787355206A1330006C3C4E /* LTCharacterDiffResult.swift */; };
+		88787358206A1337006C3C4E /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787357206A1337006C3C4E /* LTCharacterLimbo.swift */; };
+		8878735A206A152F006C3C4E /* StartDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787359206A152F006C3C4E /* StartDialog.swift */; };
+		8878735C206A1620006C3C4E /* countdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8878735B206A161F006C3C4E /* countdown.storyboard */; };
+		8878735E206A162D006C3C4E /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878735D206A162D006C3C4E /* CountdownTimer.swift */; };
+		88787360206A1638006C3C4E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878735F206A1638006C3C4E /* CustomColors.swift */; };
+		88787362206A163F006C3C4E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787361206A163F006C3C4E /* ProgressBar.swift */; };
+		88787364206A168C006C3C4E /* StartDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88787363206A168C006C3C4E /* StartDialog.xib */; };
+		88787366206A169D006C3C4E /* StartDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787365206A169D006C3C4E /* StartDialogView.swift */; };
+		88787368206A5963006C3C4E /* DoctorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88787367206A5963006C3C4E /* DoctorRow.xib */; };
+		8878736A206A596C006C3C4E /* MedicalRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88787369206A596C006C3C4E /* MedicalRow.xib */; };
+		8878736C206A5C27006C3C4E /* MedicalEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8878736B206A5C27006C3C4E /* MedicalEdit.xib */; };
+		8878736E206A5D46006C3C4E /* MedicalEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878736D206A5D46006C3C4E /* MedicalEdit.swift */; };
+		88787370206A5E71006C3C4E /* MedEditDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878736F206A5E71006C3C4E /* MedEditDialog.swift */; };
 		8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */; };
 		8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891F0032061044E00FA4578 /* GuardListAdapter.swift */; };
 		8891F0062061109F00FA4578 /* FullName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8891F0052061109F00FA4578 /* FullName.xib */; };
@@ -147,9 +168,7 @@
 		88AEE97E2069888D002562B3 /* DoctorsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97D2069888D002562B3 /* DoctorsListAdapter.swift */; };
 		88AEE98020698897002562B3 /* MedListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE97F20698897002562B3 /* MedListAdapter.swift */; };
 		88AEE9822069889E002562B3 /* MedicalListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE9812069889E002562B3 /* MedicalListAdapter.swift */; };
-		88AEE9842069891A002562B3 /* DoctorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE9832069891A002562B3 /* DoctorRow.xib */; };
 		88AEE98620698922002562B3 /* MedRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE98520698922002562B3 /* MedRow.xib */; };
-		88AEE98820698929002562B3 /* MedicalRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEE98720698929002562B3 /* MedicalRow.xib */; };
 		88AEE98A20698942002562B3 /* MedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98920698942002562B3 /* MedRow.swift */; };
 		88AEE98C2069894B002562B3 /* DoctorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98B2069894B002562B3 /* DoctorRow.swift */; };
 		88AEE98E20698954002562B3 /* MedicalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEE98D20698954002562B3 /* MedicalRow.swift */; };
@@ -358,6 +377,27 @@
 		882DB687205FCC2F00C37F85 /* Setting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Setting.xib; sourceTree = "<group>"; };
 		882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAvatarView.swift; sourceTree = "<group>"; };
 		882DB68B205FCFE200C37F85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		88787346206A11D1006C3C4E /* CountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
+		88787349206A12C7006C3C4E /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		8878734B206A12CE006C3C4E /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		8878734D206A12E8006C3C4E /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		8878734F206A12EF006C3C4E /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		88787351206A12F8006C3C4E /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		88787353206A1301006C3C4E /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		88787355206A1330006C3C4E /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		88787357206A1337006C3C4E /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		88787359206A152F006C3C4E /* StartDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDialog.swift; sourceTree = "<group>"; };
+		8878735B206A161F006C3C4E /* countdown.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = countdown.storyboard; sourceTree = "<group>"; };
+		8878735D206A162D006C3C4E /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		8878735F206A1638006C3C4E /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		88787361206A163F006C3C4E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		88787363206A168C006C3C4E /* StartDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartDialog.xib; sourceTree = "<group>"; };
+		88787365206A169D006C3C4E /* StartDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDialogView.swift; sourceTree = "<group>"; };
+		88787367206A5963006C3C4E /* DoctorRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRow.xib; sourceTree = "<group>"; };
+		88787369206A596C006C3C4E /* MedicalRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalRow.xib; sourceTree = "<group>"; };
+		8878736B206A5C27006C3C4E /* MedicalEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalEdit.xib; sourceTree = "<group>"; };
+		8878736D206A5D46006C3C4E /* MedicalEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEdit.swift; sourceTree = "<group>"; };
+		8878736F206A5E71006C3C4E /* MedEditDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedEditDialog.swift; sourceTree = "<group>"; };
 		8891F0012061030500FA4578 /* SettingsNumbersListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNumbersListAdapter.swift; sourceTree = "<group>"; };
 		8891F0032061044E00FA4578 /* GuardListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardListAdapter.swift; sourceTree = "<group>"; };
 		8891F0052061109F00FA4578 /* FullName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullName.xib; sourceTree = "<group>"; };
@@ -407,9 +447,7 @@
 		88AEE97D2069888D002562B3 /* DoctorsListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsListAdapter.swift; sourceTree = "<group>"; };
 		88AEE97F20698897002562B3 /* MedListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedListAdapter.swift; sourceTree = "<group>"; };
 		88AEE9812069889E002562B3 /* MedicalListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalListAdapter.swift; sourceTree = "<group>"; };
-		88AEE9832069891A002562B3 /* DoctorRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRow.xib; sourceTree = "<group>"; };
 		88AEE98520698922002562B3 /* MedRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedRow.xib; sourceTree = "<group>"; };
-		88AEE98720698929002562B3 /* MedicalRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalRow.xib; sourceTree = "<group>"; };
 		88AEE98920698942002562B3 /* MedRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedRow.swift; sourceTree = "<group>"; };
 		88AEE98B2069894B002562B3 /* DoctorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorRow.swift; sourceTree = "<group>"; };
 		88AEE98D20698954002562B3 /* MedicalRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRow.swift; sourceTree = "<group>"; };
@@ -561,27 +599,27 @@
 		3D3B1ADC1EBCBC17005DE871 /* saveme */ = {
 			isa = PBXGroup;
 			children = (
+				88DFFC0A205FD36C007EF3F7 /* adapter */,
+				3D3B1ADD1EBCBC17005DE871 /* AppDelegate.swift */,
 				3D3B1AE41EBCBC17005DE871 /* Assets.xcassets */,
 				3D7D71261EBCC2CA00E71211 /* Controllers */,
-				88E5130120679FC90070F407 /* Storyboards */,
-				88DFFC0A205FD36C007EF3F7 /* adapter */,
 				88AEE92F20693284002562B3 /* CountryPicker */,
-				88E512F320677AF30070F407 /* ImagePicker */,
-				882DB671205FA4B600C37F85 /* Roll */,
+				88AEE92720690112002562B3 /* demo_en.mp3 */,
 				88E5130020679EDC0070F407 /* Dialogs */,
-				3D5F219C1EC05AE80044A9A8 /* Views */,
 				3D5F21991EBF97C10044A9A8 /* Fonts */,
-				3DA38CE41EBD369C003E09CD /* Models */,
-				3D7D71291EBCC40A00E71211 /* Utilities */,
-				3D3B1ADD1EBCBC17005DE871 /* AppDelegate.swift */,
-				88AEE938206933C3002562B3 /* SwiftCountryPicker.bundle */,
+				73B81AE11FBA056A0071EF66 /* GoogleService-Info.plist */,
+				88E512F320677AF30070F407 /* ImagePicker */,
 				3D3B1AE91EBCBC17005DE871 /* Info.plist */,
 				73529F5D200F8C3000F5C9F5 /* Localizable.strings */,
-				73B81AE11FBA056A0071EF66 /* GoogleService-Info.plist */,
-				737107312046D9A90092689D /* saveme.entitlements */,
+				3DA38CE41EBD369C003E09CD /* Models */,
 				88E5131A2067D8710070F407 /* nums.json */,
+				882DB671205FA4B600C37F85 /* Roll */,
+				737107312046D9A90092689D /* saveme.entitlements */,
+				88E5130120679FC90070F407 /* Storyboards */,
+				88AEE938206933C3002562B3 /* SwiftCountryPicker.bundle */,
+				3D7D71291EBCC40A00E71211 /* Utilities */,
+				3D5F219C1EC05AE80044A9A8 /* Views */,
 				88E5131C2067D8A90070F407 /* welcome.mp3 */,
-				88AEE92720690112002562B3 /* demo_en.mp3 */,
 			);
 			path = saveme;
 			sourceTree = "<group>";
@@ -685,10 +723,15 @@
 			isa = PBXGroup;
 			children = (
 				3D7D712E1EBCC75C00E71211 /* Constants.swift */,
+				88787348206A12B4006C3C4E /* morph */,
 				3D5F21951EBF64960044A9A8 /* Theme.swift */,
 				3D0148801EC0B89900804F54 /* String+Locale.swift */,
 				737A4E7F2047932600D38D16 /* LocationManager.swift */,
 				88BA88712060125E0028C5AF /* UIGesture.swift */,
+				88787346206A11D1006C3C4E /* CountDown.swift */,
+				8878735D206A162D006C3C4E /* CountdownTimer.swift */,
+				8878735F206A1638006C3C4E /* CustomColors.swift */,
+				88787361206A163F006C3C4E /* ProgressBar.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -770,32 +813,32 @@
 		882DB671205FA4B600C37F85 /* Roll */ = {
 			isa = PBXGroup;
 			children = (
-				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
-				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
-				882DB68B205FCFE200C37F85 /* SettingView.swift */,
-				88AEE956206952EB002562B3 /* SwitchView.swift */,
-				88AEE97920698635002562B3 /* AllergySwitchView.swift */,
-				88AEE98920698942002562B3 /* MedRow.swift */,
-				88AEE98B2069894B002562B3 /* DoctorRow.swift */,
-				88AEE98D20698954002562B3 /* MedicalRow.swift */,
-				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
-				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 				882DB67C205FA4EE00C37F85 /* Adapter.swift */,
 				882DB679205FA4ED00C37F85 /* AdapterView.swift */,
-				882DB67D205FA4EE00C37F85 /* ContainerView.swift */,
-				882DB67A205FA4EE00C37F85 /* RollView.swift */,
-				882DB683205FA7E100C37F85 /* ProductView.xib */,
-				88AEE9542069529F002562B3 /* SwitchView.xib */,
 				88AEE97720698624002562B3 /* AllergySwitch.xib */,
-				88AEE9832069891A002562B3 /* DoctorRow.xib */,
-				88AEE98520698922002562B3 /* MedRow.xib */,
-				88AEE98720698929002562B3 /* MedicalRow.xib */,
+				88AEE97920698635002562B3 /* AllergySwitchView.swift */,
+				882DB67D205FA4EE00C37F85 /* ContainerView.swift */,
+				88AEE98B2069894B002562B3 /* DoctorRow.swift */,
+				88787367206A5963006C3C4E /* DoctorRow.xib */,
+				88E495372063D0CB001584E9 /* ListSeparator.swift */,
 				88E495352063D054001584E9 /* ListSeparator.xib */,
+				88AEE98D20698954002562B3 /* MedicalRow.swift */,
+				88787369206A596C006C3C4E /* MedicalRow.xib */,
+				88AEE98920698942002562B3 /* MedRow.swift */,
+				88AEE98520698922002562B3 /* MedRow.xib */,
+				882DB683205FA7E100C37F85 /* ProductView.xib */,
+				882DB67A205FA4EE00C37F85 /* RollView.swift */,
 				882DB67B205FA4EE00C37F85 /* RollView.xib */,
 				882DB687205FCC2F00C37F85 /* Setting.xib */,
 				88D539DE2060E3F10089F7E2 /* SettingAvatar.xib */,
+				882DB689205FCFCE00C37F85 /* SettingAvatarView.swift */,
 				88D539E02060F00B0089F7E2 /* SettingIcon.xib */,
 				88CCC02A2064F8D2002119CC /* SettingIconOne.xib */,
+				88D539E22060F01B0089F7E2 /* SettingIconView.swift */,
+				88CCC0282064F8C3002119CC /* SettingIconViewOneLine.swift */,
+				882DB68B205FCFE200C37F85 /* SettingView.swift */,
+				88AEE956206952EB002562B3 /* SwitchView.swift */,
+				88AEE9542069529F002562B3 /* SwitchView.xib */,
 			);
 			path = Roll;
 			sourceTree = "<group>";
@@ -808,6 +851,21 @@
 				882DB675205FA4CE00C37F85 /* PThreadMutex.swift */,
 			);
 			path = Pool;
+			sourceTree = "<group>";
+		};
+		88787348206A12B4006C3C4E /* morph */ = {
+			isa = PBXGroup;
+			children = (
+				88787357206A1337006C3C4E /* LTCharacterLimbo.swift */,
+				88787355206A1330006C3C4E /* LTCharacterDiffResult.swift */,
+				88787351206A12F8006C3C4E /* LTStringDiffResult.swift */,
+				88787353206A1301006C3C4E /* LTMorphingEffect.swift */,
+				8878734F206A12EF006C3C4E /* LTEasing.swift */,
+				8878734D206A12E8006C3C4E /* LTEmitterView.swift */,
+				88787349206A12C7006C3C4E /* LTMorphingLabel.swift */,
+				8878734B206A12CE006C3C4E /* LTMorphingLabel+Evaporate.swift */,
+			);
+			name = morph;
 			sourceTree = "<group>";
 		};
 		88AEE92F20693284002562B3 /* CountryPicker */ = {
@@ -868,55 +926,61 @@
 		88E5130020679EDC0070F407 /* Dialogs */ = {
 			isa = PBXGroup;
 			children = (
-				8891F0052061109F00FA4578 /* FullName.xib */,
-				88AEE96720697872002562B3 /* Insurance.xib */,
-				88E513082067A49B0070F407 /* SwitchDialog.xib */,
-				88E513122067C5000070F407 /* HelpDialog.xib */,
-				88AEE94A20694952002562B3 /* AddressDialog.xib */,
-				88AEE950206949AB002562B3 /* PinDialog.xib */,
-				88E513142067C5080070F407 /* SignalDialog.xib */,
-				88AEE9232068FF16002562B3 /* LangDialog.xib */,
-				88AEE96D20697E08002562B3 /* BloodDialog.xib */,
-				88AEE92D2069020E002562B3 /* CountryDialog.xib */,
-				88AEE94420694915002562B3 /* SpokenDialog.xib */,
-				88AEE98F20698AAE002562B3 /* DoctorDialog.xib */,
-				88AEE99120698AD0002562B3 /* MedDialog.xib */,
-				88AEE99320698AD7002562B3 /* MedicalDialog.xib */,
-				88AEE975206984DB002562B3 /* AllergyDialog.xib */,
-				88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */,
-				8891F007206110B300FA4578 /* FullNameView.swift */,
-				88AEE96520697864002562B3 /* InsuranceView.swift */,
-				88E513062067A4930070F407 /* SwitchDialogView.swift */,
-				88E5130E2067C4C00070F407 /* HelpDialogView.swift */,
-				88AEE94E20694999002562B3 /* PinDialogView.swift */,
-				88AEE94820694941002562B3 /* AddressDialogView.swift */,
-				88AEE91B2068FE27002562B3 /* LangDialogView.swift */,
-				88AEE96F20697E2A002562B3 /* BloodDialogView.swift */,
-				88AEE92B206901FA002562B3 /* CountryDialogView.swift */,
-				88AEE942206948FA002562B3 /* SpokenDialogView.swift */,
-				88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */,
-				88AEE99520698AE2002562B3 /* MedDialogView.swift */,
-				88AEE99720698B11002562B3 /* MedicalDialogView.swift */,
-				88AEE971206982F0002562B3 /* AllergyDialogView.swift */,
-				88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */,
-				88E513102067C4D30070F407 /* SignalDialogView.swift */,
-				88BA887520603D530028C5AF /* FullNameDialog.swift */,
-				88AEE95920696941002562B3 /* InsuranceDialog.swift */,
-				88E513042067A2310070F407 /* SwitchDialog.swift */,
-				88E5130A2067C4730070F407 /* HelpDialog.swift */,
-				88AEE94C20694991002562B3 /* PinDialog.swift */,
 				88AEE94620694931002562B3 /* AddressDialog.swift */,
-				88AEE91D2068FE36002562B3 /* LangDialog.swift */,
-				88AEE929206901EB002562B3 /* CountryDialog.swift */,
-				88AEE95B206969AF002562B3 /* BloodDialog.swift */,
-				88AEE940206948E9002562B3 /* SpokenDialog.swift */,
+				88AEE94A20694952002562B3 /* AddressDialog.xib */,
+				88AEE94820694941002562B3 /* AddressDialogView.swift */,
 				88AEE95D20696A56002562B3 /* AllergyDialog.swift */,
-				88AEE95F20696B53002562B3 /* MedicineDialog.swift */,
-				88AEE96120697662002562B3 /* MedDialog.swift */,
-				88AEE96320697678002562B3 /* DoctorsDialog.swift */,
-				88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */,
-				88E5130C2067C4A10070F407 /* SignalDialog.swift */,
+				88AEE975206984DB002562B3 /* AllergyDialog.xib */,
+				88AEE971206982F0002562B3 /* AllergyDialogView.swift */,
+				88AEE95B206969AF002562B3 /* BloodDialog.swift */,
+				88AEE96D20697E08002562B3 /* BloodDialog.xib */,
+				88AEE96F20697E2A002562B3 /* BloodDialogView.swift */,
+				88AEE929206901EB002562B3 /* CountryDialog.swift */,
+				88AEE92D2069020E002562B3 /* CountryDialog.xib */,
+				88AEE92B206901FA002562B3 /* CountryDialogView.swift */,
 				88BA8873206023BD0028C5AF /* DatePickerDialog.swift */,
+				88AEE98F20698AAE002562B3 /* DoctorDialog.xib */,
+				88AEE96320697678002562B3 /* DoctorsDialog.swift */,
+				88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */,
+				8891F0052061109F00FA4578 /* FullName.xib */,
+				88BA887520603D530028C5AF /* FullNameDialog.swift */,
+				8891F007206110B300FA4578 /* FullNameView.swift */,
+				88E5130A2067C4730070F407 /* HelpDialog.swift */,
+				88E513122067C5000070F407 /* HelpDialog.xib */,
+				88E5130E2067C4C00070F407 /* HelpDialogView.swift */,
+				88AEE96720697872002562B3 /* Insurance.xib */,
+				88AEE95920696941002562B3 /* InsuranceDialog.swift */,
+				88AEE96520697864002562B3 /* InsuranceView.swift */,
+				88AEE91D2068FE36002562B3 /* LangDialog.swift */,
+				88AEE9232068FF16002562B3 /* LangDialog.xib */,
+				88AEE91B2068FE27002562B3 /* LangDialogView.swift */,
+				88AEE96120697662002562B3 /* MedDialog.swift */,
+				88AEE99120698AD0002562B3 /* MedDialog.xib */,
+				88AEE99520698AE2002562B3 /* MedDialogView.swift */,
+				8878736F206A5E71006C3C4E /* MedEditDialog.swift */,
+				88AEE99320698AD7002562B3 /* MedicalDialog.xib */,
+				88AEE99720698B11002562B3 /* MedicalDialogView.swift */,
+				8878736D206A5D46006C3C4E /* MedicalEdit.swift */,
+				8878736B206A5C27006C3C4E /* MedicalEdit.xib */,
+				88AEE95F20696B53002562B3 /* MedicineDialog.swift */,
+				88AEE94C20694991002562B3 /* PinDialog.swift */,
+				88AEE950206949AB002562B3 /* PinDialog.xib */,
+				88AEE94E20694999002562B3 /* PinDialogView.swift */,
+				88AEE91F2068FE59002562B3 /* PlaySoundDialog.swift */,
+				88AEE9252068FF1F002562B3 /* PlaySoundDialog.xib */,
+				88AEE9212068FE6C002562B3 /* PlaySoundDialogView.swift */,
+				88E5130C2067C4A10070F407 /* SignalDialog.swift */,
+				88E513142067C5080070F407 /* SignalDialog.xib */,
+				88E513102067C4D30070F407 /* SignalDialogView.swift */,
+				88AEE940206948E9002562B3 /* SpokenDialog.swift */,
+				88AEE94420694915002562B3 /* SpokenDialog.xib */,
+				88AEE942206948FA002562B3 /* SpokenDialogView.swift */,
+				88787359206A152F006C3C4E /* StartDialog.swift */,
+				88787363206A168C006C3C4E /* StartDialog.xib */,
+				88787365206A169D006C3C4E /* StartDialogView.swift */,
+				88E513042067A2310070F407 /* SwitchDialog.swift */,
+				88E513082067A49B0070F407 /* SwitchDialog.xib */,
+				88E513062067A4930070F407 /* SwitchDialogView.swift */,
 			);
 			name = Dialogs;
 			sourceTree = "<group>";
@@ -924,6 +988,7 @@
 		88E5130120679FC90070F407 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8878735B206A161F006C3C4E /* countdown.storyboard */,
 				88E513032067A1D20070F407 /* olds */,
 				73132C1D200702E0002B690B /* guardsMap.storyboard */,
 				88E513162067D3B80070F407 /* Map.storyboard */,
@@ -1082,10 +1147,11 @@
 			files = (
 				3D3B1AE81EBCBC17005DE871 /* LaunchScreen.storyboard in Resources */,
 				88AEE94520694915002562B3 /* SpokenDialog.xib in Resources */,
-				88AEE98820698929002562B3 /* MedicalRow.xib in Resources */,
+				8878736A206A596C006C3C4E /* MedicalRow.xib in Resources */,
 				88AEE976206984DB002562B3 /* AllergyDialog.xib in Resources */,
 				73132C1A20066E65002B690B /* Login.storyboard in Resources */,
 				88E513152067C5080070F407 /* SignalDialog.xib in Resources */,
+				88787364206A168C006C3C4E /* StartDialog.xib in Resources */,
 				88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */,
 				88AEE94B20694952002562B3 /* AddressDialog.xib in Resources */,
 				88CCC02D206509EC002119CC /* wizardcontent.storyboard in Resources */,
@@ -1094,13 +1160,13 @@
 				88E513092067A49B0070F407 /* SwitchDialog.xib in Resources */,
 				3DEE9A1E1EC0F68D00CA8B8D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				88E513132067C5000070F407 /* HelpDialog.xib in Resources */,
-				88AEE9842069891A002562B3 /* DoctorRow.xib in Resources */,
 				88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */,
 				8891F0062061109F00FA4578 /* FullName.xib in Resources */,
 				88D539E12060F00B0089F7E2 /* SettingIcon.xib in Resources */,
 				88E495302063AF6A001584E9 /* QuickSettings.storyboard in Resources */,
 				3D3B1AE51EBCBC17005DE871 /* Assets.xcassets in Resources */,
 				88AEE99020698AAE002562B3 /* DoctorDialog.xib in Resources */,
+				8878736C206A5C27006C3C4E /* MedicalEdit.xib in Resources */,
 				3DEE9A2F1EC25A8C00CA8B8D /* styles.css in Resources */,
 				88AEE93F206933D6002562B3 /* SwiftCountryView.xib in Resources */,
 				88AEE939206933C3002562B3 /* SwiftCountryPicker.bundle in Resources */,
@@ -1114,6 +1180,7 @@
 				88D539DF2060E3F10089F7E2 /* SettingAvatar.xib in Resources */,
 				3DEE9A1F1EC0F68D00CA8B8D /* RobotoCondensed-Regular.ttf in Resources */,
 				882DB688205FCC2F00C37F85 /* Setting.xib in Resources */,
+				88787368206A5963006C3C4E /* DoctorRow.xib in Resources */,
 				7373DA59200653F100DC77E8 /* base.storyboard in Resources */,
 				88AEE98620698922002562B3 /* MedRow.xib in Resources */,
 				3DEE9A1A1EC0F68D00CA8B8D /* RobotoCondensed-Bold.ttf in Resources */,
@@ -1124,6 +1191,7 @@
 				88AEE92E2069020E002562B3 /* CountryDialog.xib in Resources */,
 				73132C1E200702E0002B690B /* guardsMap.storyboard in Resources */,
 				88AEE96820697872002562B3 /* Insurance.xib in Resources */,
+				8878735C206A1620006C3C4E /* countdown.storyboard in Resources */,
 				88AEE9552069529F002562B3 /* SwitchView.xib in Resources */,
 				882DB684205FA7E200C37F85 /* ProductView.xib in Resources */,
 				88AEE92820690113002562B3 /* demo_en.mp3 in Resources */,
@@ -1289,6 +1357,7 @@
 				88BA887620603D530028C5AF /* FullNameDialog.swift in Sources */,
 				9164E97B1EC30A5400BFDD4E /* MyProfileViewController.swift in Sources */,
 				88AEE95320694BBF002562B3 /* SpokenListAdapter.swift in Sources */,
+				8878734C206A12CE006C3C4E /* LTMorphingLabel+Evaporate.swift in Sources */,
 				9109E69E1EC4AC02005167B6 /* Question.swift in Sources */,
 				3D8BBD351EC0CC2100F459E7 /* UserResponse.swift in Sources */,
 				88AEE94720694931002562B3 /* AddressDialog.swift in Sources */,
@@ -1308,6 +1377,7 @@
 				9109E69A1EC49F2B005167B6 /* QuestionnarieViewController.swift in Sources */,
 				882DB68A205FCFCE00C37F85 /* SettingAvatarView.swift in Sources */,
 				3DEE9A271EC1249B00CA8B8D /* CustomNavigationBar.swift in Sources */,
+				88787360206A1638006C3C4E /* CustomColors.swift in Sources */,
 				3D01487F1EC0B69200804F54 /* MessageUtils.swift in Sources */,
 				3DAF8BC71EC9A90E002E3A76 /* ProgressionCellView.swift in Sources */,
 				88C4007B205D71FA00CF1E9D /* Wizard2ViewController.swift in Sources */,
@@ -1318,22 +1388,29 @@
 				88AEE94D20694991002562B3 /* PinDialog.swift in Sources */,
 				88E495342063BA0D001584E9 /* QucikSettingsListAdapter.swift in Sources */,
 				88AEE941206948E9002562B3 /* SpokenDialog.swift in Sources */,
+				88787358206A1337006C3C4E /* LTCharacterLimbo.swift in Sources */,
 				88D539E72060F7560089F7E2 /* SettingsHealthListAdapter.swift in Sources */,
 				3D7D712F1EBCC75C00E71211 /* Constants.swift in Sources */,
 				E6E957EB1EFBACAD00C5CA3E /* RunViewController.swift in Sources */,
 				3D0148871EC0C38F00804F54 /* UIColor+Hexa.swift in Sources */,
 				882DB68C205FCFE200C37F85 /* SettingView.swift in Sources */,
+				8878734E206A12E9006C3C4E /* LTEmitterView.swift in Sources */,
 				88AEE96620697864002562B3 /* InsuranceView.swift in Sources */,
+				88787347206A11D1006C3C4E /* CountDown.swift in Sources */,
 				3D62BA0C1EC5C87700F6B122 /* CustomNavigationController.swift in Sources */,
 				3DEE9A241EC0FD4700CA8B8D /* MenuItemCell.swift in Sources */,
+				88787352206A12F8006C3C4E /* LTStringDiffResult.swift in Sources */,
 				8891F0042061044E00FA4578 /* GuardListAdapter.swift in Sources */,
 				7373DA5B2006574200DC77E8 /* BaseViewController.swift in Sources */,
 				88AEE97A20698635002562B3 /* AllergySwitchView.swift in Sources */,
+				88787370206A5E71006C3C4E /* MedEditDialog.swift in Sources */,
 				732D648D1F0245C5007142A6 /* RunDay.swift in Sources */,
+				88787356206A1330006C3C4E /* LTCharacterDiffResult.swift in Sources */,
 				88E5130B2067C4730070F407 /* HelpDialog.swift in Sources */,
 				91AF74811EC9944B00DAD6D1 /* RecommendationsWrapperViewController.swift in Sources */,
 				88E4952420638FA8001584E9 /* LangModel.swift in Sources */,
 				3DEE9A131EC0D5EE00CA8B8D /* MenuViewController.swift in Sources */,
+				88787362206A163F006C3C4E /* ProgressBar.swift in Sources */,
 				88C4007D205D720D00CF1E9D /* Wizard3ViewController.swift in Sources */,
 				88E5131F2067D9230070F407 /* GoogleAutocompleteJSONModel.swift in Sources */,
 				73132C2220075290002B690B /* MapBack.swift in Sources */,
@@ -1355,10 +1432,12 @@
 				88AEE96020696B53002562B3 /* MedicineDialog.swift in Sources */,
 				88AEE97C2069887E002562B3 /* DoctorsDialogView.swift in Sources */,
 				88AEE94F20694999002562B3 /* PinDialogView.swift in Sources */,
+				8878735E206A162D006C3C4E /* CountdownTimer.swift in Sources */,
 				88AEE98A20698942002562B3 /* MedRow.swift in Sources */,
 				91AF74831EC9ADD100DAD6D1 /* RecommendationCell.swift in Sources */,
 				882DB67E205FA4EE00C37F85 /* AdapterView.swift in Sources */,
 				3D5F21941EBDD2320044A9A8 /* Subscription.swift in Sources */,
+				88787354206A1301006C3C4E /* LTMorphingEffect.swift in Sources */,
 				732D648F1F0245F3007142A6 /* RunDayCell.swift in Sources */,
 				88E512FB20677B310070F407 /* OpalImagePickerController.swift in Sources */,
 				88CCC03120650CBE002119CC /* WizardContent.swift in Sources */,
@@ -1376,6 +1455,7 @@
 				88C4007F205D721900CF1E9D /* Wizard4ViewController.swift in Sources */,
 				73132C2020070439002B690B /* GuardsMapViewController.swift in Sources */,
 				E6E957E91EFBACA700C5CA3E /* DecideViewController.swift in Sources */,
+				88787350206A12EF006C3C4E /* LTEasing.swift in Sources */,
 				88E513112067C4D30070F407 /* SignalDialogView.swift in Sources */,
 				8891F0022061030500FA4578 /* SettingsNumbersListAdapter.swift in Sources */,
 				88AEE92C206901FA002562B3 /* CountryDialogView.swift in Sources */,
@@ -1397,11 +1477,13 @@
 				88E512F920677B2C0070F407 /* OpalImagePickerConfiguration.swift in Sources */,
 				88DFFC0C205FD391007EF3F7 /* SettingsListAdapter.swift in Sources */,
 				88E4952220638EB2001584E9 /* ProtectedModel.swift in Sources */,
+				8878735A206A152F006C3C4E /* StartDialog.swift in Sources */,
 				88AEE95C206969AF002562B3 /* BloodDialog.swift in Sources */,
 				3D5F21961EBF64960044A9A8 /* Theme.swift in Sources */,
 				88AEE95E20696A56002562B3 /* AllergyDialog.swift in Sources */,
 				737A4E802047932600D38D16 /* LocationManager.swift in Sources */,
 				9109E69C1EC4A093005167B6 /* AnswersCell.swift in Sources */,
+				8878736E206A5D46006C3C4E /* MedicalEdit.swift in Sources */,
 				73529F60200F9FD200F5C9F5 /* navbarView.swift in Sources */,
 				88AEE99820698B11002562B3 /* MedicalDialogView.swift in Sources */,
 				3D01487B1EC0743000804F54 /* UITextField+Dismiss.swift in Sources */,
@@ -1416,6 +1498,7 @@
 				3D5F21921EBDCD460044A9A8 /* UserData.swift in Sources */,
 				7371073D2046FA0C0092689D /* HalfModalInteractiveTransition.swift in Sources */,
 				73132C1C20068391002B690B /* SigninViewController.swift in Sources */,
+				88787366206A169D006C3C4E /* StartDialogView.swift in Sources */,
 				88C40081205D722500CF1E9D /* Wizard5ViewController.swift in Sources */,
 				88AEE98020698897002562B3 /* MedListAdapter.swift in Sources */,
 				88AEE943206948FA002562B3 /* SpokenDialogView.swift in Sources */,
@@ -1430,6 +1513,7 @@
 				9109E6A01EC4AC11005167B6 /* Answer.swift in Sources */,
 				88E4952C2063926D001584E9 /* MedicalModel.swift in Sources */,
 				88AEE99620698AE2002562B3 /* MedDialogView.swift in Sources */,
+				8878734A206A12C7006C3C4E /* LTMorphingLabel.swift in Sources */,
 				88E4952A206391EE001584E9 /* MedModel.swift in Sources */,
 				88E495382063D0CB001584E9 /* ListSeparator.swift in Sources */,
 				7303FF761FB9886500247D54 /* AppDelegate.swift in Sources */,

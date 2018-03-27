@@ -137,25 +137,20 @@ class BaseViewController : UIViewController {
     }
 
     func TALongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.terrornumber)
+        AppDelegate.shared.sendSOS(type: "ta")
     }
     func PoliceLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.policenumber)
+        AppDelegate.shared.sendSOS(type: "police")
     }
     func AmbLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.ambulancenumber)
+        AppDelegate.shared.sendSOS(type: "ambulnace")
     }
     func FireLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.firenumber)
+        AppDelegate.shared.sendSOS(type: "fire")
     }
     
     func SOSLongTapped(gestureRecognizer: UILongPressGestureRecognizer){
-        self.performSegue(withIdentifier: "medicalinfomodal", sender: nil)
-        AppDelegate.shared.sendSOS(number: DataStore.shared.userData?.emnumber)
+        AppDelegate.shared.sendSOS(type: "sos")
     }
     
     /*

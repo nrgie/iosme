@@ -90,7 +90,7 @@ class WizardContent : UIViewController {
         if pagetype == 4 {
             let adapter = SettingsNumbersListAdapter()
             adapter.items = [
-                Setting("", "Selected country".localized, "", "country"),
+                Setting("", "Selected country".localized, "", "emcountry"),
                 Setting("", "Emergency service phone number".localized, "", "emnumber"),
                 Setting("", "Police phone number".localized, "", "policenumber"),
                 Setting("", "Fire department phone".localized, "", "firenumber"),

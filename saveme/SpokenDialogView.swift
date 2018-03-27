@@ -23,8 +23,10 @@ class SpokenDialogView: UIView {
         setup()
     }
     
+    let adapter = SpokenListAdapter()
+    
     func setup() {
-        let adapter = SpokenListAdapter()
+        
         adapter.items = [
             LangModel("English", false),
             LangModel("Spanish", false),
@@ -37,9 +39,22 @@ class SpokenDialogView: UIView {
             LangModel("Japanese", false),
             LangModel("Mandarin", false)
         ]
+        
+        if DataStore.shared.userData?.langs.count == adapter.items.count {
+            adapter.items = DataStore.shared.userData?.langs
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(save), name: Constants.Notifications.SaveSpoken, object: nil)
         listview.adapter = adapter
         listview.reload()
     }
+    
+    func save() {
+        DataStore.shared.userData?.langs.removeAll()
+        DataStore.shared.userData?.langs = adapter.items
+        reload()
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

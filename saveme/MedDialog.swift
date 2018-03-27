@@ -299,7 +299,7 @@ open class MedDialog: UIView {
             self.callback?(nil)
             close()
         } else if sender.tag == 123 {
-            HelpDialog().show("Valami") {_ in }
+            MedEditDialog().show("Add new record".localized) {_ in }
         } else {
             self.callback?(nil)
             close()

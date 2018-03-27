@@ -14,7 +14,7 @@ private extension Selector {
     static let deviceOrientationDidChange = #selector(DatePickerDialog.deviceOrientationDidChange)
 }
 
-open class AllergyDialog: UIView {
+open class MedEditDialog: UIView {
     public typealias InputCallback = ( Any? ) -> Void
     
     // MARK: - Constants
@@ -25,7 +25,7 @@ open class AllergyDialog: UIView {
     
     // MARK: - Views
     private var dialogView: UIView!
-    private var slayer: AllergyDialogView!
+    private var slayer: MedicalEdit!
     private var titleLabel: UILabel!
     open var datePicker: UIDatePicker!
     private var cancelButton: UIButton!
@@ -42,23 +42,23 @@ open class AllergyDialog: UIView {
     private var buttonColor: UIColor!
     private var font: UIFont!
     
-    private var type: String!
+    private var item: MedicalModel!
     
     // MARK: - Dialog initialization
     public init(textColor: UIColor = UIColor.black,
                 buttonColor: UIColor = UIColor.blue,
-                type: String = "",
                 font: UIFont = .boldSystemFont(ofSize: 15),
                 locale: Locale? = nil,
-                showCancelButton: Bool = true) {
+                showCancelButton: Bool = true,
+                item: Any? = nil) {
         let size = UIScreen.main.bounds.size
         super.init(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         self.textColor = textColor
         self.buttonColor = buttonColor
         self.font = font
-        self.type = type
         self.showCancelButton = showCancelButton
         self.locale = locale
+        self.item = item as? MedicalModel
         setupView()
     }
     
@@ -86,9 +86,9 @@ open class AllergyDialog: UIView {
     /// Handle device orientation changes
     @objc func deviceOrientationDidChange(_ notification: Notification) {
         self.frame = UIScreen.main.bounds
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         dialogView.frame = CGRect(x: (UIScreen.main.bounds.size.width - dialogSize.width) / 2,
-                                  y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)),
+                                  y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)-120),
                                   width: dialogSize.width,
                                   height: dialogSize.height)
     }
@@ -106,7 +106,7 @@ open class AllergyDialog: UIView {
         }
 
         self.callback = callback
-
+        self.slayer.item = self.item
         self.slayer.setup()
         
         /* Add dialog to main window */
@@ -164,7 +164,7 @@ open class AllergyDialog: UIView {
     /// Creates the container view here: create the dialog, then add the custom content and buttons
     private func createContainerView() -> UIView {
         let screenSize = UIScreen.main.bounds.size
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         
         
         // For the black background
@@ -172,7 +172,7 @@ open class AllergyDialog: UIView {
         
         // This is the dialog's container; we attach the custom content and the buttons to this one
         let container = UIView(frame: CGRect(x: (screenSize.width - dialogSize.width) / 2,
-                                             y: ((screenSize.height - dialogSize.height) / 2),
+                                             y: ((screenSize.height - dialogSize.height) / 2)-120,
                                              width: dialogSize.width,
                                              height: dialogSize.height))
         
@@ -228,9 +228,9 @@ open class AllergyDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> AllergyDialogView {
-        let contentFrame = CGRect(x:0, y:40, width: 300, height: 300)
-        let result : AllergyDialogView! = AllergyDialogView(frame: contentFrame)
+    fileprivate func configureLayer() -> MedicalEdit {
+        let contentFrame = CGRect(x:0, y:40+kDefaultButtonHeight, width: 300, height: 172)
+        let result : MedicalEdit! = MedicalEdit(frame: contentFrame)
         return result
     }
     
@@ -240,13 +240,13 @@ open class AllergyDialog: UIView {
         
         var leftButtonFrame = CGRect(
             x: 0,
-            y: container.bounds.size.height - kDefaultButtonHeight,
+            y: 40, //container.bounds.size.height - kDefaultButtonHeight,
             width: buttonWidth,
             height: kDefaultButtonHeight
         )
         var rightButtonFrame = CGRect(
             x: buttonWidth,
-            y: container.bounds.size.height - kDefaultButtonHeight,
+            y: 40, //container.bounds.size.height - kDefaultButtonHeight,
             width: buttonWidth,
             height: kDefaultButtonHeight
         )
@@ -290,6 +290,26 @@ open class AllergyDialog: UIView {
         } else {
             self.callback?(nil)
         }
+        
+        let desc: String = self.slayer.des.text!
+        let datum: String = self.slayer.datum.text!
+        
+        if self.item == nil {
+            // new one
+            let it = MedicalModel(desc, datum)
+            DataStore.shared.userData?.medinfo.append(it)
+        } else {
+            // edited
+            for i in (DataStore.shared.userData?.medinfo)! {
+                if i.name == self.item.name {
+                    i.name = desc
+                    i.date = datum
+                }
+            }
+            
+        }
+        
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
         
         close()
     }

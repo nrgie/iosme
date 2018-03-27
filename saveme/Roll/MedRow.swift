@@ -13,12 +13,14 @@ import UIKit
 class MedRow: UIView {
 
     @IBOutlet private var label: UILabel!
-    
-    @IBOutlet weak var sw: UISwitch!
-    @IBAction func swact(_ sender: Any) {
-    
+    @IBAction func edit(_ sender: Any) {
+        // ide egy edit dialog feltöltve
+       // MedEditDialog(item:)
     }
-    
+    @IBAction func del(_ sender: Any) {
+        // ide egy confim a delhez
+        
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         let contentView = Bundle.main.loadNibNamed("MedRow", owner: self, options: nil)?.last as! UIView
@@ -30,7 +32,6 @@ class MedRow: UIView {
     func fill(with item: MedModel) {
         label.text = item.name!
         // fill with userdata
-        sw.isOn = false
     }
     
     required init?(coder aDecoder: NSCoder) {

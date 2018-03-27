@@ -24,8 +24,8 @@ class MedDialogView: UIView {
     }
     
     func setup() {
-        let adapter = MedListAdapter()
-        adapter.items = DataStore.shared.userData?.med
+        let adapter = MedicalListAdapter()
+        adapter.items = DataStore.shared.userData?.medinfo
         listview.adapter = adapter
         listview.reload()
     }

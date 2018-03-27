@@ -14,7 +14,7 @@ private extension Selector {
     static let deviceOrientationDidChange = #selector(DatePickerDialog.deviceOrientationDidChange)
 }
 
-open class AllergyDialog: UIView {
+open class StartDialog: UIView {
     public typealias InputCallback = ( Any? ) -> Void
     
     // MARK: - Constants
@@ -25,7 +25,7 @@ open class AllergyDialog: UIView {
     
     // MARK: - Views
     private var dialogView: UIView!
-    private var slayer: AllergyDialogView!
+    private var slayer: StartDialogView!
     private var titleLabel: UILabel!
     open var datePicker: UIDatePicker!
     private var cancelButton: UIButton!
@@ -47,7 +47,6 @@ open class AllergyDialog: UIView {
     // MARK: - Dialog initialization
     public init(textColor: UIColor = UIColor.black,
                 buttonColor: UIColor = UIColor.blue,
-                type: String = "",
                 font: UIFont = .boldSystemFont(ofSize: 15),
                 locale: Locale? = nil,
                 showCancelButton: Bool = true) {
@@ -56,7 +55,6 @@ open class AllergyDialog: UIView {
         self.textColor = textColor
         self.buttonColor = buttonColor
         self.font = font
-        self.type = type
         self.showCancelButton = showCancelButton
         self.locale = locale
         setupView()
@@ -86,7 +84,7 @@ open class AllergyDialog: UIView {
     /// Handle device orientation changes
     @objc func deviceOrientationDidChange(_ notification: Notification) {
         self.frame = UIScreen.main.bounds
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 430) // + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         dialogView.frame = CGRect(x: (UIScreen.main.bounds.size.width - dialogSize.width) / 2,
                                   y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)),
                                   width: dialogSize.width,
@@ -97,9 +95,12 @@ open class AllergyDialog: UIView {
     open func show(_ title: String,
                    doneButtonTitle: String = "Done",
                    cancelButtonTitle: String = "Cancel",
-                   callback: @escaping InputCallback) {
+                   type: String = "police",
+                   callback: @escaping InputCallback)
+        {
         self.titleLabel.text = title
-       
+        self.type = type
+
         self.doneButton.setTitle(doneButtonTitle, for: .normal)
         if showCancelButton {
             self.cancelButton.setTitle(cancelButtonTitle, for: .normal)
@@ -164,7 +165,7 @@ open class AllergyDialog: UIView {
     /// Creates the container view here: create the dialog, then add the custom content and buttons
     private func createContainerView() -> UIView {
         let screenSize = UIScreen.main.bounds.size
-        let dialogSize = CGSize(width: 300, height: 350 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        let dialogSize = CGSize(width: 300, height: 430) //230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
         
         
         // For the black background
@@ -215,11 +216,9 @@ open class AllergyDialog: UIView {
         self.titleLabel.textAlignment = .center
         self.titleLabel.textColor = self.textColor
         self.titleLabel.font = self.font.withSize(17)
-        container.addSubview(self.titleLabel)
-        
+        //container.addSubview(self.titleLabel)
         
         self.slayer = configureLayer()
-        
         container.addSubview(self.slayer)
         
         // Add the buttons
@@ -228,9 +227,10 @@ open class AllergyDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> AllergyDialogView {
-        let contentFrame = CGRect(x:0, y:40, width: 300, height: 300)
-        let result : AllergyDialogView! = AllergyDialogView(frame: contentFrame)
+    fileprivate func configureLayer() -> StartDialogView {
+        // 40 label.
+        let contentFrame = CGRect(x:0, y:40, width: 300, height: 430)
+        let result : StartDialogView! = StartDialogView(frame: contentFrame)
         return result
     }
     
@@ -271,7 +271,7 @@ open class AllergyDialog: UIView {
             self.cancelButton.titleLabel!.font = self.font.withSize(14)
             self.cancelButton.layer.cornerRadius = kCornerRadius
             self.cancelButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
-            container.addSubview(self.cancelButton)
+            //container.addSubview(self.cancelButton)
         }
         self.doneButton = UIButton(type: .custom) as UIButton
         self.doneButton.frame = isLeftToRightDirection ? rightButtonFrame : leftButtonFrame
@@ -281,7 +281,7 @@ open class AllergyDialog: UIView {
         self.doneButton.titleLabel!.font = self.font.withSize(14)
         self.doneButton.layer.cornerRadius = kCornerRadius
         self.doneButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
-        container.addSubview(self.doneButton)
+        //container.addSubview(self.doneButton)
     }
     
     @objc func buttonTapped(sender: UIButton!) {

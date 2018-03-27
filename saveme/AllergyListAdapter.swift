@@ -24,7 +24,7 @@ class AllergyListAdapter: Adapter {
     }
 
     func view(forPosition position: Int, convertView: UIView?) -> UIView {
-        let result: AllergySwitchView! = viewType(forPosition: position).init(frame: CGRect.zero) as? AllergySwitchView
+        let result: SwitchView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SwitchView
         result.fill(with: items[position])
         result.isUserInteractionEnabled = true
         return result

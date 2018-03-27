@@ -46,7 +46,7 @@ class SettingsHealthListAdapter: Adapter {
                 MedicineDialog().show("medicines".localized) { _ in }
             }
             if item.action == "medinfo" {
-                MedDialog().show("medicalinfo".localized) { _ in }
+                MedDialog().show("medicaldetail".localized) { _ in }
             }
             if item.action == "doctors" {
                 DoctorsDialog().show("doctors".localized) { _ in }

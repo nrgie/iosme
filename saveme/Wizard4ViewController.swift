@@ -44,7 +44,7 @@ class Wizard4ViewController : UIViewController {
         
         let adapter = SettingsNumbersListAdapter()
         adapter.items = [
-            Setting("", "Selected country".localized, "", "country"),
+            Setting("", "Selected country".localized, "", "emcountry"),
             Setting("", "Emergency service phone number".localized, "", "emnuber"),
             Setting("", "Police phone number".localized, "", "policenumber"),
             Setting("", "Fire department phone".localized, "", "firenumber"),

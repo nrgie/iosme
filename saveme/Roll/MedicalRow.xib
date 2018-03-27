@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalRow" customModule="saveme" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="GGk-sd-meg" id="NMz-gb-XUL"/>
-                <outlet property="sw" destination="eeK-Ty-s4y" id="eF6-l4-Vwn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,33 +19,57 @@
             <rect key="frame" x="0.0" y="0.0" width="295" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGk-sd-meg">
-                    <rect key="frame" x="15" y="15" width="265" height="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGk-sd-meg">
+                    <rect key="frame" x="15" y="0.0" width="194" height="45"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-Ty-s4y">
-                    <rect key="frame" x="233" y="7" width="51" height="31"/>
-                    <color key="onTintColor" red="0.73921227329999994" green="0.057853514039999998" blue="0.049312044100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-vJ-27W">
+                    <rect key="frame" x="262" y="12" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Ost-Y8-drW"/>
+                        <constraint firstAttribute="height" constant="20" id="hgL-mr-DfR"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="ybm-r6-g9g"/>
+                    </constraints>
+                    <state key="normal" image="guardclose"/>
                     <connections>
-                        <action selector="swact:" destination="-1" eventType="valueChanged" id="gJe-vY-R41"/>
+                        <action selector="del:" destination="-1" eventType="touchUpInside" id="AfJ-vc-sbO"/>
+                        <action selector="delete:" destination="-1" eventType="touchUpInside" id="hrv-R0-NUe"/>
                     </connections>
-                </switch>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-np-9Hg">
+                    <rect key="frame" x="224" y="12" width="21" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="21" id="OCr-O0-36c"/>
+                        <constraint firstAttribute="width" constant="21" id="UQh-Ob-zmW"/>
+                        <constraint firstAttribute="height" constant="20" id="wrD-59-gxQ"/>
+                    </constraints>
+                    <state key="normal" image="ic_mode_edit_black_24dp"/>
+                    <connections>
+                        <action selector="edit:" destination="-1" eventType="touchUpInside" id="tbd-K4-C2F"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="GGk-sd-meg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="5Qq-Xp-lo8"/>
-                <constraint firstAttribute="bottom" secondItem="GGk-sd-meg" secondAttribute="bottom" constant="15" id="5ws-lG-huT"/>
-                <constraint firstAttribute="trailing" secondItem="eeK-Ty-s4y" secondAttribute="trailing" constant="13" id="7No-cX-yto"/>
-                <constraint firstItem="GGk-sd-meg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="EDd-N8-EZk"/>
-                <constraint firstAttribute="trailing" secondItem="GGk-sd-meg" secondAttribute="trailing" constant="15" id="HLz-B7-4Kw"/>
-                <constraint firstItem="eeK-Ty-s4y" firstAttribute="centerY" secondItem="GGk-sd-meg" secondAttribute="centerY" id="TJN-J5-3le"/>
-                <constraint firstAttribute="trailing" secondItem="GGk-sd-meg" secondAttribute="trailing" constant="15" id="fOg-8H-s84"/>
-                <constraint firstItem="GGk-sd-meg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="lw1-Cd-9dj"/>
+                <constraint firstItem="GGk-sd-meg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2bU-fl-Pje"/>
+                <constraint firstItem="TeS-vJ-27W" firstAttribute="leading" secondItem="5f3-np-9Hg" secondAttribute="trailing" constant="17" id="53O-Yd-Yzv"/>
+                <constraint firstAttribute="trailing" secondItem="TeS-vJ-27W" secondAttribute="trailing" constant="13" id="868-tA-ci2"/>
+                <constraint firstAttribute="bottom" secondItem="GGk-sd-meg" secondAttribute="bottom" id="CRN-JL-ea7"/>
+                <constraint firstItem="GGk-sd-meg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="SUw-bo-R2r"/>
+                <constraint firstItem="GGk-sd-meg" firstAttribute="centerY" secondItem="5f3-np-9Hg" secondAttribute="centerY" id="ZMy-wS-H5a"/>
+                <constraint firstItem="5f3-np-9Hg" firstAttribute="top" secondItem="TeS-vJ-27W" secondAttribute="top" id="ZgO-4C-IOX"/>
+                <constraint firstItem="5f3-np-9Hg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="d3g-zL-kiY"/>
+                <constraint firstItem="5f3-np-9Hg" firstAttribute="leading" secondItem="GGk-sd-meg" secondAttribute="trailing" constant="15" id="qEe-Of-BJw"/>
+                <constraint firstItem="5f3-np-9Hg" firstAttribute="bottom" secondItem="TeS-vJ-27W" secondAttribute="bottom" id="xVZ-v1-6XU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="39.5" y="-256.5"/>
+            <point key="canvasLocation" x="47.5" y="-260.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="guardclose" width="38" height="38"/>
+        <image name="ic_mode_edit_black_24dp" width="48" height="48"/>
+    </resources>
 </document>

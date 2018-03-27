@@ -21,6 +21,12 @@ class DoctorModel: Mappable {
         //super.init(map: map)
     }
     
+    init(_ name: String!, _ email: String!, _ phone: String!) {
+        self.name = name
+        self.email = email
+        self.phone = phone
+    }
+    
     func mapping(map: Map) {
         //super.mapping(map: map)
         name <- map["name"]

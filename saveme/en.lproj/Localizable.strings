@@ -217,7 +217,7 @@
 "name" = "Name";
 "confirm_delete_item" = "Confirm delete item";
 "medicinename" = "Medicine name";
-"medicaldetail" = "Description of treatment or illness";
+"medicaldetail" = "Treatment or illness";
 "medicaldate" = "Medical date";
 "add_doctor" = "Add doctor";
 "add_med" = "Add medicine";

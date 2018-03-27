@@ -12,12 +12,24 @@ import UIKit
 
 class SwitchView: UIView {
 
+    var litem: LangModel!
+    var aitem: AllergyModel!
+    
+    var type: String = ""
     
     @IBOutlet private var label: UILabel!
     
     @IBOutlet weak var sw: UISwitch!
     @IBAction func swact(_ sender: Any) {
-    
+        if type == "a" {
+            aitem.checked = sw.isOn
+            NotificationCenter.default.post(name: Constants.Notifications.SaveAllergies, object: nil, userInfo: nil)
+        }
+        if type == "l" {
+            litem.checked = sw.isOn
+            NotificationCenter.default.post(name: Constants.Notifications.SaveSpoken, object: nil, userInfo: nil)
+        }
+        
     }
     
     override init(frame: CGRect) {
@@ -29,15 +41,45 @@ class SwitchView: UIView {
     }
     
     func fill(with item: LangModel) {
+        self.type = "l"
+        self.litem = item
         label.text = item.name!
-        // fill with userdata
-        sw.isOn = false
+        
+        let langs = DataStore.shared.userData?.langs
+        
+        if langs != nil {
+            for l in langs! {
+                if l.name == litem.name {
+                    if l.checked == true {
+                        sw.setOn(true, animated: true);
+                    } else {
+                        sw.setOn(false, animated: true);
+                    }
+                }
+            }
+        } else {
+            sw.setOn(false, animated: true);
+        }
     }
     
     func fill(with item: AllergyModel) {
+        self.type = "a"
+        self.aitem = item
         label.text = item.name!
-        // fill with userdata
-        sw.isOn = false
+        let alls = DataStore.shared.userData?.allergies
+        if alls != nil {
+            for l in alls! {
+                if l.name == item.name {
+                    if l.checked == true {
+                        sw.setOn(true, animated: true);
+                    } else {
+                        sw.setOn(false, animated: true);
+                    }
+                }
+            }
+        } else {
+            sw.setOn(false, animated: true);
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

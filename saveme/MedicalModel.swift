@@ -18,6 +18,11 @@ class MedicalModel: Mappable {
         //super.init(map: map)
     }
     
+    init(_ name: String!, _ date: String!) {
+        self.name = name
+        self.date = date
+    }
+    
     func mapping(map: Map) {
         //super.mapping(map: map)
         name <- map["name"]

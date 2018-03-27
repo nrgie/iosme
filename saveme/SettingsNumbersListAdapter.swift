@@ -33,7 +33,8 @@ class SettingsNumbersListAdapter: Adapter {
         
         UITapGestureRecognizer(addToView: result) {
             
-            if item.action == "country" {
+            if item.action == "emcountry" {
+                CountryDialog(type:"emcountry").show("Select your current country") {_ in }
                 
             }
             

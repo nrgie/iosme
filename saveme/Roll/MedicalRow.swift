@@ -13,12 +13,18 @@ import UIKit
 class MedicalRow: UIView {
 
     
+    var item: MedicalModel!
+    
     @IBOutlet private var label: UILabel!
     
-    @IBOutlet weak var sw: UISwitch!
-    @IBAction func swact(_ sender: Any) {
-    
+    @IBAction func edit(_ sender: Any) {
+        MedEditDialog(item:item).show("Edit Details".localized) {_ in }
     }
+    
+    @IBAction func del(_ sender: Any) {
+        
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,9 +35,10 @@ class MedicalRow: UIView {
     }
     
     func fill(with item: MedicalModel) {
+        self.item = item
         label.text = item.name!
         // fill with userdata
-        sw.isOn = false
+       
     }
     
     required init?(coder aDecoder: NSCoder) {
