@@ -22,9 +22,16 @@ class MedicalRow: UIView {
     }
     
     @IBAction func del(_ sender: Any) {
-        
+        var temp = Array<MedicalModel>();
+        for i in (DataStore.shared.userData?.medinfo)! {
+            if i.name != self.item.name {
+                temp.append(i)
+            }
+        }
+        DataStore.shared.userData?.medinfo = temp
+        self.removeFromSuperview()
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,9 +43,7 @@ class MedicalRow: UIView {
     
     func fill(with item: MedicalModel) {
         self.item = item
-        label.text = item.name!
-        // fill with userdata
-       
+        label.text = item.date + ": " + item.name!
     }
     
     required init?(coder aDecoder: NSCoder) {

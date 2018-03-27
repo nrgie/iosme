@@ -12,10 +12,6 @@ import Photos
 
 class DoctorsDialogView: UIView {
     
-    func reload() {
-        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
-    }
-    
     @IBOutlet weak var listview: RollView!
     
     override func awakeFromNib() {
@@ -25,7 +21,17 @@ class DoctorsDialogView: UIView {
     
     func setup() {
         let adapter = DoctorsListAdapter()
-        adapter.items = DataStore.shared.userData?.doctors
+        let docs = DataStore.shared.userData?.doctors
+        adapter.items = docs
+        listview.adapter = adapter
+        listview.reload()
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Constants.Notifications.ReloadListView, object: nil)
+    }
+    
+    func reload() {
+        let adapter = DoctorsListAdapter()
+        let docs = DataStore.shared.userData?.doctors
+        adapter.items = docs
         listview.adapter = adapter
         listview.reload()
     }

@@ -14,7 +14,7 @@ private extension Selector {
     static let deviceOrientationDidChange = #selector(DatePickerDialog.deviceOrientationDidChange)
 }
 
-open class MedicineDialog: UIView {
+open class MedicineEditDialog: UIView {
     public typealias InputCallback = ( Any? ) -> Void
     
     // MARK: - Constants
@@ -25,12 +25,11 @@ open class MedicineDialog: UIView {
     
     // MARK: - Views
     private var dialogView: UIView!
-    private var slayer: MedicalDialogView!
+    private var slayer: MedicineEdit!
     private var titleLabel: UILabel!
     open var datePicker: UIDatePicker!
     private var cancelButton: UIButton!
     private var doneButton: UIButton!
-    private var addButton: UIButton!
     
     // MARK: - Variables
     private var defaultDate: Date?
@@ -43,23 +42,23 @@ open class MedicineDialog: UIView {
     private var buttonColor: UIColor!
     private var font: UIFont!
     
-    private var type: String!
+    private var item: MedModel!
     
     // MARK: - Dialog initialization
     public init(textColor: UIColor = UIColor.black,
                 buttonColor: UIColor = UIColor.blue,
-                type: String = "",
                 font: UIFont = .boldSystemFont(ofSize: 15),
                 locale: Locale? = nil,
-                showCancelButton: Bool = true) {
+                showCancelButton: Bool = true,
+                item: Any? = nil) {
         let size = UIScreen.main.bounds.size
         super.init(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         self.textColor = textColor
         self.buttonColor = buttonColor
         self.font = font
-        self.type = type
         self.showCancelButton = showCancelButton
         self.locale = locale
+        self.item = item as? MedModel
         setupView()
     }
     
@@ -87,8 +86,11 @@ open class MedicineDialog: UIView {
     /// Handle device orientation changes
     @objc func deviceOrientationDidChange(_ notification: Notification) {
         self.frame = UIScreen.main.bounds
-        let dialogSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-        dialogView.frame = CGRect(x: 0, y: 20, width: dialogSize.width, height: dialogSize.height-20)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        dialogView.frame = CGRect(x: (UIScreen.main.bounds.size.width - dialogSize.width) / 2,
+                                  y: (((UIScreen.main.bounds.size.height - dialogSize.height) / 2)-120),
+                                  width: dialogSize.width,
+                                  height: dialogSize.height)
     }
     
     /// Create the dialog view, and animate opening the dialog
@@ -104,7 +106,7 @@ open class MedicineDialog: UIView {
         }
 
         self.callback = callback
-
+        self.slayer.item = self.item
         self.slayer.setup()
         
         /* Add dialog to main window */
@@ -162,13 +164,17 @@ open class MedicineDialog: UIView {
     /// Creates the container view here: create the dialog, then add the custom content and buttons
     private func createContainerView() -> UIView {
         let screenSize = UIScreen.main.bounds.size
-        let dialogSize = CGSize(width: screenSize.width, height: screenSize.height)
+        let dialogSize = CGSize(width: 300, height: 230 + kDefaultButtonHeight + kDefaultButtonSpacerHeight)
+        
         
         // For the black background
         self.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         
         // This is the dialog's container; we attach the custom content and the buttons to this one
-        let container = UIView(frame: CGRect(x: 0, y: 20, width: dialogSize.width, height: dialogSize.height-20))
+        let container = UIView(frame: CGRect(x: (screenSize.width - dialogSize.width) / 2,
+                                             y: ((screenSize.height - dialogSize.height) / 2)-120,
+                                             width: dialogSize.width,
+                                             height: dialogSize.height))
         
         // First, we style the dialog to match the iOS8 UIAlertView >>>
         let gradient: CAGradientLayer = CAGradientLayer(layer: self.layer)
@@ -187,7 +193,7 @@ open class MedicineDialog: UIView {
         container.layer.insertSublayer(gradient, at: 0)
         
         container.layer.cornerRadius = cornerRadius
-        container.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 0.9).cgColor
+        container.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1).cgColor
         container.layer.borderWidth = 1
         container.layer.shadowRadius = cornerRadius + 5
         container.layer.shadowOpacity = 0.1
@@ -205,7 +211,7 @@ open class MedicineDialog: UIView {
         container.addSubview(lineView)
         
         //Title
-        self.titleLabel = UILabel(frame: CGRect(x: 10, y: 0, width: 280, height: 40))
+        self.titleLabel = UILabel(frame: CGRect(x: 10, y: 10, width: 280, height: 30))
         self.titleLabel.textAlignment = .center
         self.titleLabel.textColor = self.textColor
         self.titleLabel.font = self.font.withSize(17)
@@ -222,9 +228,9 @@ open class MedicineDialog: UIView {
         return container
     }
     
-    fileprivate func configureLayer() -> MedicalDialogView {
-        let contentFrame = CGRect(x:0, y:40, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-120)
-        let result : MedicalDialogView! = MedicalDialogView(frame: contentFrame)
+    fileprivate func configureLayer() -> MedicineEdit {
+        let contentFrame = CGRect(x:0, y:40+kDefaultButtonHeight, width: 300, height: 172)
+        let result : MedicineEdit! = MedicineEdit(frame: contentFrame)
         return result
     }
     
@@ -234,20 +240,16 @@ open class MedicineDialog: UIView {
         
         var leftButtonFrame = CGRect(
             x: 0,
-            y: container.bounds.size.height - kDefaultButtonHeight,
+            y: 40, //container.bounds.size.height - kDefaultButtonHeight,
             width: buttonWidth,
             height: kDefaultButtonHeight
         )
-        
         var rightButtonFrame = CGRect(
             x: buttonWidth,
-            y: container.bounds.size.height - kDefaultButtonHeight,
+            y: 40, //container.bounds.size.height - kDefaultButtonHeight,
             width: buttonWidth,
             height: kDefaultButtonHeight
         )
-        
-        let addButtonFrame = CGRect( x: container.bounds.size.width - 120, y:0, width: buttonWidth, height: 40)
-        
         if showCancelButton == false {
             buttonWidth = container.bounds.size.width
             leftButtonFrame = CGRect()
@@ -280,32 +282,36 @@ open class MedicineDialog: UIView {
         self.doneButton.layer.cornerRadius = kCornerRadius
         self.doneButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
         container.addSubview(self.doneButton)
-        
-        self.addButton = UIButton(type: .custom) as UIButton
-        self.addButton.frame = addButtonFrame
-        self.addButton.tag = 123
-        self.addButton.setTitle("ADD", for: .normal)
-        self.addButton.setTitleColor(self.buttonColor, for: .normal)
-        self.addButton.setTitleColor(self.buttonColor, for: .highlighted)
-        self.addButton.titleLabel!.font = self.font.withSize(14)
-        self.addButton.layer.cornerRadius = kCornerRadius
-        self.addButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
-        container.addSubview(self.addButton)
-        
     }
     
     @objc func buttonTapped(sender: UIButton!) {
         if sender.tag == kDoneButtonTag {
-            self.callback?(nil)
-            close()
-        } else if sender.tag == 123 {
-            MedicineEditDialog().show("Add new record") {_ in }
+            self.callback?(nil) //self.datePicker.date)
         } else {
             self.callback?(nil)
-            close()
         }
         
+        let name: String = self.slayer.name.text!
+        let qty: String = self.slayer.qty.text!
         
+        if self.item == nil {
+            // new one
+            let it = MedModel(name, qty)
+            DataStore.shared.userData?.med.append(it)
+        } else {
+            // edited
+            for i in (DataStore.shared.userData?.med)! {
+                if i.name == self.item.name {
+                    i.name = name
+                    i.qty = qty
+                }
+            }
+            
+        }
+        
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
+        
+        close()
     }
     
     deinit {

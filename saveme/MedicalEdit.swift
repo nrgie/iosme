@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Photos
 
-class MedicalEdit: UIView, UITextViewDelegate {
+class MedicalEdit: UIView {
 
     var item: MedicalModel!
     
@@ -18,24 +18,10 @@ class MedicalEdit: UIView, UITextViewDelegate {
  
     @IBOutlet weak var des: UITextView!
     
-    @IBAction func datumedit(_ sender: Any) {
-        
-    }
+    @IBAction func datumedit(_ sender: Any) {}
  
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    func getData() {
-
-    }
-    
-    func textView(textView: UITextView, shouldChangeTextInRange  range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            textView.resignFirstResponder()
-            print(des.text)
-        }
-        return true
     }
     
     func setup() {
@@ -43,8 +29,6 @@ class MedicalEdit: UIView, UITextViewDelegate {
             datum.text = item.date!
             des.text = item.name!
         }
-        
-        self.des.delegate = self
         
         self.des.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 0.9).cgColor
         self.des.layer.borderWidth = 1.0;

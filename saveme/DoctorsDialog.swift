@@ -299,7 +299,7 @@ open class DoctorsDialog: UIView {
             self.callback?(nil)
             close()
         } else if sender.tag == 123 {
-            HelpDialog().show("Valami") {_ in }
+            DoctorEditDialog().show("Add new record") {_ in }
         } else {
             self.callback?(nil)
             close()

@@ -17,11 +17,19 @@ class DoctorRow: UIView {
     @IBOutlet private var label: UILabel!
     
     @IBAction func del(_ sender: Any) {
-        
+        var temp = Array<DoctorModel>();
+        for i in (DataStore.shared.userData?.doctors)! {
+            if i.name != self.item.name {
+                temp.append(i)
+            }
+        }
+        DataStore.shared.userData?.doctors = temp
+        self.removeFromSuperview()
+        NotificationCenter.default.post(name: Constants.Notifications.ReloadListView, object: nil, userInfo: nil)
     }
     
     @IBAction func edit(_ sender: Any) {
-        //DocEditDialog()
+        DoctorEditDialog(item:item).show("Add new record") {_ in }
     }
     
     @IBAction func call(_ sender: Any) {

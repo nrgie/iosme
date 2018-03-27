@@ -21,10 +21,12 @@ class DoctorModel: Mappable {
         //super.init(map: map)
     }
     
-    init(_ name: String!, _ email: String!, _ phone: String!) {
+    init(_ name: String!, _ email: String!, _ phone: String! , _ custom: String!, _ special: String!) {
         self.name = name
         self.email = email
         self.phone = phone
+        self.custom = custom
+        self.special = special
     }
     
     func mapping(map: Map) {

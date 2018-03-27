@@ -25,6 +25,18 @@ class MedicalDialogView: UIView {
     
     func setup() {
         let adapter = MedListAdapter()
+        let med = DataStore.shared.userData?.med
+        adapter.items = med
+        adapter.items = DataStore.shared.userData?.med
+        listview.adapter = adapter
+        listview.reload()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadlist), name: Constants.Notifications.ReloadListView, object: nil)
+    }
+    
+    func reloadlist() {
+        let adapter = MedListAdapter()
+        let med = DataStore.shared.userData?.med
+        adapter.items = med
         adapter.items = DataStore.shared.userData?.med
         listview.adapter = adapter
         listview.reload()

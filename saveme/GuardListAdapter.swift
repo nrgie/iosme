@@ -24,78 +24,15 @@ class GuardListAdapter: Adapter {
     }
 
     func view(forPosition position: Int, convertView: UIView?) -> UIView {
-        
         let item : UserData = items[position]
-        
-        let result: SettingView! = viewType(forPosition: position).init(frame: CGRect.zero) as? SettingView
-        //result.fill(with: items[position])
+        let result: GuardRow! = viewType(forPosition: position).init(frame: CGRect.zero) as? GuardRow
+        result.fill(with: items[position])
         result.isUserInteractionEnabled = true
-            
-        UITapGestureRecognizer(addToView: result) {
-            /*
-            if item.action == "facebook" {
-                var value = self.user?.safe(key: "facebook")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.facebook = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            
-            if item.action == "viber" {
-                var value = self.user?.safe(key: "viber")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.viber = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            if item.action == "whatsapp" {
-                var value = self.user?.safe(key: "whatsapp")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.whatsapp = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            if item.action == "skype" {
-                var value = self.user?.safe(key: "skype")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.skype = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            if item.action == "snapchat" {
-                var value = self.user?.safe(key: "snapchat")
-                if value == nil { value = "" }
-                let alert = UIAlertController(title: "Fill your phone number".localized, message: "Please fill this input".localized, preferredStyle: .alert)
-                alert.addTextField { (textField) in textField.text = value as? String }
-                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { [weak alert] (_) in
-                    self.user?.snapchat = alert?.textFields![0].text
-                    self.reload()
-                }))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            }
-            */
-        }
         return result
     }
     
     func viewType(forPosition position: Int) -> UIView.Type {
-        return SettingView.self
+        return GuardRow.self
     }
     
     func reload() {

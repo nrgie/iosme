@@ -36,7 +36,6 @@
                     <state key="normal" image="guardclose"/>
                     <connections>
                         <action selector="del:" destination="-1" eventType="touchUpInside" id="haB-gf-Bds"/>
-                        <action selector="delete:" destination="-1" eventType="touchUpInside" id="hrv-R0-NUe"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W0-LG-ui3">
