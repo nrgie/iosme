@@ -55,6 +55,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
+                                            <action selector="back:" destination="8y2-Cg-4ov" eventType="touchUpInside" id="NWi-Wz-EWu"/>
                                             <action selector="next:" destination="8y2-Cg-4ov" eventType="touchUpInside" id="qHd-il-9uy"/>
                                         </connections>
                                     </button>
@@ -92,6 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="listview" destination="d9M-i4-LdI" id="Qt6-3S-KCB"/>
+                        <outlet property="rightbtn" destination="4G9-pz-nod" id="pXo-Gn-vfI"/>
                         <outlet property="uititle" destination="c7d-eX-on3" id="j8U-iX-NOU"/>
                     </connections>
                 </viewController>

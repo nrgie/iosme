@@ -188,6 +188,9 @@
 		88BCCCAA206A83F500D4AA83 /* DoctorEditDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCCCA9206A83F500D4AA83 /* DoctorEditDialog.swift */; };
 		88BCCCAC206A9CC800D4AA83 /* GuardRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCCCAB206A9CC800D4AA83 /* GuardRow.xib */; };
 		88BCCCAE206A9CD800D4AA83 /* GuardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCCCAD206A9CD800D4AA83 /* GuardRow.swift */; };
+		88BCCCB0206ACECE00D4AA83 /* AddGuardDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCCCAF206ACECE00D4AA83 /* AddGuardDialog.swift */; };
+		88BCCCB2206AD01F00D4AA83 /* GuardEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCCCB1206AD01F00D4AA83 /* GuardEdit.xib */; };
+		88BCCCB4206AD02700D4AA83 /* GuardEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCCCB3206AD02700D4AA83 /* GuardEdit.swift */; };
 		88C40071205D715800CF1E9D /* wizard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40070205D715800CF1E9D /* wizard2.storyboard */; };
 		88C40073205D716900CF1E9D /* wizard3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40072205D716900CF1E9D /* wizard3.storyboard */; };
 		88C40075205D717600CF1E9D /* wizard4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C40074205D717600CF1E9D /* wizard4.storyboard */; };
@@ -475,6 +478,9 @@
 		88BCCCA9206A83F500D4AA83 /* DoctorEditDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorEditDialog.swift; sourceTree = "<group>"; };
 		88BCCCAB206A9CC800D4AA83 /* GuardRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuardRow.xib; sourceTree = "<group>"; };
 		88BCCCAD206A9CD800D4AA83 /* GuardRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardRow.swift; sourceTree = "<group>"; };
+		88BCCCAF206ACECE00D4AA83 /* AddGuardDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGuardDialog.swift; sourceTree = "<group>"; };
+		88BCCCB1206AD01F00D4AA83 /* GuardEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuardEdit.xib; sourceTree = "<group>"; };
+		88BCCCB3206AD02700D4AA83 /* GuardEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardEdit.swift; sourceTree = "<group>"; };
 		88C40070205D715800CF1E9D /* wizard2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard2.storyboard; sourceTree = "<group>"; };
 		88C40072205D716900CF1E9D /* wizard3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard3.storyboard; sourceTree = "<group>"; };
 		88C40074205D717600CF1E9D /* wizard4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = wizard4.storyboard; sourceTree = "<group>"; };
@@ -960,8 +966,11 @@
 				88AEE98F20698AAE002562B3 /* DoctorDialog.xib */,
 				88BCCCA5206A824000D4AA83 /* DoctorEdit.swift */,
 				88BCCCA7206A824F00D4AA83 /* DoctorEdit.xib */,
+				88BCCCB1206AD01F00D4AA83 /* GuardEdit.xib */,
+				88BCCCB3206AD02700D4AA83 /* GuardEdit.swift */,
 				88BCCCA9206A83F500D4AA83 /* DoctorEditDialog.swift */,
 				88AEE96320697678002562B3 /* DoctorsDialog.swift */,
+				88BCCCAF206ACECE00D4AA83 /* AddGuardDialog.swift */,
 				88AEE97B2069887E002562B3 /* DoctorsDialogView.swift */,
 				8891F0052061109F00FA4578 /* FullName.xib */,
 				88BA887520603D530028C5AF /* FullNameDialog.swift */,
@@ -1238,6 +1247,7 @@
 				88E5131D2067D8AA0070F407 /* welcome.mp3 in Resources */,
 				3DEE9A1B1EC0F68D00CA8B8D /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				3D7D71251EBCC07A00E71211 /* Splash.storyboard in Resources */,
+				88BCCCB2206AD01F00D4AA83 /* GuardEdit.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1441,6 +1451,7 @@
 				88787362206A163F006C3C4E /* ProgressBar.swift in Sources */,
 				88C4007D205D720D00CF1E9D /* Wizard3ViewController.swift in Sources */,
 				88E5131F2067D9230070F407 /* GoogleAutocompleteJSONModel.swift in Sources */,
+				88BCCCB0206ACECE00D4AA83 /* AddGuardDialog.swift in Sources */,
 				73132C2220075290002B690B /* MapBack.swift in Sources */,
 				3D0148791EC06BAA00804F54 /* CustomButton.swift in Sources */,
 				882DB67F205FA4EE00C37F85 /* RollView.swift in Sources */,
@@ -1499,6 +1510,7 @@
 				88AEE97420698444002562B3 /* AllergyListAdapter.swift in Sources */,
 				88AEE94920694941002562B3 /* AddressDialogView.swift in Sources */,
 				737107372046F9650092689D /* HalfModalVC.swift in Sources */,
+				88BCCCB4206AD02700D4AA83 /* GuardEdit.swift in Sources */,
 				88AEE957206952EB002562B3 /* SwitchView.swift in Sources */,
 				3DA38CEC1EBDA7CF003E09CD /* OAuthResponse.swift in Sources */,
 				738BF2F32017813300773420 /* MedicalViewController.swift in Sources */,

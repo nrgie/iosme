@@ -6,19 +6,94 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressDialogView" customModule="saveme" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressDialogView" customModule="saveme" customModuleProvider="target">
+            <connections>
+                <outlet property="city" destination="Ugk-9H-wiG" id="Afh-rx-09U"/>
+                <outlet property="floordoor" destination="FiA-Zj-Syf" id="Pav-Vi-bKv"/>
+                <outlet property="number" destination="0NA-0g-3iu" id="kDE-HE-gRw"/>
+                <outlet property="street" destination="f9o-Sw-6tt" id="0EN-7H-OzU"/>
+                <outlet property="zip" destination="Tes-0C-vdK" id="9as-BZ-3dn"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="172" height="171"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="156"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-0C-vdK">
+                    <rect key="frame" x="16" y="20" width="130" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="ziped:" destination="-1" eventType="editingDidEnd" id="9Ga-CY-1KE"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugk-9H-wiG">
+                    <rect key="frame" x="161" y="20" width="123" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="123" id="JKp-jh-Yc3"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="cityed:" destination="-1" eventType="editingDidEnd" id="l6x-cb-kKW"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-Sw-6tt">
+                    <rect key="frame" x="16" y="58" width="268" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="streeted:" destination="-1" eventType="editingDidEnd" id="qMj-s4-y1O"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0NA-0g-3iu">
+                    <rect key="frame" x="16" y="96" width="130" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="numbered:" destination="-1" eventType="editingDidEnd" id="iUk-Lz-Iiw"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Floor/door" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiA-Zj-Syf">
+                    <rect key="frame" x="161" y="96" width="123" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="floored:" destination="-1" eventType="editingDidEnd" id="H3K-v0-JyI"/>
+                    </connections>
+                </textField>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ugk-9H-wiG" firstAttribute="trailing" secondItem="f9o-Sw-6tt" secondAttribute="trailing" id="4X0-VV-n6l"/>
+                <constraint firstItem="0NA-0g-3iu" firstAttribute="top" secondItem="f9o-Sw-6tt" secondAttribute="bottom" constant="8" symbolic="YES" id="EBU-Y9-JAK"/>
+                <constraint firstItem="Tes-0C-vdK" firstAttribute="trailing" secondItem="0NA-0g-3iu" secondAttribute="trailing" id="EoF-zB-BDs"/>
+                <constraint firstItem="f9o-Sw-6tt" firstAttribute="top" secondItem="Tes-0C-vdK" secondAttribute="bottom" constant="8" symbolic="YES" id="KDK-qA-c7F"/>
+                <constraint firstItem="Tes-0C-vdK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="LGj-Fr-gQn"/>
+                <constraint firstItem="Tes-0C-vdK" firstAttribute="baseline" secondItem="Ugk-9H-wiG" secondAttribute="baseline" id="Pev-jg-XzN"/>
+                <constraint firstItem="Ugk-9H-wiG" firstAttribute="leading" secondItem="FiA-Zj-Syf" secondAttribute="leading" id="Q0J-Sm-Lnw"/>
+                <constraint firstItem="Tes-0C-vdK" firstAttribute="leading" secondItem="f9o-Sw-6tt" secondAttribute="leading" id="SqX-5A-J18"/>
+                <constraint firstItem="Ugk-9H-wiG" firstAttribute="leading" secondItem="Tes-0C-vdK" secondAttribute="trailing" constant="15" id="TBr-mi-bHy"/>
+                <constraint firstItem="f9o-Sw-6tt" firstAttribute="trailing" secondItem="FiA-Zj-Syf" secondAttribute="trailing" id="blf-A9-RCm"/>
+                <constraint firstItem="0NA-0g-3iu" firstAttribute="baseline" secondItem="FiA-Zj-Syf" secondAttribute="baseline" id="dro-cy-J7J"/>
+                <constraint firstItem="f9o-Sw-6tt" firstAttribute="leading" secondItem="0NA-0g-3iu" secondAttribute="leading" id="nCJ-9l-8hk"/>
+                <constraint firstItem="Tes-0C-vdK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="v7c-6f-w1q"/>
+                <constraint firstItem="Ugk-9H-wiG" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="xzC-jz-PrK"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-96" y="-383.5"/>
+            <point key="canvasLocation" x="-160" y="-391"/>
         </view>
     </objects>
 </document>

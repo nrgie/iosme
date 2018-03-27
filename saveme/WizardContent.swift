@@ -21,15 +21,35 @@ class WizardContent : UIViewController {
     public func forSettings(type:Int) {
         pagetype = type
     }
-    
-    @IBAction func next(_ sender: Any) {
+    @IBAction func back(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "QuickSettings", bundle: nil)
         let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "QuickSettings") as! QuickSettingsViewController
         UIApplication.shared.delegate?.window??.rootViewController = settingsController
     }
     
+    @IBOutlet weak var rightbtn: UIButton!
+    
+    @IBAction func next(_ sender: Any) {
+        
+        if pagetype != 5 {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "QuickSettings", bundle: nil)
+            let settingsController = mainStoryboard.instantiateViewController(withIdentifier: "QuickSettings") as! QuickSettingsViewController
+            UIApplication.shared.delegate?.window??.rootViewController = settingsController
+        } else {
+            //add guard dialog.
+            AddGuardDialog().show("Guardian details"){_ in }
+        }
+    }
+    
     func reload() {
         listview.reload()
+        if pagetype == 5 {
+            let adapter = GuardListAdapter()
+            adapter.items = DataStore.shared.userData?.guards
+            listview.adapter = adapter
+            listview.reload()
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -102,6 +122,7 @@ class WizardContent : UIViewController {
         }
         
         if pagetype == 5 {
+            rightbtn.setTitle("ADD", for:.normal)
             let adapter = GuardListAdapter()
             adapter.items = DataStore.shared.userData?.guards
             listview.adapter = adapter

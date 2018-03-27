@@ -27,11 +27,20 @@ class GuardRow: UIView {
     func fill(with item: UserData) {
         key.text = "guardian".localized
         //flag.image = UIImage(named:item.icon!)
-        value.text = item.name1! + " " + item.name2! + " " + item.name3!
+        value.text = item.name! //1! + " " + item.name2! + " " + item.name3!
+
+        key.isUserInteractionEnabled = true
+        flag.isUserInteractionEnabled = true
+        status.isUserInteractionEnabled = true
         
         UITapGestureRecognizer(addToView: flag) {
-            CountryDialog().show("Select country for guardian") {_ in }
+            //CountryDialog().show("Select country for guardian") {_ in }
         }
+        
+        UITapGestureRecognizer(addToView: key) {
+            AddGuardDialog(item:item).show("Guardian details"){_ in }
+        }
+        
 
         UITapGestureRecognizer(addToView: status) {
             let alert = UIAlertController(title: "Guardian".localized, message: "The status of this Guradian is Pending".localized, preferredStyle: .alert)
